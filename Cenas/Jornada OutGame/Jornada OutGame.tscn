@@ -1,0 +1,676 @@
+[gd_scene load_steps=57 format=2]
+
+[ext_resource path="res://Cenas/Jornada OutGame/Jornada OutGame.gd" type="Script" id=1]
+[ext_resource path="res://Elementos_Jogo/jornada outgame.png" type="Texture" id=2]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/normal/botao desativado-02.png" type="Texture" id=3]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-02.png" type="Texture" id=4]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/hover/botao hover (1).png" type="Texture" id=5]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-02.png" type="Texture" id=6]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/normal/botao desativado-03.png" type="Texture" id=7]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-03.png" type="Texture" id=8]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/hover/botao hover (2).png" type="Texture" id=9]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-03.png" type="Texture" id=10]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/normal/botao desativado-04.png" type="Texture" id=11]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-04.png" type="Texture" id=12]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/hover/botao hover (3).png" type="Texture" id=13]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-04.png" type="Texture" id=14]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/normal/botao desativado-05.png" type="Texture" id=15]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-05.png" type="Texture" id=16]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/hover/botao hover (4).png" type="Texture" id=17]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-05.png" type="Texture" id=18]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/normal/botao desativado-06.png" type="Texture" id=19]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-06.png" type="Texture" id=20]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/hover/botao hover (5).png" type="Texture" id=21]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-06.png" type="Texture" id=22]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/normal/botao desativado-07.png" type="Texture" id=23]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-07.png" type="Texture" id=24]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/hover/botao hover (6).png" type="Texture" id=25]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-07.png" type="Texture" id=26]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/normal/botao desativado-08.png" type="Texture" id=27]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-08.png" type="Texture" id=28]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/hover/botao hover (7).png" type="Texture" id=29]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-08.png" type="Texture" id=30]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/normal/botao desativado-09.png" type="Texture" id=31]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-09.png" type="Texture" id=32]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/hover/botao hover (8).png" type="Texture" id=33]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-09.png" type="Texture" id=34]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/normal/botao desativado-10.png" type="Texture" id=35]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-10.png" type="Texture" id=36]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/hover/botao hover (9).png" type="Texture" id=37]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-10.png" type="Texture" id=38]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/normal/botao desativado-11.png" type="Texture" id=39]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-11.png" type="Texture" id=40]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/hover/botao hover (10).png" type="Texture" id=41]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-11.png" type="Texture" id=42]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/normal/botao desativado-12.png" type="Texture" id=43]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-12.png" type="Texture" id=44]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/hover/botao hover (11).png" type="Texture" id=45]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-12.png" type="Texture" id=46]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/normal/botao desativado-13.png" type="Texture" id=47]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-13.png" type="Texture" id=48]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/hover/botao hover (12).png" type="Texture" id=49]
+[ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-13.png" type="Texture" id=50]
+[ext_resource path="res://Fonts/Roman SD.ttf" type="DynamicFontData" id=51]
+[ext_resource path="res://Control_Progress.tscn" type="PackedScene" id=52]
+
+[sub_resource type="DynamicFont" id=1]
+
+resource_name = "Texto Botões"
+size = 16
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 51 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 21
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 51 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 16
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 51 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 10
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 51 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="Jornada OutGame" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Rect" ]
+__meta__ = {
+"_edit_horizontal_guides_": [ -37.8053 ],
+"_edit_vertical_guides_": [ 1168.8, 109.769 ]
+}
+
+[node name="Trajeto" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="I" type="TextureButton" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 212.0
+margin_top = 107.0
+margin_right = 264.0
+margin_bottom = 159.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Mundo Comum"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+_sections_unfolded = [ "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="I2" type="TextureButton" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 285.0
+margin_top = 107.0
+margin_right = 338.0
+margin_bottom = 159.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "O Chamado da Aventura"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 10 )
+_sections_unfolded = [ "Hint", "Mouse", "Rect", "Textures" ]
+
+[node name="I3" type="TextureButton" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 360.0
+margin_top = 107.0
+margin_right = 413.0
+margin_bottom = 159.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Recusa do Chamado"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 13 )
+texture_disabled = ExtResource( 14 )
+_sections_unfolded = [ "Hint", "Rect", "Textures" ]
+
+[node name="I4" type="TextureButton" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 433.0
+margin_top = 107.0
+margin_right = 486.0
+margin_bottom = 159.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Encontro com o Mentor"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 17 )
+texture_disabled = ExtResource( 18 )
+_sections_unfolded = [ "Hint", "Rect", "Textures" ]
+
+[node name="I5" type="TextureButton" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 507.0
+margin_top = 107.0
+margin_right = 560.0
+margin_bottom = 159.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Travessia do Primeiro Limiar"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+texture_disabled = ExtResource( 22 )
+_sections_unfolded = [ "Hint", "Rect", "Textures" ]
+
+[node name="I6" type="TextureButton" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 580.0
+margin_top = 107.0
+margin_right = 633.0
+margin_bottom = 159.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Testes, Aliados e Inimigos"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 25 )
+texture_disabled = ExtResource( 26 )
+_sections_unfolded = [ "Hint", "Rect", "Textures" ]
+
+[node name="I7" type="TextureButton" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 654.0
+margin_top = 107.0
+margin_right = 707.0
+margin_bottom = 159.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Aproximação da Caverna Oculta"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 27 )
+texture_pressed = ExtResource( 28 )
+texture_hover = ExtResource( 29 )
+texture_disabled = ExtResource( 30 )
+_sections_unfolded = [ "Hint", "Rect", "Textures" ]
+
+[node name="I8" type="TextureButton" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 726.0
+margin_top = 107.0
+margin_right = 779.0
+margin_bottom = 159.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Provação"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 31 )
+texture_pressed = ExtResource( 32 )
+texture_hover = ExtResource( 33 )
+texture_disabled = ExtResource( 34 )
+_sections_unfolded = [ "Hint", "Rect", "Textures" ]
+
+[node name="I9" type="TextureButton" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 799.0
+margin_top = 107.0
+margin_right = 852.0
+margin_bottom = 159.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Recompensa"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 35 )
+texture_pressed = ExtResource( 36 )
+texture_hover = ExtResource( 37 )
+texture_disabled = ExtResource( 38 )
+_sections_unfolded = [ "Hint", "Rect", "Textures" ]
+
+[node name="I10" type="TextureButton" parent="." index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 873.0
+margin_top = 107.0
+margin_right = 926.0
+margin_bottom = 159.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "O Caminho de Volta"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 39 )
+texture_pressed = ExtResource( 40 )
+texture_hover = ExtResource( 41 )
+texture_disabled = ExtResource( 42 )
+_sections_unfolded = [ "Hint", "Rect", "Textures" ]
+
+[node name="I11" type="TextureButton" parent="." index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 946.0
+margin_top = 107.0
+margin_right = 999.0
+margin_bottom = 159.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Ressurreição"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 43 )
+texture_pressed = ExtResource( 44 )
+texture_hover = ExtResource( 45 )
+texture_disabled = ExtResource( 46 )
+_sections_unfolded = [ "Hint", "Rect", "Textures" ]
+
+[node name="I12" type="TextureButton" parent="." index="12"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1020.0
+margin_top = 107.0
+margin_right = 1072.0
+margin_bottom = 159.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Retorno com o Elixir"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 47 )
+texture_pressed = ExtResource( 48 )
+texture_hover = ExtResource( 49 )
+texture_disabled = ExtResource( 50 )
+_sections_unfolded = [ "Hint", "Rect", "Textures" ]
+
+[node name="Voltar" type="Button" parent="." index="13"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 999.0
+margin_top = 644.0
+margin_right = 1168.0
+margin_bottom = 683.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Voltar ao Jogo"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Voltar"
+flat = false
+align = 1
+_sections_unfolded = [ "Hint", "Margin", "Material", "Mouse", "Rect", "custom_fonts" ]
+
+[node name="titulopos" type="Control" parent="." index="14"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 110.0
+margin_top = 546.0
+margin_right = 519.0
+margin_bottom = 594.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="tituloCap" type="RichTextLabel" parent="titulopos" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 409.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "mmmmm"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "mmmmm"
+scroll_active = false
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Texto" type="RichTextLabel" parent="." index="15"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 110.0
+margin_top = 571.0
+margin_right = 521.0
+margin_bottom = 680.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = true
+bbcode_text = "O heróis é desafiado em termos de vida ou morte. Ou ele saí dali vivo e ainda mais forte, ou falha em sua jornada. Quase sempre a provação é um desafio que nasce aos poucos, o resultado de um trabalho narrativo que começa ou é apresentado em um momento anterior, assim seu tamanho ou periculosidade vai aumentando aos poucos. Todos têm pavor da provação desde o começo da história."
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "O heróis é desafiado em termos de vida ou morte. Ou ele saí dali vivo e ainda mais forte, ou falha em sua jornada. Quase sempre a provação é um desafio que nasce aos poucos, o resultado de um trabalho narrativo que começa ou é apresentado em um momento anterior, assim seu tamanho ou periculosidade vai aumentando aos poucos. Todos têm pavor da provação desde o começo da história."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Rect" ]
+
+[node name="titulo pagina" type="Label" parent="." index="16"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 534.0
+margin_top = 38.0
+margin_right = 749.0
+margin_bottom = 53.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "A Jornada do Herói"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts", "custom_styles" ]
+
+[node name="TimerTitulo" type="Timer" parent="." index="17"]
+
+process_mode = 1
+wait_time = 0.01
+one_shot = false
+autostart = false
+
+[node name="TimerText" type="Timer" parent="." index="18"]
+
+process_mode = 1
+wait_time = 0.01
+one_shot = false
+autostart = false
+
+[node name="Control_Progress" parent="." index="19" instance=ExtResource( 52 )]
+
+[node name="SkipText" type="Button" parent="." index="20"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 111.0
+margin_top = 688.0
+margin_right = 149.0
+margin_bottom = 708.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 4 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Skip"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[connection signal="pressed" from="I" to="." method="_on_I_pressed"]
+
+[connection signal="pressed" from="I2" to="." method="_on_I2_pressed"]
+
+[connection signal="pressed" from="I3" to="." method="_on_I3_pressed"]
+
+[connection signal="pressed" from="I4" to="." method="_on_I4_pressed"]
+
+[connection signal="pressed" from="I5" to="." method="_on_I5_pressed"]
+
+[connection signal="pressed" from="I6" to="." method="_on_I6_pressed"]
+
+[connection signal="pressed" from="I7" to="." method="_on_I7_pressed"]
+
+[connection signal="pressed" from="I8" to="." method="_on_I8_pressed"]
+
+[connection signal="pressed" from="I9" to="." method="_on_I9_pressed"]
+
+[connection signal="pressed" from="I10" to="." method="_on_I10_pressed"]
+
+[connection signal="pressed" from="I11" to="." method="_on_I11_pressed"]
+
+[connection signal="pressed" from="I12" to="." method="_on_I12_pressed"]
+
+[connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
+
+[connection signal="timeout" from="TimerTitulo" to="." method="_on_TimerTitulo_timeout"]
+
+[connection signal="timeout" from="TimerText" to="." method="_on_TimerText_timeout"]
+
+[connection signal="pressed" from="SkipText" to="." method="_on_SkipText_pressed"]
+
+
