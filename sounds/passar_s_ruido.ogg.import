@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/passar_s_ruido.ogg-b3c0db8d1f4911e6db3a8027e0cd8e71.oggstr"
+
+[deps]
+
+source_file="res://sounds/passar_s_ruido.ogg"
+dest_files=[ "res://.import/passar_s_ruido.ogg-b3c0db8d1f4911e6db3a8027e0cd8e71.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
