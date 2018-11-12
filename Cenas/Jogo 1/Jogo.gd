@@ -6,8 +6,8 @@ var IsPaused=-1
 
 var JornadaIsOn=-1
 
-const cardTextD="SIM"
-const cardTextE="NÃO"
+const cardTextD="Ariel adota o cachorrinho"
+const cardTextE="Negar o cachorrinho"
 
 const trocaCenaE="res://Cenas/Jogo 2/Jogo2.tscn"
 const trocaCenaD="res://Cenas/Jogo 3/Jogo3.tscn"
