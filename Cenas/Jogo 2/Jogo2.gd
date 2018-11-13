@@ -29,8 +29,9 @@ var cena = self.get_script().get_path()
 
 func _ready():
 	CardNode.mover(-200,-200,620,661,-90,0)
-	get_node("TrofeuArquetipo").subir_Trofeu();
-	print(cena)
+	get_node("TrofeuArquetipo").subir_Trofeu(true);
+	print(global.cena)
+	print(global.heroi)
 	pass
 
 
@@ -191,22 +192,22 @@ func _on_Salvar_e_Sair_pressed():
 
 
 func salvar_dados():
-	var ArquetiposNode=get_node("ArquetiposControl")
+	
 	var Save = File.new()
 	var erro = Save.open(ARQUIVO, File.WRITE)
 	var dados = {
 		
 	"capitulo" : get_node("Jornada InGame/Control_Progress").capituloAtual,
-	"Cena": cena,
+	"Cena": global.cena,
 	
 	#####################Arquetipos###################
-	"heroi": ArquetiposNode.heroi,
-	"sombra": ArquetiposNode.sombra,
-	"mentor": ArquetiposNode.mentor,
-	"arauto": ArquetiposNode.mentor,
-	"Guardiao": ArquetiposNode.guardiaoDoLimiar,
-	"metamorfo": ArquetiposNode.metamorfo,
-	"aliado": ArquetiposNode.aliado,
+	"heroi": global.heroi,
+	"sombra": global.sombra,
+	"mentor": global.mentor,
+	"arauto": global.mentor,
+	"Guardiao": global.guardiaoDoLimiar,
+	"metamorfo": global.metamorfo,
+	"aliado": global.aliado,
 	}
 	
 	if not erro:

@@ -6,15 +6,18 @@ var IsPaused=-1
 
 var JornadaIsOn=-1
 
-const cardTextD="Ariel adota o cachorrinho"
-const cardTextE="Negar o cachorrinho"
-
-const trocaCenaE="res://Cenas/Jogo 2/Jogo2.tscn"
-const trocaCenaD="res://Cenas/Jogo 3/Jogo3.tscn"
-
-var changebg=true;
-
-var somarMaldade=false;
+var cardTextE="Negar o cachorrinho"
+var cardTextD="Ariel adota o cachorrinho"
+var trocaCenaE="res://Cenas/Jogo 2/Jogo2.tscn"
+var trocaCenaD="res://Cenas/Jogo 3/Jogo3.tscn"
+var trocaCenaAlteradoE
+var trocaCenaAlteradoD
+var changebgE
+var changebgD
+var somarMaldade
+var alterarCaminho
+var trocarMusica
+var audioMusica
 
 onready var CardNode= get_node("Card_Control")
 onready var TextNode= get_node("Card_Control/Text_Control")
@@ -25,25 +28,60 @@ onready var ApagarTexto=get_node("Narrativa_Control/RichTextLabel")
 onready var ShowJornada= get_node("Jornada InGame")
 onready var soundArrastar=get_node("Sound_arrastar")
 onready var soundPassar=get_node("Sound_passar")
-onready var Maldade=get_node("Maldade")
-onready var AtivarArquetipo=get_node("ArquetiposControl");
+
+
 
 const ARQUIVO = "user://save.data"
 
-var cena = self.get_script().get_path()
+
 
 
 func _ready():
-	Maldade.somarMaldade(somarMaldade)
+	salvar_dados()
+	global.cena = self.get_script().get_path()
+	
+	
+	###########################################################
+	################### VARIÁVEIS PARA ALTERAR ##############
+	
+	global.capituloAtual=1 #Aqui coloque o ponto da jornada em que o jogador está
+	
+	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena
+	audioMusica=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer
+	
+	changebgE=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
+	changebgD=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
+	
+	cardTextE="NÃO" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
+	trocaCenaE="res://Cenas/Jogo 2/Jogo2.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
+	cardTextD="SIM" #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
+	trocaCenaD="res://Cenas/Jogo 3/Jogo3.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
+	
+	somarMaldade=false #Mude para TRUE se essa escolha soma maldade para o personagem
+	alterarCaminho=false #altere para TRUE se essa for a cena que muda o caminho do personagem dependendo da maldade
+	trocaCenaAlteradoE="res://Cenas/Menu/Menu.tscn"
+	trocaCenaAlteradoD="res://Cenas/Menu/Menu.tscn"
+	
+	get_node("TrofeuArquetipo").subir_Trofeu(false); #mude para TRUE se ele encontrar algum arquétipo
+	get_node("TrofeuArquetipo/LabelArquetipo").set_text("Arquétipo encontrado: Herói") #Mude para o nome do arquétipo que o usuário encontrou
+	
+	##############Aqui você vai descomentar o ARQUÉTIPO que o herói encontrou nessa cena#################
+	#global.heroi=true
+	#global.sombra=true
+	#global.mentor=true
+	#global.arauto=true
+	#global.guardiaoDoLimiar=true
+	#global.aliado=true
+	#global.camaleao=true
+	##############################################################
+	
+	###########################################################################################
+	####################################### FIM das Variáveis para Alterar######################
+	
+	global.somarMaldade(somarMaldade)
 	soundPassar.play();
 	CardNode.mover(-200,-200,620,661,-90,0)
-	get_node("TrofeuArquetipo").subir_Trofeu();
-	print(cena)
-	
-	#AtivarArquetipo.heroi=true
-	
-	
-	
+	mudaMusica(trocarMusica,audioMusica)
 	pass
 	
 	
@@ -136,7 +174,7 @@ func _on_ButtonL_pressed():
 	TimerNodeScene.start()
 	ApagarTexto.apagar()
 	CardNode.mover(580,661,200,900,-15,-90)
-	get_node("Change_bg").chageBGAnimation(changebg,0,1280)
+	get_node("Change_bg").chageBGAnimation(changebgE,0,1280)
 	soundPassar.play();
 	pass # replace with function body
 
@@ -146,7 +184,7 @@ func _on_ButtonR_pressed():
 	ApagarTexto.apagar()
 	TimerNodeScene.start()
 	CardNode.mover(660,661,1040,900,15,90)
-	get_node("Change_bg").chageBGAnimation(changebg,0,-1280)
+	get_node("Change_bg").chageBGAnimation(changebgD,0,-1280)
 	soundPassar.play();
 	pass # replace with function body
 
@@ -154,9 +192,16 @@ func _on_ButtonR_pressed():
 
 func _on_TimerChanceScene_timeout():
 	if irPara ==0:
-		get_tree().change_scene(trocaCenaE);
+		if alterarCaminho==true && global.maldade>=5:
+			get_tree().change_scene(trocaCenaAlteradoE);
+		else:
+			get_tree().change_scene(trocaCenaE);
+			
 	if irPara ==1:
-		get_tree().change_scene(trocaCenaD);
+		if alterarCaminho==true && global.maldade>=5:
+			get_tree().change_scene(trocaCenaAlteradoD);
+		else:
+			get_tree().change_scene(trocaCenaD);
 	pass # replace with function body
 
 
@@ -217,23 +262,29 @@ func _on_Salvar_e_Sair_pressed():
 	pass # replace with function body
 
 
+func mudaMusica(tf,som):
+	if tf==true:
+		Musica.set_stream(som)
+		Musica.play();
+	pass
+
 func salvar_dados():
-	var ArquetiposNode=get_node("ArquetiposControl")
+	
 	var Save = File.new()
 	var erro = Save.open(ARQUIVO, File.WRITE)
 	var dados = {
 		
-	"capitulo" : get_node("Jornada InGame/Control_Progress").capituloAtual,
-	"Cena": cena,
+	"capitulo" : global.capituloAtual,
+	"Cena": global.cena,
 	
 	#####################Arquetipos###################
-	"heroi": ArquetiposNode.heroi,
-	"sombra": ArquetiposNode.sombra,
-	"mentor": ArquetiposNode.mentor,
-	"arauto": ArquetiposNode.mentor,
-	"Guardiao": ArquetiposNode.guardiaoDoLimiar,
-	"metamorfo": ArquetiposNode.metamorfo,
-	"aliado": ArquetiposNode.aliado,
+	"heroi": global.heroi,
+	"sombra": global.sombra,
+	"mentor": global.mentor,
+	"arauto": global.mentor,
+	"Guardiao": global.guardiaoDoLimiar,
+	"metamorfo": global.camaleao,
+	"aliado": global.aliado,
 	}
 	
 	if not erro:

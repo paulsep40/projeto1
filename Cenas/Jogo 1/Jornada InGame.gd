@@ -14,7 +14,7 @@ onready var ButtonI2= get_node("I2")
 onready var titulopos = get_node("titulopos")
 onready var tituloPasso =get_node("titulopos/tituloCap")
 onready var textoPasso = get_node("Texto")
-onready var CapituloInicial=get_node("Control_Progress")
+onready var Imagem=get_node("Imagem")
 
 var capituloT=["",
 "Mundo Comum",
@@ -44,17 +44,34 @@ var dialogue= ["",
 "Pode ser em teoria ou na prática, sua ideia, empresa ou o herói voltam a sua jornada ao descobrirem que ela não terminou ainda. Um último desafio surge, um onde ele terá que usar todos conhecimentos e ensinamentos que ganhou na jornada para enfrentar esse inimigo.",
 "E nesse caso pode ser algo figurado, um elixir, um conhecimento, uma ferramenta, uma força. Qualquer coisa que o herói tenha ganhado depois de enfrentar seu maior desafio. Com ela em mãos, o heróis volta a sua vida ordinária, mas agora com a possibilidade de ajudar os próximos com esse conhecimento ou melhorar a vida de todos ao seu redor."]
 
+var imagemJ=[preload("res://Elementos_Jogo/Imagens_Jornada/bordaimagem_Prancheta 1.png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (1).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (2).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (3).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (4).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (5).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (6).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (7).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (8).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (9).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (10).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (11).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (12).png")
+
+]
+
 func preparar():
 	liberar()
 	ativarBotao()
-	tituloPasso.set_text(capituloT[CapituloInicial.capituloAtual])
+	tituloPasso.set_text(capituloT[global.capituloAtual])
 	tituloPasso.set_visible_characters(0)
 	get_node("TimerTitulo").start();
-	textoPasso.set_text(dialogue[CapituloInicial.capituloAtual])
+	textoPasso.set_text(dialogue[global.capituloAtual])
 	textoPasso.set_visible_characters(0)
 	get_node("TimerText").start();
 	get_node("SkipText").set_disabled(false)
-	if CapituloInicial.capituloAtual==7 || CapituloInicial.capituloAtual==5:
+	Imagem.set_texture(imagemJ[global.capituloAtual])
+	if global.capituloAtual==7 || global.capituloAtual==5:
 		titulopos.set_position(Vector2(110,133))
 	else:
 		titulopos.set_position(Vector2(110,151))
@@ -91,7 +108,7 @@ func moverJornada(y1,y2):
 
 func _on_I_pressed():
 	capAtual=1
-	#get_node("titulopos").set_position(Vector2(100,100))
+	Imagem.set_texture(imagemJ[1])
 	titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[1])
 	textoPasso.set_text(dialogue[1])
@@ -117,6 +134,7 @@ func _on_I_pressed():
 
 
 func _on_I2_pressed():
+	Imagem.set_texture(imagemJ[2])
 	capAtual=2
 	titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[2])
@@ -143,6 +161,7 @@ func _on_I2_pressed():
 
 
 func _on_I3_pressed():
+	Imagem.set_texture(imagemJ[3])
 	capAtual=3
 	titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[3])
@@ -170,6 +189,7 @@ func _on_I3_pressed():
 
 
 func _on_I4_pressed():
+	Imagem.set_texture(imagemJ[4])
 	capAtual=4
 	titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[4])
@@ -197,6 +217,7 @@ func _on_I4_pressed():
 
 
 func _on_I5_pressed():
+	Imagem.set_texture(imagemJ[5])
 	capAtual=5
 	tituloPasso.set_text(capituloT[5])
 	titulopos.set_position(Vector2(110,133))
@@ -223,6 +244,7 @@ func _on_I5_pressed():
 
 
 func _on_I6_pressed():
+	Imagem.set_texture(imagemJ[6])
 	capAtual=6
 	tituloPasso.set_text(capituloT[6])
 	titulopos.set_position(Vector2(110,151))
@@ -250,6 +272,7 @@ func _on_I6_pressed():
 
 
 func _on_I7_pressed():
+	Imagem.set_texture(imagemJ[7])
 	capAtual=7
 	tituloPasso.set_text(capituloT[7])
 	titulopos.set_position(Vector2(110,133))
@@ -277,6 +300,7 @@ func _on_I7_pressed():
 
 
 func _on_I8_pressed():
+	Imagem.set_texture(imagemJ[8])
 	capAtual=8
 	titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[8])
@@ -304,6 +328,7 @@ func _on_I8_pressed():
 
 
 func _on_I9_pressed():
+	Imagem.set_texture(imagemJ[9])
 	capAtual=9
 	titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[9])
@@ -331,6 +356,7 @@ func _on_I9_pressed():
 
 
 func _on_I10_pressed():
+	Imagem.set_texture(imagemJ[10])
 	capAtual=10
 	titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[10])	
@@ -357,6 +383,7 @@ func _on_I10_pressed():
 
 
 func _on_I11_pressed():
+	Imagem.set_texture(imagemJ[11])
 	capAtual=11
 	titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[11])	
@@ -385,6 +412,7 @@ func _on_I11_pressed():
 
 
 func _on_I12_pressed():
+	Imagem.set_texture(imagemJ[12])
 	capAtual=12
 	titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[12])	
@@ -413,32 +441,32 @@ func _on_I12_pressed():
 	
 	
 func liberar():
-	if CapituloInicial.capituloAtual==1:
+	if global.capituloAtual==1:
 		get_node("I").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==2:
+	if global.capituloAtual==2:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==3:
+	if global.capituloAtual==3:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==4:
+	if global.capituloAtual==4:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
 		get_node("I4").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==5:
+	if global.capituloAtual==5:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
 		get_node("I4").set_disabled(false);
 		get_node("I5").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==6:
+	if global.capituloAtual==6:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -446,7 +474,7 @@ func liberar():
 		get_node("I5").set_disabled(false);
 		get_node("I6").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==7:
+	if global.capituloAtual==7:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -455,7 +483,7 @@ func liberar():
 		get_node("I6").set_disabled(false);
 		get_node("I7").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==8:
+	if global.capituloAtual==8:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -465,7 +493,7 @@ func liberar():
 		get_node("I7").set_disabled(false);
 		get_node("I8").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==9:
+	if global.capituloAtual==9:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -476,7 +504,7 @@ func liberar():
 		get_node("I8").set_disabled(false);
 		get_node("I9").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==10:
+	if global.capituloAtual==10:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -488,7 +516,7 @@ func liberar():
 		get_node("I9").set_disabled(false);
 		get_node("I10").set_disabled(false);
 	
-	if CapituloInicial.capituloAtual==11:
+	if global.capituloAtual==11:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -501,7 +529,7 @@ func liberar():
 		get_node("I10").set_disabled(false);
 		get_node("I11").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==12:
+	if global.capituloAtual==12:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -518,7 +546,7 @@ func liberar():
 	pass
 	
 func ativarBotao():
-	if CapituloInicial.capituloAtual==1:
+	if global.capituloAtual==1:
 		get_node("I").set_pressed(true);
 		get_node("I2").set_pressed(false);
 		get_node("I3").set_pressed(false);
@@ -532,7 +560,7 @@ func ativarBotao():
 		get_node("I11").set_pressed(false);
 		get_node("I12").set_pressed(false);
 		
-	if CapituloInicial.capituloAtual==2:
+	if global.capituloAtual==2:
 		get_node("I").set_pressed(false);
 		get_node("I2").set_pressed(true);
 		get_node("I3").set_pressed(false);
@@ -546,7 +574,7 @@ func ativarBotao():
 		get_node("I11").set_pressed(false);
 		get_node("I12").set_pressed(false);
 		
-	if CapituloInicial.capituloAtual==3:
+	if global.capituloAtual==3:
 		get_node("I").set_pressed(false);
 		get_node("I2").set_pressed(false);
 		get_node("I3").set_pressed(true);
@@ -560,7 +588,7 @@ func ativarBotao():
 		get_node("I11").set_pressed(false);
 		get_node("I12").set_pressed(false);
 		
-	if CapituloInicial.capituloAtual==4:
+	if global.capituloAtual==4:
 		get_node("I").set_pressed(false);
 		get_node("I2").set_pressed(false);
 		get_node("I3").set_pressed(false);
@@ -574,7 +602,7 @@ func ativarBotao():
 		get_node("I11").set_pressed(false);
 		get_node("I12").set_pressed(false);
 		
-	if CapituloInicial.capituloAtual==5:
+	if global.capituloAtual==5:
 		get_node("I").set_pressed(false);
 		get_node("I2").set_pressed(false);
 		get_node("I3").set_pressed(false);
@@ -588,7 +616,7 @@ func ativarBotao():
 		get_node("I11").set_pressed(false);
 		get_node("I12").set_pressed(false);
 		
-	if CapituloInicial.capituloAtual==6:
+	if global.capituloAtual==6:
 		get_node("I").set_pressed(false);
 		get_node("I2").set_pressed(false);
 		get_node("I3").set_pressed(false);
@@ -602,7 +630,7 @@ func ativarBotao():
 		get_node("I11").set_pressed(false);
 		get_node("I12").set_pressed(false);
 		
-	if CapituloInicial.capituloAtual==7:
+	if global.capituloAtual==7:
 		get_node("I").set_pressed(false);
 		get_node("I2").set_pressed(false);
 		get_node("I3").set_pressed(false);
@@ -616,7 +644,7 @@ func ativarBotao():
 		get_node("I11").set_pressed(false);
 		get_node("I12").set_pressed(false);
 		
-	if CapituloInicial.capituloAtual==8:
+	if global.capituloAtual==8:
 		get_node("I").set_pressed(false);
 		get_node("I2").set_pressed(false);
 		get_node("I3").set_pressed(false);
@@ -630,7 +658,7 @@ func ativarBotao():
 		get_node("I11").set_pressed(false);
 		get_node("I12").set_pressed(false);
 	
-	if CapituloInicial.capituloAtual==9:
+	if global.capituloAtual==9:
 		get_node("I").set_pressed(false);
 		get_node("I2").set_pressed(false);
 		get_node("I3").set_pressed(false);
@@ -644,7 +672,7 @@ func ativarBotao():
 		get_node("I11").set_pressed(false);
 		get_node("I12").set_pressed(false);
 	
-	if CapituloInicial.capituloAtual==10:
+	if global.capituloAtual==10:
 		get_node("I").set_pressed(false);
 		get_node("I2").set_pressed(false);
 		get_node("I3").set_pressed(false);
@@ -658,7 +686,7 @@ func ativarBotao():
 		get_node("I11").set_pressed(false);
 		get_node("I12").set_pressed(false);
 		
-	if CapituloInicial.capituloAtual==11:
+	if global.capituloAtual==11:
 		get_node("I").set_pressed(false);
 		get_node("I2").set_pressed(false);
 		get_node("I3").set_pressed(false);
@@ -672,7 +700,7 @@ func ativarBotao():
 		get_node("I11").set_pressed(true);
 		get_node("I12").set_pressed(false);
 	
-	if CapituloInicial.capituloAtual==12:
+	if global.capituloAtual==12:
 		get_node("I").set_pressed(false);
 		get_node("I2").set_pressed(false);
 		get_node("I3").set_pressed(false);

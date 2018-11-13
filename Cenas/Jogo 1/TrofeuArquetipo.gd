@@ -9,10 +9,11 @@ func _ready():
 	# Initialization here
 	pass
 
-func subir_Trofeu():
-	get_node("Tween").interpolate_property(self,"rect_position", Vector2(978,728),Vector2(978,643),0.5,Tween.TRANS_SINE,Tween.EASE_IN_OUT,1)
-	get_node("Tween").start()
-	get_node("Timer").start();
+func subir_Trofeu(x):
+	if x==true:
+		get_node("Tween").interpolate_property(self,"rect_position", Vector2(978,728),Vector2(978,643),0.5,Tween.TRANS_SINE,Tween.EASE_IN_OUT,1)
+		get_node("Tween").start()
+		get_node("Timer").start();
 	pass
 
 #func _process(delta):

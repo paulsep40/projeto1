@@ -8,8 +8,26 @@ var capAtual
 
 onready var tituloPasso =get_node("ControlTitulo/TItulo")
 onready var textoPasso = get_node("Texto")
-onready var CapituloInicial=get_node("Control_Progress")
+
 onready var controlTitulo=get_node("ControlTitulo")
+onready var Imagem=get_node("Imagem")
+
+var imagemJ=[preload("res://Elementos_Jogo/Imagens_Jornada/bordaimagem_Prancheta 1.png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (1).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (2).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (3).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (4).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (5).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (6).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (7).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (8).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (9).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (10).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (11).png"),
+preload("res://Elementos_Jogo/Imagens_Jornada/imagem (12).png")
+
+
+]
 
 var capituloT=["",
 "Mundo Comum",
@@ -42,16 +60,17 @@ var dialogue= ["",
 func _ready():
 	liberar()
 	ativarBotao()
-	capAtual=CapituloInicial.capituloAtual;
+	capAtual=global.capituloAtual;
 	get_node("SkipText").set_disabled(false)
-	tituloPasso.set_text(capituloT[CapituloInicial.capituloAtual])
+	tituloPasso.set_text(capituloT[global.capituloAtual])
 	tituloPasso.set_visible_characters(0)
 	get_node("TimerTitulo").start();
-	textoPasso.set_text(dialogue[CapituloInicial.capituloAtual])
+	textoPasso.set_text(dialogue[global.capituloAtual])
 	textoPasso.set_visible_characters(0)
 	get_node("TimerText").start();
-	capAnt=CapituloInicial.capituloAtual
-	if CapituloInicial.capituloAtual==7 || CapituloInicial.capituloAtual==5:
+	Imagem.set_texture(imagemJ[global.capituloAtual])
+	capAnt=global.capituloAtual
+	if global.capituloAtual==7 || global.capituloAtual==5:
 		controlTitulo.set_position(Vector2(130,208));
 	else:
 		controlTitulo.set_position(Vector2(130,228));
@@ -71,6 +90,7 @@ func _on_TimerText_timeout():
 
 
 func _on_I_pressed():
+	Imagem.set_texture(imagemJ[1])
 	capAtual=1
 	#get_node("titulopos").set_position(Vector2(100,100))
 	controlTitulo.set_position(Vector2(130,228))
@@ -98,6 +118,7 @@ func _on_I_pressed():
 
 
 func _on_I2_pressed():
+	Imagem.set_texture(imagemJ[2])
 	capAtual=2
 	controlTitulo.set_position(Vector2(130,228))
 	tituloPasso.set_text(capituloT[2])
@@ -124,6 +145,7 @@ func _on_I2_pressed():
 
 
 func _on_I3_pressed():
+	Imagem.set_texture(imagemJ[3])
 	capAtual=3
 	controlTitulo.set_position(Vector2(130,228))
 	tituloPasso.set_text(capituloT[3])
@@ -151,6 +173,7 @@ func _on_I3_pressed():
 
 
 func _on_I4_pressed():
+	Imagem.set_texture(imagemJ[4])
 	capAtual=4
 	controlTitulo.set_position(Vector2(130,228))
 	tituloPasso.set_text(capituloT[4])
@@ -178,6 +201,7 @@ func _on_I4_pressed():
 
 
 func _on_I5_pressed():
+	Imagem.set_texture(imagemJ[5])
 	capAtual=5
 	tituloPasso.set_text(capituloT[5])
 	controlTitulo.set_position(Vector2(130,208))
@@ -205,6 +229,7 @@ func _on_I5_pressed():
 
 
 func _on_I6_pressed():
+	Imagem.set_texture(imagemJ[6])
 	capAtual=6
 	tituloPasso.set_text(capituloT[6])
 	controlTitulo.set_position(Vector2(130,228))
@@ -232,6 +257,7 @@ func _on_I6_pressed():
 
 
 func _on_I7_pressed():
+	Imagem.set_texture(imagemJ[7])
 	capAtual=7
 	controlTitulo.set_position(Vector2(130,208))
 	tituloPasso.set_text(capituloT[7])
@@ -260,6 +286,7 @@ func _on_I7_pressed():
 
 
 func _on_I8_pressed():
+	Imagem.set_texture(imagemJ[8])
 	capAtual=8
 	tituloPasso.set_text(capituloT[8])
 	textoPasso.set_text(dialogue[8])
@@ -286,6 +313,7 @@ func _on_I8_pressed():
 
 
 func _on_I9_pressed():
+	Imagem.set_texture(imagemJ[9])
 	capAtual=9
 	tituloPasso.set_text(capituloT[9])
 	textoPasso.set_text(dialogue[9])
@@ -312,6 +340,7 @@ func _on_I9_pressed():
 
 
 func _on_I10_pressed():
+	Imagem.set_texture(imagemJ[10])
 	capAtual=10
 	controlTitulo.set_position(Vector2(130,228))
 	tituloPasso.set_text(capituloT[10])	
@@ -338,6 +367,7 @@ func _on_I10_pressed():
 
 
 func _on_I11_pressed():
+	Imagem.set_texture(imagemJ[11])
 	capAtual=11
 	controlTitulo.set_position(Vector2(130,228))
 	tituloPasso.set_text(capituloT[11])	
@@ -366,6 +396,7 @@ func _on_I11_pressed():
 
 
 func _on_I12_pressed():
+	Imagem.set_texture(imagemJ[12])
 	capAtual=12
 	
 	tituloPasso.set_text(capituloT[12])	
@@ -393,32 +424,32 @@ func _on_I12_pressed():
 
 
 func liberar():
-	if CapituloInicial.capituloAtual==1:
+	if global.capituloAtual==1:
 		get_node("I").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==2:
+	if global.capituloAtual==2:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==3:
+	if global.capituloAtual==3:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==4:
+	if global.capituloAtual==4:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
 		get_node("I4").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==5:
+	if global.capituloAtual==5:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
 		get_node("I4").set_disabled(false);
 		get_node("I5").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==6:
+	if global.capituloAtual==6:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -426,7 +457,7 @@ func liberar():
 		get_node("I5").set_disabled(false);
 		get_node("I6").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==7:
+	if global.capituloAtual==7:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -435,7 +466,7 @@ func liberar():
 		get_node("I6").set_disabled(false);
 		get_node("I7").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==8:
+	if global.capituloAtual==8:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -445,7 +476,7 @@ func liberar():
 		get_node("I7").set_disabled(false);
 		get_node("I8").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==9:
+	if global.capituloAtual==9:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -456,7 +487,7 @@ func liberar():
 		get_node("I8").set_disabled(false);
 		get_node("I9").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==10:
+	if global.capituloAtual==10:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -468,7 +499,7 @@ func liberar():
 		get_node("I9").set_disabled(false);
 		get_node("I10").set_disabled(false);
 	
-	if CapituloInicial.capituloAtual==11:
+	if global.capituloAtual==11:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -481,7 +512,7 @@ func liberar():
 		get_node("I10").set_disabled(false);
 		get_node("I11").set_disabled(false);
 		
-	if CapituloInicial.capituloAtual==12:
+	if global.capituloAtual==12:
 		get_node("I").set_disabled(false);
 		get_node("I2").set_disabled(false);
 		get_node("I3").set_disabled(false);
@@ -496,40 +527,40 @@ func liberar():
 		get_node("I12").set_disabled(false);
 
 func ativarBotao():
-	if CapituloInicial.capituloAtual==1:
+	if global.capituloAtual==1:
 		get_node("I").set_pressed(true);
 		
-	if CapituloInicial.capituloAtual==2:
+	if global.capituloAtual==2:
 		get_node("I2").set_pressed(true);
 		
-	if CapituloInicial.capituloAtual==3:
+	if global.capituloAtual==3:
 		get_node("I3").set_pressed(true);
 		
-	if CapituloInicial.capituloAtual==4:
+	if global.capituloAtual==4:
 		get_node("I4").set_pressed(true);
 		
-	if CapituloInicial.capituloAtual==5:
+	if global.capituloAtual==5:
 		get_node("I5").set_pressed(true);
 		
-	if CapituloInicial.capituloAtual==6:
+	if global.capituloAtual==6:
 		get_node("I6").set_pressed(true);
 		
-	if CapituloInicial.capituloAtual==7:
+	if global.capituloAtual==7:
 		get_node("I7").set_pressed(true);
 		
-	if CapituloInicial.capituloAtual==8:
+	if global.capituloAtual==8:
 		get_node("I8").set_pressed(true);
 	
-	if CapituloInicial.capituloAtual==9:
+	if global.capituloAtual==9:
 		get_node("I9").set_pressed(true);
 	
-	if CapituloInicial.capituloAtual==10:
+	if global.capituloAtual==10:
 		get_node("I10").set_pressed(true);
 		
-	if CapituloInicial.capituloAtual==11:
+	if global.capituloAtual==11:
 		get_node("I11").set_pressed(true);
 	
-	if CapituloInicial.capituloAtual==12:
+	if global.capituloAtual==12:
 		get_node("I12").set_pressed(true);
 	
 	

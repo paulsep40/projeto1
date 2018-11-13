@@ -36,7 +36,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="Main" type="Control" index="0"]
+[node name="Main" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -387,7 +387,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="ArquetiposControl" parent="." index="11" instance=ExtResource( 11 )]
 
-[connection signal="pressed" from="Nova Jornada" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Nova Jornada" to="." method="_on_Nova_Jornada_pressed"]
 
 [connection signal="pressed" from="Continuar" to="." method="_on_Button_pressed"]
 

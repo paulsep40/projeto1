@@ -14,10 +14,13 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-
-func _on_Button_pressed():
+func _on_Nova_Jornada_pressed():
 	get_tree().change_scene("res://Cenas/Jogo 1/Jogo.tscn")
+	Musica.set_stream(preload("res://sounds/musicaMenu.ogg"))
+	Musica.play()
 	pass # replace with function body
+
+
 
 func _on_Jornada_do_Heri_pressed():
 	get_tree().change_scene("res://Cenas/Jornada OutGame/Jornada OutGame.tscn")
@@ -40,5 +43,8 @@ func _on_Sair_pressed():
 func _on_Cancelar_pressed():
 	get_node("PopupExit").hide();
 	pass # replace with function body
+
+
+
 
 
