@@ -14,6 +14,7 @@ const trocaCenaD="res://Cenas/Jogo 3/Jogo3.tscn"
 
 var changebg=true;
 
+var somarMaldade=false;
 
 onready var CardNode= get_node("Card_Control")
 onready var TextNode= get_node("Card_Control/Text_Control")
@@ -24,16 +25,28 @@ onready var ApagarTexto=get_node("Narrativa_Control/RichTextLabel")
 onready var ShowJornada= get_node("Jornada InGame")
 onready var soundArrastar=get_node("Sound_arrastar")
 onready var soundPassar=get_node("Sound_passar")
+onready var Maldade=get_node("Maldade")
+onready var AtivarArquetipo=get_node("ArquetiposControl");
+
 const ARQUIVO = "user://save.data"
+
 var cena = self.get_script().get_path()
 
 
 func _ready():
+	Maldade.somarMaldade(somarMaldade)
 	soundPassar.play();
 	CardNode.mover(-200,-200,620,661,-90,0)
 	get_node("TrofeuArquetipo").subir_Trofeu();
 	print(cena)
+	
+	#AtivarArquetipo.heroi=true
+	
+	
+	
 	pass
+	
+	
 
 
 func _on_ButtonL_mouse_entered():

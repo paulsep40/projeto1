@@ -47,17 +47,17 @@ var dialogue= ["",
 func preparar():
 	liberar()
 	ativarBotao()
-	tituloPasso.set_bbcode(capituloT[CapituloInicial.capituloAtual])
+	tituloPasso.set_text(capituloT[CapituloInicial.capituloAtual])
 	tituloPasso.set_visible_characters(0)
 	get_node("TimerTitulo").start();
-	textoPasso.set_bbcode(dialogue[CapituloInicial.capituloAtual])
+	textoPasso.set_text(dialogue[CapituloInicial.capituloAtual])
 	textoPasso.set_visible_characters(0)
 	get_node("TimerText").start();
 	get_node("SkipText").set_disabled(false)
-	if CapituloInicial.capituloAtual==7:
-		titulopos.set_position(Vector2(110,466))
+	if CapituloInicial.capituloAtual==7 || CapituloInicial.capituloAtual==5:
+		titulopos.set_position(Vector2(110,133))
 	else:
-		titulopos.set_position(Vector2(110,488))
+		titulopos.set_position(Vector2(110,151))
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	pass
@@ -92,9 +92,9 @@ func moverJornada(y1,y2):
 func _on_I_pressed():
 	capAtual=1
 	#get_node("titulopos").set_position(Vector2(100,100))
-	titulopos.set_position(Vector2(110,488))
-	tituloPasso.set_bbcode(capituloT[1])
-	textoPasso.set_bbcode(dialogue[1])
+	titulopos.set_position(Vector2(110,151))
+	tituloPasso.set_text(capituloT[1])
+	textoPasso.set_text(dialogue[1])
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
 		textoPasso.set_visible_characters(0)
@@ -118,9 +118,9 @@ func _on_I_pressed():
 
 func _on_I2_pressed():
 	capAtual=2
-	titulopos.set_position(Vector2(110,488))
-	tituloPasso.set_bbcode(capituloT[2])
-	textoPasso.set_bbcode(dialogue[2])
+	titulopos.set_position(Vector2(110,151))
+	tituloPasso.set_text(capituloT[2])
+	textoPasso.set_text(dialogue[2])
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
 		textoPasso.set_visible_characters(0)
@@ -144,9 +144,9 @@ func _on_I2_pressed():
 
 func _on_I3_pressed():
 	capAtual=3
-	titulopos.set_position(Vector2(110,488))
-	tituloPasso.set_bbcode(capituloT[3])
-	textoPasso.set_bbcode(dialogue[3])
+	titulopos.set_position(Vector2(110,151))
+	tituloPasso.set_text(capituloT[3])
+	textoPasso.set_text(dialogue[3])
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
 		textoPasso.set_visible_characters(0)
@@ -171,9 +171,9 @@ func _on_I3_pressed():
 
 func _on_I4_pressed():
 	capAtual=4
-	titulopos.set_position(Vector2(110,488))
-	tituloPasso.set_bbcode(capituloT[4])
-	textoPasso.set_bbcode(dialogue[4])
+	titulopos.set_position(Vector2(110,151))
+	tituloPasso.set_text(capituloT[4])
+	textoPasso.set_text(dialogue[4])
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
 		textoPasso.set_visible_characters(0)
@@ -198,9 +198,9 @@ func _on_I4_pressed():
 
 func _on_I5_pressed():
 	capAtual=5
-	tituloPasso.set_bbcode(capituloT[5])
-	titulopos.set_position(Vector2(110,488))
-	textoPasso.set_bbcode(dialogue[5])
+	tituloPasso.set_text(capituloT[5])
+	titulopos.set_position(Vector2(110,133))
+	textoPasso.set_text(dialogue[5])
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
 		textoPasso.set_visible_characters(0)
@@ -224,9 +224,9 @@ func _on_I5_pressed():
 
 func _on_I6_pressed():
 	capAtual=6
-	tituloPasso.set_bbcode(capituloT[6])
-	titulopos.set_position(Vector2(110,488))
-	textoPasso.set_bbcode(dialogue[6])
+	tituloPasso.set_text(capituloT[6])
+	titulopos.set_position(Vector2(110,151))
+	textoPasso.set_text(dialogue[6])
 	
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
@@ -251,9 +251,9 @@ func _on_I6_pressed():
 
 func _on_I7_pressed():
 	capAtual=7
-	tituloPasso.set_bbcode(capituloT[7])
-	titulopos.set_position(Vector2(110,466))
-	textoPasso.set_bbcode(dialogue[7])
+	tituloPasso.set_text(capituloT[7])
+	titulopos.set_position(Vector2(110,133))
+	textoPasso.set_text(dialogue[7])
 	
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
@@ -278,9 +278,9 @@ func _on_I7_pressed():
 
 func _on_I8_pressed():
 	capAtual=8
-	titulopos.set_position(Vector2(110,488))
-	tituloPasso.set_bbcode(capituloT[8])
-	textoPasso.set_bbcode(dialogue[8])
+	titulopos.set_position(Vector2(110,151))
+	tituloPasso.set_text(capituloT[8])
+	textoPasso.set_text(dialogue[8])
 
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
@@ -305,9 +305,9 @@ func _on_I8_pressed():
 
 func _on_I9_pressed():
 	capAtual=9
-	titulopos.set_position(Vector2(110,488))
-	tituloPasso.set_bbcode(capituloT[9])
-	textoPasso.set_bbcode(dialogue[9])
+	titulopos.set_position(Vector2(110,151))
+	tituloPasso.set_text(capituloT[9])
+	textoPasso.set_text(dialogue[9])
 	
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
@@ -332,9 +332,9 @@ func _on_I9_pressed():
 
 func _on_I10_pressed():
 	capAtual=10
-	titulopos.set_position(Vector2(110,488))
-	tituloPasso.set_bbcode(capituloT[10])	
-	textoPasso.set_bbcode(dialogue[10])
+	titulopos.set_position(Vector2(110,151))
+	tituloPasso.set_text(capituloT[10])	
+	textoPasso.set_text(dialogue[10])
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
 		textoPasso.set_visible_characters(0)
@@ -358,9 +358,9 @@ func _on_I10_pressed():
 
 func _on_I11_pressed():
 	capAtual=11
-	titulopos.set_position(Vector2(110,488))
-	tituloPasso.set_bbcode(capituloT[11])	
-	textoPasso.set_bbcode(dialogue[11])
+	titulopos.set_position(Vector2(110,151))
+	tituloPasso.set_text(capituloT[11])	
+	textoPasso.set_text(dialogue[11])
 	
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
@@ -386,9 +386,9 @@ func _on_I11_pressed():
 
 func _on_I12_pressed():
 	capAtual=12
-	titulopos.set_position(Vector2(110,488))
-	tituloPasso.set_bbcode(capituloT[12])	
-	textoPasso.set_bbcode(dialogue[12])
+	titulopos.set_position(Vector2(110,151))
+	tituloPasso.set_text(capituloT[12])	
+	textoPasso.set_text(dialogue[12])
 	
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
