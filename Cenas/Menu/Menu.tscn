@@ -36,7 +36,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="Main" type="Control"]
+[node name="Main" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -118,7 +118,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="Jornada do Herói" type="Button" parent="." index="4"]
+[node name="Jornada do Heroi" type="Button" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -389,9 +389,9 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [connection signal="pressed" from="Nova Jornada" to="." method="_on_Nova_Jornada_pressed"]
 
-[connection signal="pressed" from="Continuar" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Continuar" to="." method="_on_Continuar_pressed"]
 
-[connection signal="pressed" from="Jornada do Herói" to="." method="_on_Jornada_do_Heri_pressed"]
+[connection signal="pressed" from="Jornada do Heroi" to="." method="_on_Jornada_do_Heroi_pressed"]
 
 [connection signal="pressed" from="Arquétipos" to="." method="_on_Button_pressed"]
 

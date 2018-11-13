@@ -281,9 +281,9 @@ func salvar_dados():
 	"heroi": global.heroi,
 	"sombra": global.sombra,
 	"mentor": global.mentor,
-	"arauto": global.mentor,
+	"arauto": global.arauto,
 	"Guardiao": global.guardiaoDoLimiar,
-	"metamorfo": global.camaleao,
+	"camaleao": global.camaleao,
 	"aliado": global.aliado,
 	}
 	
