@@ -393,7 +393,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [connection signal="pressed" from="Jornada do Heroi" to="." method="_on_Jornada_do_Heroi_pressed"]
 
-[connection signal="pressed" from="Arquétipos" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Arquétipos" to="." method="_on_Arqutipos_pressed"]
 
 [connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
 

@@ -31,13 +31,13 @@ onready var soundPassar=get_node("Sound_passar")
 
 
 
-const ARQUIVO = "user://save.data"
+
 
 
 
 
 func _ready():
-	salvar_dados()
+	global.salvar_dados();
 	global.cena = self.get_script().get_path()
 	
 	
@@ -82,6 +82,7 @@ func _ready():
 	soundPassar.play();
 	CardNode.mover(-200,-200,620,661,-90,0)
 	mudaMusica(trocarMusica,audioMusica)
+	
 	pass
 	
 	
@@ -257,7 +258,7 @@ func _on_Timer_Atalho_timeout():
 
 
 func _on_Salvar_e_Sair_pressed():
-	salvar_dados();
+	global.salvar_dados();
 	get_tree().change_scene("res://Cenas/Menu/Menu.tscn")
 	pass # replace with function body
 
@@ -268,34 +269,9 @@ func mudaMusica(tf,som):
 		Musica.play();
 	pass
 
-func salvar_dados():
+
 	
-	var Save = File.new()
-	var erro = Save.open(ARQUIVO, File.WRITE)
-	var dados = {
-		
-	"capitulo" : global.capituloAtual,
-	"Cena": global.cena,
 	
-	#####################Arquetipos###################
-	"heroi": global.heroi,
-	"sombra": global.sombra,
-	"mentor": global.mentor,
-	"arauto": global.arauto,
-	"Guardiao": global.guardiaoDoLimiar,
-	"camaleao": global.camaleao,
-	"aliado": global.aliado,
-	}
-	
-	if not erro:
-		Save.store_var(dados)
-		print("Sucesso ao salvar dados!")
-	else:
-		print("Erro ao salvar dados")
-		
-	Save.close()
-	
-	pass
 	
 	
 	
