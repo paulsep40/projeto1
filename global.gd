@@ -22,7 +22,7 @@ func somarMaldade(x):
 	pass
 ################################################################
 ########################## Bençãos e escudo ######################
-var escudo = true
+var escudo = false
 
 var Fogo= false
 var Terra = false
@@ -65,7 +65,9 @@ func salvar_dados():
 	"fogo": global.Fogo,
 	"terra": global.Terra,
 	"agua": global.Agua,
-	"ar": global.Ar
+	"ar": global.Ar,
+	
+	"escudo": global.escudo
 	}
 	if not erro:
 		Save.store_var(dados)
@@ -100,6 +102,8 @@ func carregar_dados():
 		global.Terra=dados_salvos["terra"]
 		global.Agua=dados_salvos["agua"]
 		global.Ar=dados_salvos["ar"]
+		
+		global.escudo=dados_salvos["escudo"]
 		
 		print("Sucesso ao carregar dados!")
 	else:

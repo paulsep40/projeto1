@@ -89,20 +89,20 @@ use_filter = false
 font_data = ExtResource( 17 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="DynamicFontData" id=16]
+[sub_resource type="DynamicFontData" id=10]
 
 hinting = 2
 font_path = "res://Fonts/RobotoSlab-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=17]
+[sub_resource type="DynamicFont" id=11]
 
 size = 12
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 16 )
+font_data = SubResource( 10 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Jogo" type="Control" index="0"]
+[node name="Jogo" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -703,7 +703,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 17 )
+custom_fonts/font = SubResource( 11 )
 text = "Arquétipo encontrado: Herói"
 align = 1
 autowrap = true

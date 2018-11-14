@@ -136,6 +136,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/font = SubResource( 1 )
+disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -243,7 +244,6 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -396,6 +396,8 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 [connection signal="pressed" from="Arquétipos" to="." method="_on_Arqutipos_pressed"]
 
 [connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
+
+[connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]
 
 [connection signal="pressed" from="PopupExit/Sair" to="." method="_on_Sair_pressed"]
 

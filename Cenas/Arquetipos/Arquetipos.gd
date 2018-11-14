@@ -4,6 +4,9 @@ onready var Texto_Arquetipo= get_node("Texto_Arquetipo")
 onready var timerText=get_node("Timer_text_a")
 onready var Imagem_Arquetipo = get_node("Imagem_Arquetipo")
 
+var capAnt
+var capAtual
+
 var imagemA=[
 preload("res://Elementos_Jogo/cartas Arquetipos/heroi.png"),
 preload("res://Elementos_Jogo/cartas Arquetipos/mentor.png"),
@@ -31,10 +34,13 @@ var descricaoA=[
 
 func _ready():
 	liberarButton()
+	capAtual=0
 	Texto_Arquetipo.set_text(descricaoA[0])
 	Texto_Arquetipo.set_visible_characters(0)
 	Imagem_Arquetipo.set_texture(imagemA[0])
+	get_node("Heroi").set_pressed(true);
 	timerText.start();
+	capAnt=0
 	
 	pass
 
@@ -60,3 +66,180 @@ func liberarButton():
 		get_node("Picaro").set_disabled(false);
 	
 	pass
+
+func _on_Heroi_pressed():
+	Imagem_Arquetipo.set_texture(imagemA[0])
+	capAtual=0
+	Texto_Arquetipo.set_text(descricaoA[0])
+	
+	if capAtual!=capAnt:
+		Texto_Arquetipo.set_visible_characters(0)
+		capAnt=capAtual;
+	
+	get_node("Heroi").set_pressed(true);
+	get_node("Mentor").set_pressed(false);
+	get_node("Arauto").set_pressed(false);
+	get_node("Guardiao").set_pressed(false);
+	get_node("Camaleao").set_pressed(false);
+	get_node("Aliados").set_pressed(false);
+	get_node("Sombra").set_pressed(false);
+	get_node("Picaro").set_pressed(false);
+	
+	pass # replace with function body
+
+
+func _on_Mentor_pressed():
+	Imagem_Arquetipo.set_texture(imagemA[1])
+	capAtual=1
+	Texto_Arquetipo.set_text(descricaoA[1])
+	
+	if capAtual!=capAnt:
+		Texto_Arquetipo.set_visible_characters(0)
+		capAnt=capAtual;
+	
+	get_node("Heroi").set_pressed(false);
+	get_node("Mentor").set_pressed(true);
+	get_node("Arauto").set_pressed(false);
+	get_node("Guardiao").set_pressed(false);
+	get_node("Camaleao").set_pressed(false);
+	get_node("Aliados").set_pressed(false);
+	get_node("Sombra").set_pressed(false);
+	get_node("Picaro").set_pressed(false);
+	pass # replace with function body
+
+
+func _on_Arauto_pressed():
+	Imagem_Arquetipo.set_texture(imagemA[2])
+	capAtual=2
+	Texto_Arquetipo.set_text(descricaoA[2])
+	
+	if capAtual!=capAnt:
+	
+		Texto_Arquetipo.set_visible_characters(0)
+		capAnt=capAtual;
+	
+	get_node("Heroi").set_pressed(false);
+	get_node("Mentor").set_pressed(false);
+	get_node("Arauto").set_pressed(true);
+	get_node("Guardiao").set_pressed(false);
+	get_node("Camaleao").set_pressed(false);
+	get_node("Aliados").set_pressed(false);
+	get_node("Sombra").set_pressed(false);
+	get_node("Picaro").set_pressed(false);
+	pass # replace with function body
+
+
+func _on_Guardiao_pressed():
+	Imagem_Arquetipo.set_texture(imagemA[3])
+	capAtual=3
+	Texto_Arquetipo.set_text(descricaoA[3])
+	
+	if capAtual!=capAnt:
+	
+		Texto_Arquetipo.set_visible_characters(0)
+		capAnt=capAtual;
+	
+	get_node("Heroi").set_pressed(false);
+	get_node("Mentor").set_pressed(false);
+	get_node("Arauto").set_pressed(false);
+	get_node("Guardiao").set_pressed(true);
+	get_node("Camaleao").set_pressed(false);
+	get_node("Aliados").set_pressed(false);
+	get_node("Sombra").set_pressed(false);
+	get_node("Picaro").set_pressed(false);
+	pass # replace with function body
+
+
+func _on_Camaleao_pressed():
+	Imagem_Arquetipo.set_texture(imagemA[4])
+	capAtual=4
+	Texto_Arquetipo.set_text(descricaoA[4])
+	
+	if capAtual!=capAnt:
+		
+		Texto_Arquetipo.set_visible_characters(0)
+		capAnt=capAtual;
+	
+	get_node("Heroi").set_pressed(false);
+	get_node("Mentor").set_pressed(false);
+	get_node("Arauto").set_pressed(false);
+	get_node("Guardiao").set_pressed(false);
+	get_node("Camaleao").set_pressed(true);
+	get_node("Aliados").set_pressed(false);
+	get_node("Sombra").set_pressed(false);
+	get_node("Picaro").set_pressed(false);
+	pass # replace with function body
+
+func _on_Aliados_pressed():
+	Imagem_Arquetipo.set_texture(imagemA[5])
+	capAtual=5
+	Texto_Arquetipo.set_text(descricaoA[5])
+	
+	if capAtual!=capAnt:
+		
+		Texto_Arquetipo.set_visible_characters(0)
+		capAnt=capAtual;
+	
+	get_node("Heroi").set_pressed(false);
+	get_node("Mentor").set_pressed(false);
+	get_node("Arauto").set_pressed(false);
+	get_node("Guardiao").set_pressed(false);
+	get_node("Camaleao").set_pressed(false);
+	get_node("Aliados").set_pressed(true);
+	get_node("Sombra").set_pressed(false);
+	get_node("Picaro").set_pressed(false);
+	pass # replace with function body
+
+func _on_Sombra_pressed():
+	Imagem_Arquetipo.set_texture(imagemA[6])
+	capAtual=6
+	Texto_Arquetipo.set_text(descricaoA[6])
+	
+	if capAtual!=capAnt:
+
+		Texto_Arquetipo.set_visible_characters(0)
+		capAnt=capAtual;
+	
+	get_node("Heroi").set_pressed(false);
+	get_node("Mentor").set_pressed(false);
+	get_node("Arauto").set_pressed(false);
+	get_node("Guardiao").set_pressed(false);
+	get_node("Camaleao").set_pressed(false);
+	get_node("Aliados").set_pressed(false);
+	get_node("Sombra").set_pressed(true);
+	get_node("Picaro").set_pressed(false);
+	pass # replace with function body
+
+
+func _on_Picaro_pressed():
+	Imagem_Arquetipo.set_texture(imagemA[7])
+	capAtual=7
+	Texto_Arquetipo.set_text(descricaoA[7])
+	
+	if capAtual!=capAnt:
+	
+		Texto_Arquetipo.set_visible_characters(0)
+		capAnt=capAtual;
+	
+	get_node("Heroi").set_pressed(false);
+	get_node("Mentor").set_pressed(false);
+	get_node("Arauto").set_pressed(false);
+	get_node("Guardiao").set_pressed(false);
+	get_node("Camaleao").set_pressed(false);
+	get_node("Aliados").set_pressed(false);
+	get_node("Sombra").set_pressed(false);
+	get_node("Picaro").set_pressed(true);
+	pass # replace with function body
+
+
+
+
+
+func _on_skipText_pressed():
+	Texto_Arquetipo.set_visible_characters(500)
+	pass # replace with function body
+
+
+func _on_Voltar_pressed():
+	get_tree().change_scene("res://Cenas/Menu/Menu.tscn");
+	pass # replace with function body

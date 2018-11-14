@@ -78,3 +78,8 @@ func reiniciar():
 
 
 
+
+
+func _on_Settings_pressed():
+	get_tree().change_scene("res://Cenas/Opcoes/opcao.tscn")
+	pass # replace with function body

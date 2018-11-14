@@ -14,7 +14,8 @@ var trocaCenaAlteradoE
 var trocaCenaAlteradoD
 var changebgE
 var changebgD
-var somarMaldade
+var somarMaldadeE
+var somarMaldadeD
 var alterarCaminho
 var trocarMusica
 var audioMusica
@@ -56,7 +57,8 @@ func _ready():
 	cardTextD="SIM" #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
 	trocaCenaD="res://Cenas/Jogo 3/Jogo3.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
 	
-	somarMaldade=false #Mude para TRUE se essa escolha soma maldade para o personagem
+	somarMaldadeE=false
+	somarMaldadeD=false #Mude para TRUE se essa escolha soma maldade para o personagem
 	alterarCaminho=false #altere para TRUE se essa for a cena que muda o caminho do personagem dependendo da maldade
 	trocaCenaAlteradoE="res://Cenas/Menu/Menu.tscn"
 	trocaCenaAlteradoD="res://Cenas/Menu/Menu.tscn"
@@ -80,11 +82,13 @@ func _ready():
 	#global.Agua=true
 	#global.Ar=true
 	
+	#global.escudo=true
+	
 	
 	###########################################################################################
 	####################################### FIM das Variáveis para Alterar######################
 	
-	global.somarMaldade(somarMaldade)
+	
 	Sound_passar.play();
 	CardNode.mover(-200,-200,620,661,-90,0)
 	mudaMusica(trocarMusica,audioMusica)
@@ -177,6 +181,7 @@ func _on_Text_Tween_Sumir_tween_completed(object, key):
 
 
 func _on_ButtonL_pressed():
+	global.somarMaldade(somarMaldadeE)
 	irPara=0
 	TimerNodeScene.start()
 	ApagarTexto.apagar()
@@ -187,6 +192,7 @@ func _on_ButtonL_pressed():
 
 
 func _on_ButtonR_pressed():
+	global.somarMaldade(somarMaldadeD)
 	irPara=1
 	ApagarTexto.apagar()
 	TimerNodeScene.start()

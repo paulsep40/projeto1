@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Cenas/Jornada OutGame/Jornada OutGame.gd" type="Script" id=1]
 [ext_resource path="res://Elementos_Jogo/jornada outgame.png" type="Texture" id=2]
@@ -70,7 +70,24 @@ use_filter = false
 font_data = ExtResource( 53 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="InputEventKey" id=3]
+
+device = 0
+alt = false
+shift = false
+control = false
+meta = false
+command = false
+pressed = false
+scancode = 16777217
+unicode = 0
+echo = false
+
+[sub_resource type="ShortCut" id=4]
+
+shortcut = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
 
 size = 16
 use_mipmaps = false
@@ -78,34 +95,34 @@ use_filter = false
 font_data = ExtResource( 53 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFontData" id=4]
+[sub_resource type="DynamicFontData" id=6]
 
 hinting = 2
 font_path = "res://Fonts/Roman SD.ttf"
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=7]
 
 size = 21
 use_mipmaps = true
 use_filter = true
 extra_spacing_top = 3
-font_data = SubResource( 4 )
+font_data = SubResource( 6 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="DynamicFontData" id=6]
+[sub_resource type="DynamicFontData" id=8]
 
 hinting = 2
 font_path = "res://Fonts/RobotoSlab-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=9]
 
 size = 18
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 6 )
+font_data = SubResource( 8 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="Jornada OutGame" type="Control" index="0"]
+[node name="Jornada OutGame" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -539,7 +556,7 @@ margin_right = 1168.0
 margin_bottom = 683.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-hint_tooltip = "Voltar ao Jogo"
+hint_tooltip = "Voltar para o Menu Principal"
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
@@ -548,7 +565,7 @@ size_flags_vertical = 1
 custom_fonts/font = SubResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = null
+shortcut = SubResource( 4 )
 group = null
 text = "Voltar"
 flat = false
@@ -571,7 +588,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "A Jornada do Herói"
 percent_visible = 1.0
 lines_skipped = 0
@@ -613,7 +630,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.976471, 0.980392, 0.988235, 1 )
 text = "Aproximação da Caverna Oculta"
 align = 1
@@ -640,7 +657,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 9 )
 align = 3
 autowrap = true
 percent_visible = 1.0
