@@ -26,8 +26,7 @@ onready var TimerNode= get_node("Card_Control/Timer")
 onready var TimerNodeScene= get_node("TimerChangeScene")
 onready var ApagarTexto=get_node("Narrativa_Control/RichTextLabel")
 onready var ShowJornada= get_node("Jornada InGame")
-onready var soundArrastar=get_node("Sound_arrastar")
-onready var soundPassar=get_node("Sound_passar")
+
 
 
 
@@ -73,13 +72,20 @@ func _ready():
 	#global.guardiaoDoLimiar=true
 	#global.aliado=true
 	#global.camaleao=true
+	#global.picaro=true
 	##############################################################
+	####################### Aqui são as Bençãos ####################
+	#global.Fogo=true
+	#global.Terra=true
+	#global.Agua=true
+	#global.Ar=true
+	
 	
 	###########################################################################################
 	####################################### FIM das Variáveis para Alterar######################
 	
 	global.somarMaldade(somarMaldade)
-	soundPassar.play();
+	Sound_passar.play();
 	CardNode.mover(-200,-200,620,661,-90,0)
 	mudaMusica(trocarMusica,audioMusica)
 	
@@ -89,7 +95,7 @@ func _ready():
 
 
 func _on_ButtonL_mouse_entered():
-	soundArrastar.play();
+	Sound_arrastar.play();
 	if place==0:
 		CardNode.rotacao(620,580,0,-15,0.25)
 		TextLabel.set_text(cardTextE)
@@ -121,7 +127,7 @@ func _on_ButtonC_mouse_exited():
 
 
 func _on_ButtonR_mouse_entered():
-	soundArrastar.play();
+	Sound_arrastar.play();
 	if place==0:
 		CardNode.rotacao(620,660,0,15,0.25)
 		TextLabel.set_text(cardTextD)
@@ -148,11 +154,11 @@ func _on_Timer_timeout():
 	if place==2:
 		CardNode.rotacao(660,620,15,0,0.25)
 		TextNode.sumir(0.25);
-		soundArrastar.play();
+		Sound_arrastar.play();
 	if place==1:
 		CardNode.rotacao(580,620,-15,0,0.25)
 		TextNode.sumir(0.25);
-		soundArrastar.play();
+		Sound_arrastar.play();
 	place=0;
 	TimerNode.stop();
 	pass # replace with function body
@@ -176,7 +182,7 @@ func _on_ButtonL_pressed():
 	ApagarTexto.apagar()
 	CardNode.mover(580,661,200,900,-15,-90)
 	get_node("Change_bg").chageBGAnimation(changebgE,0,1280)
-	soundPassar.play();
+	Sound_passar.play();
 	pass # replace with function body
 
 
@@ -186,7 +192,7 @@ func _on_ButtonR_pressed():
 	TimerNodeScene.start()
 	CardNode.mover(660,661,1040,900,15,90)
 	get_node("Change_bg").chageBGAnimation(changebgD,0,-1280)
-	soundPassar.play();
+	Sound_passar.play();
 	pass # replace with function body
 
 

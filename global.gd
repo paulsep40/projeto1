@@ -10,6 +10,7 @@ var arauto=false
 var guardiaoDoLimiar=false
 var camaleao=false
 var aliado=false
+var picaro=false
 #####################################################
 
 #################################Maldade##############
@@ -19,7 +20,18 @@ func somarMaldade(x):
 	if x==true:
 		maldade=maldade+1;
 	pass
-	
+################################################################
+########################## Bençãos e escudo ######################
+var escudo = true
+
+var Fogo= false
+var Terra = false
+var Agua = false
+var Ar = false
+
+
+
+
 #############################################################
 
 ############################### Progresso ##################
@@ -47,6 +59,13 @@ func salvar_dados():
 	"Guardiao": global.guardiaoDoLimiar,
 	"camaleao": global.camaleao,
 	"aliado": global.aliado,
+	
+	#################### bencaos ####################
+	
+	"fogo": global.Fogo,
+	"terra": global.Terra,
+	"agua": global.Agua,
+	"ar": global.Ar
 	}
 	if not erro:
 		Save.store_var(dados)
@@ -76,6 +95,11 @@ func carregar_dados():
 		global.guardiaoDoLimiar=dados_salvos["Guardiao"]
 		global.camaleao=dados_salvos["camaleao"]
 		global.aliado=dados_salvos["aliado"]
+		
+		global.Fogo=dados_salvos["fogo"]
+		global.Terra=dados_salvos["terra"]
+		global.Agua=dados_salvos["agua"]
+		global.Ar=dados_salvos["ar"]
 		
 		print("Sucesso ao carregar dados!")
 	else:
