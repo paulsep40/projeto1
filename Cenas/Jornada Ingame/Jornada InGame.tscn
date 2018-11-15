@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Cenas/Jogo 1/Jornada InGame.gd" type="Script" id=1]
 [ext_resource path="res://Elementos_Jogo/jornada ingame bg transparente-01.png" type="Texture" id=2]
@@ -52,60 +52,34 @@
 [ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-13.png" type="Texture" id=50]
 [ext_resource path="res://Elementos_Jogo/Botões jornada/hover/hover-13.png" type="Texture" id=51]
 [ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-13.png" type="Texture" id=52]
-[ext_resource path="res://Fonts/Roman SD.ttf" type="DynamicFontData" id=53]
 
-[sub_resource type="DynamicFont" id=9]
-
-size = 16
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 53 )
-_sections_unfolded = [ "Font", "Resource", "Settings" ]
-
-[sub_resource type="InputEventKey" id=10]
-
-device = 0
-alt = false
-shift = false
-control = false
-meta = false
-command = false
-pressed = false
-scancode = 16777217
-unicode = 0
-echo = false
-
-[sub_resource type="ShortCut" id=11]
-
-shortcut = SubResource( 10 )
-
-[sub_resource type="DynamicFontData" id=12]
+[sub_resource type="DynamicFontData" id=4]
 
 hinting = 2
 font_path = "res://Fonts/Roman SD.ttf"
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=5]
 
 size = 21
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 12 )
+font_data = SubResource( 4 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="DynamicFontData" id=14]
+[sub_resource type="DynamicFontData" id=6]
 
 hinting = 2
 font_path = "res://Fonts/RobotoSlab-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=15]
+[sub_resource type="DynamicFont" id=7]
 
 size = 18
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 14 )
+font_data = SubResource( 6 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Jornada InGame" type="Control"]
+[node name="Jornada InGame" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -532,66 +506,7 @@ group = null
 flat = true
 align = 1
 
-[node name="Voltar" type="Button" parent="." index="17"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 1061.0
-margin_top = 582.0
-margin_right = 1254.0
-margin_bottom = 626.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-hint_tooltip = "Voltar ao Jogo"
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 2
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = SubResource( 9 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = SubResource( 11 )
-group = null
-text = "Voltar"
-flat = false
-align = 1
-_sections_unfolded = [ "Hint", "Margin", "Material", "Mouse", "Rect", "custom_fonts" ]
-
-[node name="VoltarOpção2" type="Button" parent="." index="18"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 648.0
-margin_right = 1280.0
-margin_bottom = 720.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-flat = true
-align = 1
-_sections_unfolded = [ "Rect" ]
-
-[node name="Timer Atalho" type="Timer" parent="." index="19"]
-
-process_mode = 1
-wait_time = 0.5
-one_shot = true
-autostart = false
-
-[node name="titulopos" type="Control" parent="." index="20"]
+[node name="titulopos" type="Control" parent="." index="17"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -625,7 +540,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 5 )
 text = "Aproximação da Caverna Oculta"
 align = 1
 valign = 1
@@ -635,7 +550,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="Texto" type="Label" parent="." index="21"]
+[node name="Texto" type="Label" parent="." index="18"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -652,7 +567,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 7 )
 align = 3
 autowrap = true
 percent_visible = 1.0
@@ -660,14 +575,14 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="TimerTitulo" type="Timer" parent="." index="22"]
+[node name="TimerTitulo" type="Timer" parent="." index="19"]
 
 process_mode = 1
 wait_time = 0.01
 one_shot = false
 autostart = false
 
-[node name="TimerText" type="Timer" parent="." index="23"]
+[node name="TimerText" type="Timer" parent="." index="20"]
 
 process_mode = 1
 wait_time = 0.01

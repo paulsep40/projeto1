@@ -291,3 +291,22 @@ func mudaMusica(tf,som):
 	
 	
 
+########################## OPÇÕES INGAME #####################
+
+func _on_VoltarOp_pressed():
+	get_node("Pause/opcao").hide()
+	get_node("Pause/opcao/TimerOpcao").start()
+	pass # replace with function body
+
+
+func _on_TimerOpcao_timeout():
+	IsPaused=1
+	pass # replace with function body
+	
+func _on_Settings_pressed():
+	get_node("Pause/opcao").show()
+	IsPaused=2
+	pass # replace with function body
+
+
+

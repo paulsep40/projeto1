@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Cenas/Jogo 1/Jogo.gd" type="Script" id=1]
 [ext_resource path="res://Cenas/Jogo 1/Chabge_bg.gd" type="Script" id=2]
@@ -19,10 +19,11 @@
 [ext_resource path="res://Fonts/Roman SD.ttf" type="DynamicFontData" id=17]
 [ext_resource path="res://Elementos_Jogo/icon_setting.png" type="Texture" id=18]
 [ext_resource path="res://Elementos_Jogo/icon_help.png" type="Texture" id=19]
-[ext_resource path="res://Cenas/Jornada Ingame/Jornada InGame.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Cenas/Jogo 1/TrofeuArquetipo.gd" type="Script" id=21]
-[ext_resource path="res://Elementos_Jogo/achievement.png" type="Texture" id=22]
-[ext_resource path="res://Elementos_Jogo/icones arquetipos/heroi.png" type="Texture" id=23]
+[ext_resource path="res://Cenas/OpcoesIngame/opcaoIngame.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Cenas/Jornada Ingame/Jornada InGame.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Cenas/Jogo 1/TrofeuArquetipo.gd" type="Script" id=22]
+[ext_resource path="res://Elementos_Jogo/achievement.png" type="Texture" id=23]
+[ext_resource path="res://Elementos_Jogo/icones arquetipos/heroi.png" type="Texture" id=24]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -89,6 +90,66 @@ use_filter = false
 font_data = ExtResource( 17 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
+[sub_resource type="DynamicFontData" id=12]
+
+hinting = 2
+font_path = "res://Fonts/Roman SD.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+
+size = 16
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 12 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="InputEventKey" id=14]
+
+device = 0
+alt = false
+shift = false
+control = false
+meta = false
+command = false
+pressed = false
+scancode = 16777217
+unicode = 0
+echo = false
+
+[sub_resource type="ShortCut" id=15]
+
+shortcut = SubResource( 14 )
+
+[sub_resource type="DynamicFontData" id=16]
+
+hinting = 2
+font_path = "res://Fonts/Roman SD.ttf"
+
+[sub_resource type="DynamicFont" id=17]
+
+size = 16
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 16 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="InputEventKey" id=18]
+
+device = 0
+alt = false
+shift = false
+control = false
+meta = false
+command = false
+pressed = false
+scancode = 16777217
+unicode = 0
+echo = false
+
+[sub_resource type="ShortCut" id=19]
+
+shortcut = SubResource( 18 )
+
 [sub_resource type="DynamicFontData" id=10]
 
 hinting = 2
@@ -102,7 +163,7 @@ use_filter = true
 font_data = SubResource( 10 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Jogo" type="Control"]
+[node name="Jogo" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -614,7 +675,6 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -660,7 +720,103 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
-[node name="Jornada InGame" parent="." index="12" instance=ExtResource( 20 )]
+[node name="opcao" parent="Pause" index="7" instance=ExtResource( 20 )]
+
+visible = false
+
+[node name="VoltarOp" type="Button" parent="Pause/opcao" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 556.0
+margin_top = 523.0
+margin_right = 724.0
+margin_bottom = 563.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 13 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = SubResource( 15 )
+group = null
+text = "Voltar"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="TimerOpcao" type="Timer" parent="Pause/opcao" index="7"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="Jornada InGame" parent="." index="12" instance=ExtResource( 21 )]
+
+[node name="Voltar" type="Button" parent="Jornada InGame" index="21"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1062.0
+margin_top = 583.0
+margin_right = 1254.0
+margin_bottom = 625.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 17 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = SubResource( 19 )
+group = null
+text = "Voltar"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="VoltarOpção2" type="Button" parent="Jornada InGame" index="22"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1.0
+margin_top = 648.0
+margin_right = 1279.0
+margin_bottom = 719.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+
+[node name="Timer Atalho" type="Timer" parent="Jornada InGame" index="23"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
 
 [node name="TrofeuArquetipo" type="Control" parent="." index="13"]
 
@@ -678,12 +834,12 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 21 )
+script = ExtResource( 22 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="Fundo" type="Sprite" parent="TrofeuArquetipo" index="0"]
 
-texture = ExtResource( 22 )
+texture = ExtResource( 23 )
 centered = false
 _sections_unfolded = [ "Region", "Transform" ]
 
@@ -725,7 +881,7 @@ playback/speed = 1.0
 
 position = Vector2( 41.1503, 39.751 )
 scale = Vector2( 0.9, 0.9 )
-texture = ExtResource( 23 )
+texture = ExtResource( 24 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Timer" type="Timer" parent="TrofeuArquetipo" index="4"]
@@ -775,6 +931,18 @@ autostart = false
 [connection signal="pressed" from="Pause/Continuar" to="." method="_on_Continuar_pressed"]
 
 [connection signal="pressed" from="Pause/Salvar e Sair" to="." method="_on_Salvar_e_Sair_pressed"]
+
+[connection signal="pressed" from="Pause/Settings" to="." method="_on_Settings_pressed"]
+
+[connection signal="pressed" from="Pause/opcao/VoltarOp" to="." method="_on_VoltarOp_pressed"]
+
+[connection signal="timeout" from="Pause/opcao/TimerOpcao" to="." method="_on_TimerOpcao_timeout"]
+
+[connection signal="pressed" from="Jornada InGame/Voltar" to="." method="_on_Voltar_pressed"]
+
+[connection signal="pressed" from="Jornada InGame/VoltarOpção2" to="." method="_on_VoltarOpo2_pressed"]
+
+[connection signal="timeout" from="Jornada InGame/Timer Atalho" to="." method="_on_Timer_Atalho_timeout"]
 
 [connection signal="timeout" from="TrofeuArquetipo/Timer" to="TrofeuArquetipo" method="_on_Timer_timeout"]
 
