@@ -1,5 +1,7 @@
 extends Node
 
+var cheated=false
+
 const ARQUIVO = "user://save.data"
 
 #####################Arquétipos##############
@@ -64,7 +66,7 @@ func salvar_dados():
 	"Guardiao": global.guardiaoDoLimiar,
 	"camaleao": global.camaleao,
 	"aliado": global.aliado,
-	
+	"picaro": global.picaro,
 	#################### bencaos ####################
 	
 	"fogo": global.Fogo,
@@ -102,6 +104,7 @@ func carregar_dados():
 		global.guardiaoDoLimiar=dados_salvos["Guardiao"]
 		global.camaleao=dados_salvos["camaleao"]
 		global.aliado=dados_salvos["aliado"]
+		global.picaro=dados_salvos["picaro"]
 		
 		global.Fogo=dados_salvos["fogo"]
 		global.Terra=dados_salvos["terra"]

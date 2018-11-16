@@ -44,18 +44,18 @@ var capituloT=["",
 "Retorno com o Elixir"]
 
 var dialogue= ["",
-"Como era sua vida antes de você entrar naquele negócio ou surgir aquela ideia. Aquela mundo onde o herói vive uma vida sem saber de nada que vai acontecer. É onde você mostra o estado natural daquele ambiente.",
-"Explique porque você tentou começar aquele negócio ou o que o levou a ter aquela ideia. É um momento onde a aventura do herói começa, onde a velha vida começa a ficar para trás.",
-"Acostumado com o seu antigo mundo, o herói deixa de lado o que virá e tenta (em vão) voltar a ser o que era.",
-"Quem inspirou você? Quem te colocou naquele caminho? O que o levou a eles? O momento onde você ganha um guia que o prepara para a jornada e que te auxiliará no decorrer da trajetória.",
-"O herói ultrapassa uma barreira física ou psicológica que não o permite mais voltar atrás. Talvez aquele momento onde sua ideia toma forma de um jeito que não pode mais ser abandonada, ou seu novo negócio ganha vida.",
-"Sua aventura ganha obstáculos e dificuldades, mas também ganha parceiros. Que lições você tira de cada barreira que surge em sua frente?",
-"Aquele momento em que é tudo ou nada se aproxima. O herói enxerga esse obstáculo maior e você percebe o quanto isso pode colocar em risco a vida do herói",
-"O heróis é desafiado em termos de vida ou morte. Ou ele saí dali vivo e ainda mais forte, ou falha em sua jornada. Quase sempre a provação é um desafio que nasce aos poucos, o resultado de um trabalho narrativo que começa ou é apresentado em um momento anterior, assim seu tamanho ou periculosidade vai aumentando aos poucos. Todos têm pavor da provação desde o começo da história.",
-"O herói sobrevive àquela provação, sua ideia não morre diante daquele desafio ou sua nova empresa continua à toda depois daquele momento de tensão. E disso o heróis trás com ele um ensinamento ou experiência específica que lhe ajudará para um desafio final.",
-"O herói pega o caminho de volta para casa, para o mundo ordinário. Você sente que não terá mais problemas ou desafios e seu caminho está completo.",
-"Pode ser em teoria ou na prática, sua ideia, empresa ou o herói voltam a sua jornada ao descobrirem que ela não terminou ainda. Um último desafio surge, um onde ele terá que usar todos conhecimentos e ensinamentos que ganhou na jornada para enfrentar esse inimigo.",
-"E nesse caso pode ser algo figurado, um elixir, um conhecimento, uma ferramenta, uma força. Qualquer coisa que o herói tenha ganhado depois de enfrentar seu maior desafio. Com ela em mãos, o heróis volta a sua vida ordinária, mas agora com a possibilidade de ajudar os próximos com esse conhecimento ou melhorar a vida de todos ao seu redor."]
+"É onde conhecemos o herói e seu mundo. É aqui que observamos a interação dele com outros personagens, compreendemos sua rotina e seus problemas. ",
+"É onde surge uma oportunidade, um objetivo ou uma missão que pode (ou não) ser trazida por um Arauto. Aqui é onde o herói percebe que algo em seu Mundo comum está diferente.",
+"Quando o herói não embarca na jornada recém descoberta. Pode ser por medo, orgulho, ou por intervenção de outro personagem.",
+"O herói então encontra alguém que vai ajudá-lo. O mentor deve guiar e preparar o herói, concedendo ou ensinando novas habilidades que o irão ajudar na jornada. ",
+"A entrada Real na aventura. A primeira vez que o herói percebe não pode mais voltar atrás. Pode ser representado por um portal, um muro, ou um simples aviso.",
+"É o capítulo mais longo da jornada. É onde ocorre a evolução do herói (para o bem ou para o mal!) E onde se encontram aliados e obstáculos.",
+"O momento de tensão, sensação de ''medo de palco''. Chegada no local mais perigoso do mundo especial. É aqui que o herói se prepara e pega o que precisa para o confronto.",
+"O momento que o herói joga com a sorte, onde Ele enfrentará seu maior medo. Momento crítico da história. O mundo e a motivação do herói estão em jogo.",
+"Conquista, Celebração. É nesse ponto que o Herói atinge seu objetivo ou meta. Um momento de alívio ou de tensão que evidencia a importância de sua provação.",
+"Aqui é onde o herói lida com as consequências da Provação. Geralmente pode vir seguida de uma Perseguição do inimigo ou uma Fuga para voltar ao mundo comum.",
+"O que foi perdido ou danificado durante a provação é recuperado. Nem sempre a ressurreição diz respeito ao herói, mas, como todos os estágios desta jornada, o impacta profundamente.",
+"Chegada ao Mundo Comum com Conhecimento e/ou um tesouro. Liberdade, objetivo alcançado. A paz e o equilíbrio são restaurados. O herói agora pode viver em paz com seus feitos"]
 
 func _ready():
 	liberar()

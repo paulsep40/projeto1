@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Cenas/Menu/Main.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/bg.png" type="Texture" id=2]
@@ -11,6 +11,25 @@
 [ext_resource path="res://Elementos_Jogo/popupbg.png" type="Texture" id=9]
 [ext_resource path="res://Elementos_Jogo/Popup.png" type="Texture" id=10]
 [ext_resource path="res://Cenas/Menu/sprite_splash.jpg" type="Texture" id=11]
+[ext_resource path="res://Cenas/Menu/CheatControl.gd" type="Script" id=12]
+[ext_resource path="res://Fonts/cour.ttf" type="DynamicFontData" id=13]
+
+[sub_resource type="InputEventKey" id=11]
+
+device = 0
+alt = false
+shift = false
+control = false
+meta = false
+command = false
+pressed = false
+scancode = 16777240
+unicode = 0
+echo = false
+
+[sub_resource type="ShortCut" id=12]
+
+shortcut = SubResource( 11 )
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -67,6 +86,68 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
+[sub_resource type="DynamicFont" id=6]
+
+size = 12
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 13 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="InputEventKey" id=8]
+
+device = 0
+alt = false
+shift = false
+control = false
+meta = false
+command = false
+pressed = false
+scancode = 16777221
+unicode = 0
+echo = false
+
+[sub_resource type="ShortCut" id=9]
+
+shortcut = SubResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.28125, 0.277954, 0.277954, 1 )
+draw_center = true
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 0
+border_color = Color( 0.144531, 0.144531, 0.144531, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 2
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius", "Shadow" ]
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 12
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 13 )
+_sections_unfolded = [ "Font", "Settings" ]
+
 [node name="Main" type="Control" index="0"]
 
 anchor_left = 0.0
@@ -88,13 +169,38 @@ texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 
-[node name="Fundo" type="Sprite" parent="." index="1"]
+[node name="CallCheat" type="Button" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 533.0
+margin_top = 367.0
+margin_right = 582.0
+margin_bottom = 387.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = SubResource( 12 )
+group = null
+text = "clovis"
+flat = false
+align = 1
+
+[node name="Fundo" type="Sprite" parent="." index="2"]
 
 texture = ExtResource( 3 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="Nova Jornada" type="Button" parent="." index="2"]
+[node name="Nova Jornada" type="Button" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -106,6 +212,7 @@ margin_right = 805.0
 margin_bottom = 211.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+hint_tooltip = "Iniciar Nova Aventura"
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
@@ -119,9 +226,9 @@ group = null
 text = "Novo Jornada"
 flat = false
 align = 1
-_sections_unfolded = [ "Rect", "custom_fonts" ]
+_sections_unfolded = [ "Hint", "Rect", "custom_fonts" ]
 
-[node name="Continuar" type="Button" parent="." index="3"]
+[node name="Continuar" type="Button" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -133,6 +240,7 @@ margin_right = 805.0
 margin_bottom = 302.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+hint_tooltip = "Continuar Aventura"
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
@@ -147,9 +255,9 @@ group = null
 text = "Continuar"
 flat = false
 align = 1
-_sections_unfolded = [ "Rect", "custom_fonts" ]
+_sections_unfolded = [ "Hint", "Rect", "custom_fonts" ]
 
-[node name="Jornada do Heroi" type="Button" parent="." index="4"]
+[node name="Jornada do Heroi" type="Button" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -161,6 +269,7 @@ margin_right = 805.0
 margin_bottom = 393.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+hint_tooltip = "Conheça a Jornada do Herói"
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
@@ -175,9 +284,9 @@ group = null
 text = "Jornada do Herói"
 flat = false
 align = 1
-_sections_unfolded = [ "Rect", "custom_fonts" ]
+_sections_unfolded = [ "Hint", "Rect", "custom_fonts" ]
 
-[node name="Arquétipos" type="Button" parent="." index="5"]
+[node name="Arquétipos" type="Button" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -189,6 +298,7 @@ margin_right = 805.0
 margin_bottom = 484.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+hint_tooltip = "Conheça os Arquétipos da Jornada do Herói"
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
@@ -203,9 +313,9 @@ group = null
 text = "Arquétipos"
 flat = false
 align = 1
-_sections_unfolded = [ "Rect", "custom_fonts" ]
+_sections_unfolded = [ "Hint", "Rect", "custom_fonts" ]
 
-[node name="Exit" type="Button" parent="." index="6"]
+[node name="Exit" type="Button" parent="." index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -217,6 +327,7 @@ margin_right = 539.0
 margin_bottom = 576.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+hint_tooltip = "Sair do Jogo"
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
@@ -229,20 +340,21 @@ group = null
 icon = ExtResource( 5 )
 flat = false
 align = 1
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Hint", "Rect" ]
 
-[node name="Creditos" type="Button" parent="." index="7"]
+[node name="Creditos" type="Button" parent="." index="8"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 561.0
+margin_left = 557.0
 margin_top = 509.0
-margin_right = 632.0
+margin_right = 628.0
 margin_bottom = 576.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+hint_tooltip = "Créditos de Desenvolvimento"
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
@@ -255,20 +367,21 @@ group = null
 icon = ExtResource( 6 )
 flat = false
 align = 1
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Hint", "Rect" ]
 
-[node name="Settings" type="Button" parent="." index="8"]
+[node name="Settings" type="Button" parent="." index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 650.0
+margin_left = 644.0
 margin_top = 509.0
-margin_right = 721.0
+margin_right = 715.0
 margin_bottom = 576.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+hint_tooltip = "Configurações de Tela e Sim"
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
@@ -281,20 +394,21 @@ group = null
 icon = ExtResource( 7 )
 flat = false
 align = 1
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Hint", "Rect" ]
 
-[node name="Help" type="Button" parent="." index="9"]
+[node name="Help" type="Button" parent="." index="10"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 740.0
+margin_left = 732.0
 margin_top = 509.0
-margin_right = 812.0
+margin_right = 804.0
 margin_bottom = 576.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+hint_tooltip = "Como Utilizar"
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 2
@@ -307,9 +421,9 @@ group = null
 icon = ExtResource( 8 )
 flat = false
 align = 1
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Hint", "Rect" ]
 
-[node name="PopupExit" type="Control" parent="." index="10"]
+[node name="PopupExit" type="Control" parent="." index="11"]
 
 editor/display_folded = true
 visible = false
@@ -414,7 +528,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="PopupNovoJogo" type="Control" parent="." index="11"]
+[node name="PopupNovoJogo" type="Control" parent="." index="12"]
 
 editor/display_folded = true
 visible = false
@@ -520,7 +634,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="12"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="13"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -530,12 +644,208 @@ playback_speed = 1.0
 anims/apareceMenu = SubResource( 4 )
 blend_times = [  ]
 
-[node name="Black" type="Sprite" parent="." index="13"]
+[node name="Black" type="Sprite" parent="." index="14"]
 
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 11 )
 centered = false
 _sections_unfolded = [ "Offset", "Visibility" ]
+
+[node name="CheatControl" type="Control" parent="." index="15"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 727.0
+margin_right = 439.0
+margin_bottom = 871.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 12 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="CheatBar" type="LineEdit" parent="CheatControl" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 2.0
+margin_right = 394.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 6 )
+max_length = 200
+focus_mode = 2
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = true
+caret_blink_speed = 0.5
+caret_position = 0
+_sections_unfolded = [ "Caret", "Placeholder", "custom_fonts" ]
+
+[node name="okButton" type="Button" parent="CheatControl" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 394.0
+margin_top = 2.0
+margin_right = 437.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = SubResource( 9 )
+group = null
+text = "OK"
+flat = false
+align = 1
+
+[node name="Panel" type="Panel" parent="CheatControl" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 28.0
+margin_right = 437.0
+margin_bottom = 147.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/panel = SubResource( 10 )
+_sections_unfolded = [ "custom_styles" ]
+
+[node name="Info" type="RichTextLabel" parent="CheatControl/Panel" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 438.0
+margin_bottom = 117.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
+bbcode_text = "#########[color=lime]Jornada do Herói:[/color] [color=red] Liberada[/color]  ###########
+[color=lime]Capítulo Atual[/color] = [color=red]12[/color];
+
+#########[color=lime]Arquétipos:[/color] [color=red] Liberados[/color]############
+[color=lime]Herói = [/color] [color=red]True[/color];
+[color=lime]Mentor =  [/color][color=red]True[/color];
+[color=lime]Arauto = [/color][color=red]True[/color];
+[color=lime]Guardião do Limiar =[/color] [color=red]True[/color];
+[color=lime]Camaleão =[/color] [color=red]True[/color];
+[color=lime]Aliados =[/color] [color=red]True[/color];
+[color=lime]Sombra =[/color] [color=red]True[/color];
+[color=lime]Picaro =[/color] [color=red]True[/color];"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "#########Jornada do Herói:  Liberada  ###########
+Capítulo Atual = 12;
+
+#########Arquétipos:  Liberados############
+Herói =  True;
+Mentor =  True;
+Arauto = True;
+Guardião do Limiar = True;
+Camaleão = True;
+Aliados = True;
+Sombra = True;
+Picaro = True;"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Material", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="Info2" type="RichTextLabel" parent="CheatControl/Panel" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 438.0
+margin_bottom = 117.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
+bbcode_text = "######### NICE TRY, PAL  ###########
+Espertinho, você  ( ͡° ͜ʖ ͡°)
+
+[color=red]Tente de novo !!!![/color]
+
+"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "######### NICE TRY, PAL  ###########
+Espertinho, você  ( ͡° ͜ʖ ͡°)
+
+Tente de novo !!!!
+
+"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Material", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="Tween" type="Tween" parent="CheatControl" index="3"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="TimerCheat" type="Timer" parent="CheatControl" index="4"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[connection signal="pressed" from="CallCheat" to="." method="_on_CallCheat_pressed"]
 
 [connection signal="pressed" from="Nova Jornada" to="." method="_on_Nova_Jornada_pressed"]
 
@@ -560,5 +870,11 @@ _sections_unfolded = [ "Offset", "Visibility" ]
 [connection signal="pressed" from="PopupNovoJogo/Sim" to="." method="_on_Sim_pressed"]
 
 [connection signal="pressed" from="PopupNovoJogo/CancelarNovo" to="." method="_on_CancelarNovo_pressed"]
+
+[connection signal="text_changed" from="CheatControl/CheatBar" to="CheatControl" method="_on_CheatBar_text_changed"]
+
+[connection signal="pressed" from="CheatControl/okButton" to="CheatControl" method="_on_okButton_pressed"]
+
+[connection signal="timeout" from="CheatControl/TimerCheat" to="." method="_on_TimerCheat_timeout"]
 
 

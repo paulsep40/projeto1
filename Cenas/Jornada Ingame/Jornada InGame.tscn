@@ -53,7 +53,6 @@
 [ext_resource path="res://Elementos_Jogo/Botões jornada/hover/hover-13.png" type="Texture" id=51]
 [ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-13.png" type="Texture" id=52]
 
-
 [sub_resource type="DynamicFontData" id=1]
 
 hinting = 2
@@ -80,7 +79,7 @@ use_filter = true
 font_data = SubResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Jornada InGame" type="Control"]
+[node name="Jornada InGame" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0

@@ -1,9 +1,11 @@
 extends Control
+var cheaton=false
 
 
 func _ready():
 	get_node("AnimationPlayer").play("apareceMenu")
-	global.carregar_dados()
+	if global.cheated==false:
+		global.carregar_dados();
 	
 	if global.capituloAtual>0:
 		get_node("Continuar").set_disabled(false)
@@ -40,8 +42,9 @@ func _on_CancelarNovo_pressed():
 
 
 func _on_Continuar_pressed():
-	global.carregar_dados()
 	
+	global.carregar_dados()
+	global.cheated==false
 	get_tree().change_scene(global.cena)
 	
 	Musica.set_stream(preload("res://sounds/musicaMenu.ogg"))
@@ -81,6 +84,7 @@ func _on_Cancelar_pressed():
 
 
 func reiniciar():
+	global.cheated==false
 	global.heroi=false
 	global.sombra=false
 	global.mentor=false
@@ -97,6 +101,7 @@ func reiniciar():
 	global.Agua = false
 	global.Ar = false
 	global.maldade=0
+	
 	pass
 
 
@@ -122,5 +127,27 @@ func _on_Help_pressed():
 
 
 
+
+
+
+
+
+func _on_CallCheat_pressed():
+	
+	if cheaton==false:
+		get_node("CheatControl").show()
+		get_node("CheatControl").SubirCheat();
+		cheaton=true;
+	else:
+		get_node("CheatControl/TimerCheat").start();
+		get_node("CheatControl").DescerCheat();
+		cheaton=false;
+	pass # replace with function body
+
+
+func _on_TimerCheat_timeout():
+	get_node("CheatControl").hide()
+	get_node("CheatControl/Panel/Info2").hide();
+	pass # replace with function body
 
 
