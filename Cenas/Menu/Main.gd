@@ -1,8 +1,8 @@
 extends Control
 
 
-
 func _ready():
+	get_node("AnimationPlayer").play("apareceMenu")
 	global.carregar_dados()
 	
 	if global.capituloAtual>0:
@@ -17,14 +17,33 @@ func _ready():
 
 
 func _on_Nova_Jornada_pressed():
+	if global.capituloAtual>0:
+		get_node("PopupNovoJogo").show();
+	else:
+		reiniciar()
+		get_tree().change_scene("res://Cenas/Historia/Jogo 1/Jogo.tscn")
+		Musica.set_stream(preload("res://sounds/musicaMenu.ogg"))
+		Musica.play()
+		
+	pass 
+	
+func _on_Sim_pressed():
 	reiniciar()
-	get_tree().change_scene("res://Cenas/Jogo 1/Jogo.tscn")
+	get_tree().change_scene("res://Cenas/Historia/Jogo 1/Jogo.tscn")
 	Musica.set_stream(preload("res://sounds/musicaMenu.ogg"))
 	Musica.play()
-	pass 
+	pass # replace with function body
+
+func _on_CancelarNovo_pressed():
+	get_node("PopupNovoJogo").hide()
+	pass # replace with function body
+
 
 func _on_Continuar_pressed():
 	global.carregar_dados()
+	
+	get_tree().change_scene(global.cena)
+	
 	Musica.set_stream(preload("res://sounds/musicaMenu.ogg"))
 	Musica.play()
 	pass 
@@ -36,6 +55,7 @@ func _on_Jornada_do_Heroi_pressed():
 
 
 func _on_Arqutipos_pressed():
+	get_tree().change_scene("res://Cenas/Arquetipos/Arquetipos.tscn")
 	pass # replace with function body
 
 
@@ -68,18 +88,39 @@ func reiniciar():
 	global.guardiaoDoLimiar=false
 	global.aliado=false
 	global.camaleao=false
+	global.picaro=false
 	
+	global.escudo = false
+
+	global.Fogo= false
+	global.Terra = false
+	global.Agua = false
+	global.Ar = false
+	global.maldade=0
 	pass
 
 
 
 
 
-
-
-
+func _on_Creditos_pressed():
+	get_tree().change_scene("res://Cenas/creditos/Creditos.tscn")
+	pass # replace with function body
 
 
 func _on_Settings_pressed():
 	get_tree().change_scene("res://Cenas/Opcoes/opcao.tscn")
 	pass # replace with function body
+
+
+func _on_Help_pressed():
+	get_tree().change_scene("res://Cenas/Ajuda/Ajuda.tscn")
+	pass # replace with function body
+
+
+
+
+
+
+
+

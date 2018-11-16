@@ -5,11 +5,20 @@ extends Control
 # var b = "textvar"
 
 func _ready():
-	get_node("janela").set_pressed(true)
-	get_node("Full_Screen").set_pressed(false)
-	OS.set_window_size(Vector2(1280,720))
-	get_node("Control tamanho da tela").show()
-	get_node("Control tamanho da tela/Labelnumero").set_text("1280 X 720")
+	get_node("Efeitos").set_value(global.volumefx)
+	get_node("Musica").set_value(global.volumemusica)
+	get_node("Control tamanho da tela/Tamanho de Tela").set_value(global.tamanhotela)
+	if OS.window_fullscreen==true:
+		get_node("Full_Screen").set_pressed(true)
+		get_node("janela").set_pressed(false);
+		get_node("Control tamanho da tela").hide()
+		pass
+	else:
+		get_node("Full_Screen").set_pressed(false)
+		get_node("janela").set_pressed(true)
+		
+		get_node("Control tamanho da tela").show()
+		get_node("Control tamanho da tela/Labelnumero").set_text("1280 X 720");
 	pass
 
 #func _process(delta):
@@ -22,15 +31,18 @@ func _on_Efeitos_value_changed(value):
 	Sound_arrastar.set_volume_db(value)
 	Sound_passar.set_volume_db(value)
 	Sound_arrastar.play()
+	global.volumefx=value;
 	pass # replace with function body
 
 
 func _on_Musica_value_changed(value):
 	Musica.set_volume_db(value)
+	global.volumemusica=value;
 	pass # replace with function body
 
 
 func _on_Tamanho_de_Tela_value_changed(value):
+	global.tamanhotela=value
 	if value==1:
 		OS.set_window_size(Vector2(853.33,480))
 		get_node("Control tamanho da tela/Labelnumero").set_text("853 X 480")

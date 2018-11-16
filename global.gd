@@ -41,6 +41,11 @@ var capituloAtual=-1
 
 ########################## Salvar Cena #####################
 var cena="res://Cenas/Menu/Menu.tscn"
+######################################
+var volumefx=0
+var volumemusica=0
+var tamanhotela=3
+######################################
 
 func salvar_dados():
 	
@@ -112,3 +117,6 @@ func carregar_dados():
 	Save.close()
 	
 	pass
+	
+	
+	

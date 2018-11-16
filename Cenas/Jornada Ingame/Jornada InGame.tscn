@@ -1,6 +1,6 @@
 [gd_scene load_steps=57 format=2]
 
-[ext_resource path="res://Cenas/Jogo 1/Jornada InGame.gd" type="Script" id=1]
+[ext_resource path="res://Cenas/Historia/Jogo 1/Jornada InGame.gd" type="Script" id=1]
 [ext_resource path="res://Elementos_Jogo/jornada ingame bg transparente-01.png" type="Texture" id=2]
 [ext_resource path="res://Elementos_Jogo/Imagens_Jornada/imagem (1).png" type="Texture" id=3]
 [ext_resource path="res://Elementos_Jogo/Imagens_Jornada/outraborda_Prancheta 1.png" type="Texture" id=4]
@@ -53,33 +53,34 @@
 [ext_resource path="res://Elementos_Jogo/Botões jornada/hover/hover-13.png" type="Texture" id=51]
 [ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-13.png" type="Texture" id=52]
 
-[sub_resource type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFontData" id=1]
 
 hinting = 2
 font_path = "res://Fonts/Roman SD.ttf"
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=2]
 
 size = 21
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 4 )
+font_data = SubResource( 1 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="DynamicFontData" id=6]
+[sub_resource type="DynamicFontData" id=3]
 
 hinting = 2
 font_path = "res://Fonts/RobotoSlab-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=4]
 
 size = 18
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 6 )
+font_data = SubResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Jornada InGame" type="Control" index="0"]
+[node name="Jornada InGame" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -111,7 +112,7 @@ texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="Imagem" type="Sprite" parent="." index="2"]
+[node name="ImagemDentro" type="Sprite" parent="." index="2"]
 
 position = Vector2( 651.038, 219.544 )
 texture = ExtResource( 3 )
@@ -540,7 +541,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 text = "Aproximação da Caverna Oculta"
 align = 1
 valign = 1
@@ -567,7 +568,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 4 )
 align = 3
 autowrap = true
 percent_visible = 1.0
