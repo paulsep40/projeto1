@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Cenas/Opcoes/opcao.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/bg.png" type="Texture" id=2]
@@ -7,8 +7,10 @@
 [ext_resource path="res://Elementos_Jogo/slider_normal1.png" type="Texture" id=5]
 [ext_resource path="res://Elementos_Jogo/checked.png" type="Texture" id=6]
 [ext_resource path="res://Elementos_Jogo/uncheck.png" type="Texture" id=7]
+[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Cenas/Opcoes/OptionButton.gd" type="Script" id=9]
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=13]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -37,33 +39,173 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width" ]
 
-[sub_resource type="DynamicFontData" id=2]
+[sub_resource type="DynamicFont" id=14]
 
-hinting = 2
-font_path = "res://Fonts/Roman SD.ttf"
-
-[sub_resource type="DynamicFont" id=3]
-
-size = 12
+size = 14
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 2 )
+font_data = ExtResource( 8 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFont" id=15]
+
+size = 14
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFontData" id=4]
+[sub_resource type="Theme" id=12]
 
-hinting = 2
-font_path = "res://Fonts/Roman SD.ttf"
+OptionButton/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+OptionButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+OptionButton/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+OptionButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+OptionButton/constants/arrow_margin = 2
+OptionButton/constants/hseparation = 2
+OptionButton/fonts/font = null
+OptionButton/icons/arrow = null
+OptionButton/styles/disabled = null
+OptionButton/styles/focus = null
+OptionButton/styles/hover = null
+OptionButton/styles/normal = null
+OptionButton/styles/pressed = null
+_sections_unfolded = [ "OptionButton" ]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="StyleBoxFlat" id=16]
 
-size = 16
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 0.0718039 )
+draw_center = true
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width" ]
+
+[sub_resource type="StyleBoxFlat" id=17]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+draw_center = true
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width" ]
+
+[sub_resource type="StyleBoxFlat" id=11]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 1, 1, 1, 0 )
+draw_center = true
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border Width" ]
+
+[sub_resource type="StyleBoxFlat" id=18]
+
+resource_name = "OptionButton"
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+draw_center = true
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Resource" ]
+
+[sub_resource type="DynamicFont" id=19]
+
+size = 14
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 4 )
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="InputEventKey" id=6]
+[sub_resource type="DynamicFont" id=20]
+
+size = 18
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 8 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="InputEventKey" id=21]
 
 device = 0
 alt = false
@@ -76,11 +218,11 @@ scancode = 16777217
 unicode = 0
 echo = false
 
-[sub_resource type="ShortCut" id=7]
+[sub_resource type="ShortCut" id=22]
 
-shortcut = SubResource( 6 )
+shortcut = SubResource( 21 )
 
-[node name="opcao" type="Control" index="0"]
+[node name="opcao" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -125,7 +267,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_icons/grabber_highlight = ExtResource( 4 )
 custom_icons/grabber = ExtResource( 5 )
-custom_styles/slider = SubResource( 1 )
+custom_styles/slider = SubResource( 13 )
 min_value = -20.0
 max_value = 24.0
 step = 1.0
@@ -158,7 +300,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_icons/grabber_highlight = ExtResource( 4 )
 custom_icons/grabber = ExtResource( 5 )
-custom_styles/slider = SubResource( 1 )
+custom_styles/slider = SubResource( 13 )
 min_value = -20.0
 max_value = 24.0
 step = 1.0
@@ -180,8 +322,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 667.0
 margin_top = 160.0
-margin_right = 787.0
-margin_bottom = 184.0
+margin_right = 766.0
+margin_bottom = 187.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -191,6 +333,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_icons/checked = ExtResource( 6 )
 custom_icons/unchecked = ExtResource( 7 )
+custom_fonts/font = SubResource( 14 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -198,7 +341,7 @@ group = null
 text = "Tela Cheia"
 flat = false
 align = 0
-_sections_unfolded = [ "Theme", "custom_icons" ]
+_sections_unfolded = [ "Theme", "custom_fonts", "custom_icons" ]
 
 [node name="janela" type="CheckBox" parent="." index="5"]
 
@@ -219,6 +362,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_icons/checked = ExtResource( 6 )
 custom_icons/unchecked = ExtResource( 7 )
+custom_fonts/font = SubResource( 15 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -226,7 +370,7 @@ group = null
 text = "Janela"
 flat = false
 align = 0
-_sections_unfolded = [ "Theme", "custom_icons", "custom_styles" ]
+_sections_unfolded = [ "Theme", "custom_fonts", "custom_icons", "custom_styles" ]
 
 [node name="Control tamanho da tela" type="Control" parent="." index="6"]
 
@@ -245,53 +389,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="LabelTamanho" type="Label" parent="Control tamanho da tela" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 5.0
-margin_top = 5.0
-margin_right = 144.0
-margin_bottom = 19.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
-text = "Dimensão de Tela"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="Labelnumero" type="Label" parent="Control tamanho da tela" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 203.0
-margin_top = 24.0
-margin_right = 283.0
-margin_bottom = 38.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
-text = "1280 x 720"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="Tamanho de Tela" type="HSlider" parent="Control tamanho da tela" index="2"]
+[node name="Tamanho de Tela" type="HSlider" parent="Control tamanho da tela" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -310,12 +408,12 @@ size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_icons/grabber_highlight = ExtResource( 4 )
 custom_icons/grabber = ExtResource( 5 )
-custom_styles/slider = SubResource( 1 )
-min_value = 1.0
-max_value = 4.0
+custom_styles/slider = SubResource( 13 )
+min_value = 0.0
+max_value = 3.0
 step = 1.0
 page = 0.0
-value = 3.0
+value = 2.0
 exp_edit = false
 rounded = true
 editable = true
@@ -323,6 +421,88 @@ tick_count = 4
 ticks_on_borders = true
 focus_mode = 2
 _sections_unfolded = [ "Theme", "custom_icons", "custom_styles" ]
+
+[node name="OptionButton" type="OptionButton" parent="Control tamanho da tela" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 4.0
+margin_top = 20.0
+margin_right = 286.0
+margin_bottom = 47.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 12 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/normal = SubResource( 18 )
+custom_constants/arrow_margin = 0
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+script = ExtResource( 9 )
+_sections_unfolded = [ "Anchor", "Focus", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Theme", "custom_constants", "custom_icons", "custom_styles" ]
+
+[node name="LabelTamanho" type="Label" parent="Control tamanho da tela" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 5.0
+margin_top = 3.0
+margin_right = 144.0
+margin_bottom = 22.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 19 )
+text = "Dimensão de Tela"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts", "custom_styles" ]
+
+[node name="Labelnumero" type="Label" parent="Control tamanho da tela" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 203.0
+margin_top = 20.0
+margin_right = 283.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 19 )
+text = "1280 x 720"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
 [node name="Voltar" type="Button" parent="." index="7"]
 
@@ -342,10 +522,10 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 20 )
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 7 )
+shortcut = SubResource( 22 )
 group = null
 text = "Voltar"
 flat = false
@@ -361,6 +541,8 @@ _sections_unfolded = [ "Hint", "Rect", "custom_fonts" ]
 [connection signal="pressed" from="janela" to="." method="_on_janela_pressed"]
 
 [connection signal="value_changed" from="Control tamanho da tela/Tamanho de Tela" to="." method="_on_Tamanho_de_Tela_value_changed"]
+
+[connection signal="item_selected" from="Control tamanho da tela/OptionButton" to="." method="_on_OptionButton_item_selected"]
 
 [connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
 

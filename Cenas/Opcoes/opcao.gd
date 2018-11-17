@@ -8,6 +8,7 @@ func _ready():
 	get_node("Efeitos").set_value(global.volumefx)
 	get_node("Musica").set_value(global.volumemusica)
 	get_node("Control tamanho da tela/Tamanho de Tela").set_value(global.tamanhotela)
+	attLabel()
 	if OS.window_fullscreen==true:
 		get_node("Full_Screen").set_pressed(true)
 		get_node("janela").set_pressed(false);
@@ -18,7 +19,7 @@ func _ready():
 		get_node("janela").set_pressed(true)
 		
 		get_node("Control tamanho da tela").show()
-		get_node("Control tamanho da tela/Labelnumero").set_text("1280 X 720");
+		#get_node("Control tamanho da tela/Labelnumero").set_text("1280 X 720");
 	pass
 
 #func _process(delta):
@@ -43,19 +44,19 @@ func _on_Musica_value_changed(value):
 
 func _on_Tamanho_de_Tela_value_changed(value):
 	global.tamanhotela=value
-	if value==1:
+	if value==0:
 		OS.set_window_size(Vector2(853.33,480))
 		get_node("Control tamanho da tela/Labelnumero").set_text("853 X 480")
 		pass
-	if value==2:
+	if value==1:
 		OS.set_window_size(Vector2(1000,562.50))
 		get_node("Control tamanho da tela/Labelnumero").set_text("1000 X 562")
 		pass
-	if value==3:
+	if value==2:
 		OS.set_window_size(Vector2(1280,720))
 		get_node("Control tamanho da tela/Labelnumero").set_text("1280 X 720")
 		pass
-	if value==4:
+	if value==3:
 		OS.set_window_size(Vector2(1920,1080))
 		get_node("Control tamanho da tela/Labelnumero").set_text("1920 X 1080")
 		pass
@@ -83,3 +84,42 @@ func _on_Full_Screen_pressed():
 func _on_Voltar_pressed():
 	get_tree().change_scene("res://Cenas/Menu/Menu.tscn")
 	pass # replace with function body
+
+
+func _on_OptionButton_item_selected(ID):
+	global.tamanhotela=ID
+	if ID==0:
+		OS.set_window_size(Vector2(853.33,480))
+		get_node("Control tamanho da tela/Labelnumero").set_text("853 X 480")
+		pass
+	if ID==1:
+		OS.set_window_size(Vector2(1000,562.50))
+		get_node("Control tamanho da tela/Labelnumero").set_text("1000 X 562")
+		pass
+	if ID==2:
+		OS.set_window_size(Vector2(1280,720))
+		get_node("Control tamanho da tela/Labelnumero").set_text("1280 X 720")
+		pass
+	if ID==3:
+		OS.set_window_size(Vector2(1920,1080))
+		get_node("Control tamanho da tela/Labelnumero").set_text("1920 X 1080")
+		pass
+	pass # replace with function body
+
+func attLabel():
+	if global.tamanhotela==0:
+		
+		get_node("Control tamanho da tela/Labelnumero").set_text("853 X 480")
+		pass
+	if global.tamanhotela==1:
+		
+		get_node("Control tamanho da tela/Labelnumero").set_text("1000 X 562")
+		pass
+	if global.tamanhotela==2:
+		
+		get_node("Control tamanho da tela/Labelnumero").set_text("1280 X 720")
+		pass
+	if global.tamanhotela==3:
+		
+		get_node("Control tamanho da tela/Labelnumero").set_text("1920 X 1080")
+		pass

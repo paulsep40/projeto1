@@ -219,6 +219,7 @@
 [ext_resource path="res://Cenas/Ajuda/desbloquear e pausar/tile081.png" type="Texture" id=217]
 [ext_resource path="res://Cenas/Ajuda/desbloquear e pausar/tile082.png" type="Texture" id=218]
 [ext_resource path="res://Cenas/Ajuda/desbloquear e pausar/tile083.png" type="Texture" id=219]
+[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=220]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -273,20 +274,15 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="DynamicFontData" id=8]
+[sub_resource type="DynamicFont" id=8]
 
-hinting = 2
-font_path = "res://Fonts/Roman SD.ttf"
-
-[sub_resource type="DynamicFont" id=9]
-
-size = 16
+size = 18
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 8 )
+font_data = ExtResource( 220 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="InputEventKey" id=10]
+[sub_resource type="InputEventKey" id=9]
 
 device = 0
 alt = false
@@ -299,11 +295,11 @@ scancode = 16777217
 unicode = 0
 echo = false
 
-[sub_resource type="ShortCut" id=11]
+[sub_resource type="ShortCut" id=10]
 
-shortcut = SubResource( 10 )
+shortcut = SubResource( 9 )
 
-[node name="Ajuda" type="Control" index="0"]
+[node name="Ajuda" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -419,7 +415,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 position = Vector2( 120.638, 86.0572 )
 frames = SubResource( 3 )
 animation = "Mover e Escolher"
-frame = 2
+frame = 15
 playing = true
 
 [node name="Mover e Escolher label" type="Label" parent="ScrollContainer/VBoxContainer/Mover e escolher" index="2"]
@@ -497,7 +493,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 position = Vector2( 120.638, 86.0572 )
 frames = SubResource( 6 )
 animation = "Acessar Jornada"
-frame = 1
+frame = 42
 playing = true
 
 [node name="acessar jornada label" type="Label" parent="ScrollContainer/VBoxContainer/Acessar a Jornada" index="2"]
@@ -574,7 +570,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 position = Vector2( 120.638, 114.937 )
 frames = SubResource( 7 )
 animation = "Desbloquear"
-frame = 57
+frame = 14
 playing = true
 
 [node name="debloquear e pause label" type="Label" parent="ScrollContainer/VBoxContainer/Desbloquear e pause" index="2"]
@@ -620,18 +616,18 @@ rect_clip_content = false
 hint_tooltip = "Voltar para o Menu Principal"
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 8 )
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 11 )
+shortcut = SubResource( 10 )
 group = null
 text = "Voltar"
 flat = false
 align = 1
-_sections_unfolded = [ "Hint", "Rect", "custom_fonts" ]
+_sections_unfolded = [ "Hint", "Mouse", "Rect", "custom_fonts" ]
 
 [connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]
 

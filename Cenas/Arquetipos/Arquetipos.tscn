@@ -35,6 +35,7 @@
 [ext_resource path="res://Elementos_Jogo/Botoes Arquetipos/Ativo/ativo-28.png" type="Texture" id=33]
 [ext_resource path="res://Elementos_Jogo/Botoes Arquetipos/Hover/hover-28.png" type="Texture" id=34]
 [ext_resource path="res://Elementos_Jogo/Botoes Arquetipos/desativado/desativado-28.png" type="Texture" id=35]
+[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=36]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -49,20 +50,15 @@ use_filter = true
 font_data = SubResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFontData" id=3]
+[sub_resource type="DynamicFont" id=3]
 
-hinting = 2
-font_path = "res://Fonts/Roman SD.ttf"
-
-[sub_resource type="DynamicFont" id=4]
-
-size = 16
+size = 18
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 3 )
+font_data = ExtResource( 36 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="InputEventKey" id=5]
+[sub_resource type="InputEventKey" id=4]
 
 device = 0
 alt = false
@@ -75,11 +71,11 @@ scancode = 16777217
 unicode = 0
 echo = false
 
-[sub_resource type="ShortCut" id=6]
+[sub_resource type="ShortCut" id=5]
 
-shortcut = SubResource( 5 )
+shortcut = SubResource( 4 )
 
-[node name="Arquetipos" type="Control" index="0"]
+[node name="Arquetipos" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -406,10 +402,10 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 6 )
+shortcut = SubResource( 5 )
 group = null
 text = "Voltar"
 flat = false

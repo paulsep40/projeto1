@@ -1,7 +1,7 @@
 [gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Cenas/Historia/Jogo 1/Jornada InGame.gd" type="Script" id=1]
-[ext_resource path="res://Elementos_Jogo/jornada ingame bg transparente-01.png" type="Texture" id=2]
+[ext_resource path="res://Elementos_Jogo/JornadaIngame_Prancheta 1.png" type="Texture" id=2]
 [ext_resource path="res://Elementos_Jogo/Imagens_Jornada/imagem (1).png" type="Texture" id=3]
 [ext_resource path="res://Elementos_Jogo/Imagens_Jornada/outraborda_Prancheta 1.png" type="Texture" id=4]
 [ext_resource path="res://Elementos_Jogo/Botões jornada/normal/botao desativado-02.png" type="Texture" id=5]
@@ -52,34 +52,30 @@
 [ext_resource path="res://Elementos_Jogo/Botões jornada/ativado/botao ativado-13.png" type="Texture" id=50]
 [ext_resource path="res://Elementos_Jogo/Botões jornada/hover/hover-13.png" type="Texture" id=51]
 [ext_resource path="res://Elementos_Jogo/Botões jornada/Desativado/Final-13.png" type="Texture" id=52]
+[ext_resource path="res://Fonts/RobotoSlab-Bold.ttf" type="DynamicFontData" id=53]
 
-[sub_resource type="DynamicFontData" id=1]
+[sub_resource type="DynamicFont" id=1]
 
-hinting = 2
-font_path = "res://Fonts/Roman SD.ttf"
-
-[sub_resource type="DynamicFont" id=2]
-
-size = 21
+size = 19
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 1 )
+font_data = ExtResource( 53 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="DynamicFontData" id=3]
+[sub_resource type="DynamicFontData" id=2]
 
 hinting = 2
 font_path = "res://Fonts/RobotoSlab-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 
 size = 18
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 3 )
+font_data = SubResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Jornada InGame" type="Control" index="0"]
+[node name="Jornada InGame" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -113,13 +109,14 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="ImagemDentro" type="Sprite" parent="." index="2"]
 
-position = Vector2( 651.038, 219.544 )
+position = Vector2( 610.903, 219.544 )
 texture = ExtResource( 3 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Borda Imagem" type="Sprite" parent="." index="3"]
 
+position = Vector2( -40.1346, 0 )
 texture = ExtResource( 4 )
 centered = false
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -513,9 +510,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 110.0
-margin_top = 133.0
+margin_top = 508.0
 margin_right = 519.0
-margin_bottom = 181.0
+margin_bottom = 556.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -530,9 +527,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 14.0
-margin_right = 394.0
-margin_bottom = 36.0
+margin_left = 13.0
+margin_top = -300.0
+margin_right = 393.0
+margin_bottom = -264.0
 rect_min_size = Vector2( 380, 0 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -540,7 +538,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Aproximação da Caverna Oculta"
 align = 1
 valign = 1
@@ -556,18 +554,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 125.0
-margin_top = 207.0
-margin_right = 505.0
-margin_bottom = 221.0
-rect_min_size = Vector2( 380, 0 )
+margin_left = 183.0
+margin_top = 259.0
+margin_right = 447.0
+margin_bottom = 508.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 align = 3
 autowrap = true
 percent_visible = 1.0

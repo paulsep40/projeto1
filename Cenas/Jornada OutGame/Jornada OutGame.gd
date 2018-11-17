@@ -70,10 +70,10 @@ func _ready():
 	get_node("TimerText").start();
 	Imagem.set_texture(imagemJ[global.capituloAtual])
 	capAnt=global.capituloAtual
-	if global.capituloAtual==7 || global.capituloAtual==5:
-		controlTitulo.set_position(Vector2(130,208));
-	else:
-		controlTitulo.set_position(Vector2(130,228));
+#	if global.capituloAtual==7 || global.capituloAtual==5:
+#		controlTitulo.set_position(Vector2(130,208));
+#	else:
+#		controlTitulo.set_position(Vector2(130,228));
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	pass
@@ -93,7 +93,7 @@ func _on_I_pressed():
 	Imagem.set_texture(imagemJ[1])
 	capAtual=1
 	#get_node("titulopos").set_position(Vector2(100,100))
-	controlTitulo.set_position(Vector2(130,228))
+	#controlTitulo.set_position(Vector2(130,228))
 	tituloPasso.set_text(capituloT[1])
 	textoPasso.set_text(dialogue[1])
 	if capAtual!=capAnt:
@@ -120,7 +120,7 @@ func _on_I_pressed():
 func _on_I2_pressed():
 	Imagem.set_texture(imagemJ[2])
 	capAtual=2
-	controlTitulo.set_position(Vector2(130,228))
+	#controlTitulo.set_position(Vector2(130,228))
 	tituloPasso.set_text(capituloT[2])
 	textoPasso.set_text(dialogue[2])
 	if capAtual!=capAnt:
@@ -147,7 +147,7 @@ func _on_I2_pressed():
 func _on_I3_pressed():
 	Imagem.set_texture(imagemJ[3])
 	capAtual=3
-	controlTitulo.set_position(Vector2(130,228))
+	#controlTitulo.set_position(Vector2(130,228))
 	tituloPasso.set_text(capituloT[3])
 	textoPasso.set_text(dialogue[3])
 	if capAtual!=capAnt:
@@ -175,7 +175,7 @@ func _on_I3_pressed():
 func _on_I4_pressed():
 	Imagem.set_texture(imagemJ[4])
 	capAtual=4
-	controlTitulo.set_position(Vector2(130,228))
+	#controlTitulo.set_position(Vector2(130,228))
 	tituloPasso.set_text(capituloT[4])
 	textoPasso.set_text(dialogue[4])
 	if capAtual!=capAnt:
@@ -204,7 +204,7 @@ func _on_I5_pressed():
 	Imagem.set_texture(imagemJ[5])
 	capAtual=5
 	tituloPasso.set_text(capituloT[5])
-	controlTitulo.set_position(Vector2(130,208))
+	#controlTitulo.set_position(Vector2(130,208))
 	textoPasso.set_text(dialogue[5])
 	
 	if capAtual!=capAnt:
@@ -232,7 +232,7 @@ func _on_I6_pressed():
 	Imagem.set_texture(imagemJ[6])
 	capAtual=6
 	tituloPasso.set_text(capituloT[6])
-	controlTitulo.set_position(Vector2(130,228))
+	#controlTitulo.set_position(Vector2(130,228))
 	textoPasso.set_text(dialogue[6])
 	
 	if capAtual!=capAnt:
@@ -259,7 +259,7 @@ func _on_I6_pressed():
 func _on_I7_pressed():
 	Imagem.set_texture(imagemJ[7])
 	capAtual=7
-	controlTitulo.set_position(Vector2(130,208))
+	#controlTitulo.set_position(Vector2(130,208))
 	tituloPasso.set_text(capituloT[7])
 	
 	textoPasso.set_text(dialogue[7])
@@ -290,7 +290,7 @@ func _on_I8_pressed():
 	capAtual=8
 	tituloPasso.set_text(capituloT[8])
 	textoPasso.set_text(dialogue[8])
-	controlTitulo.set_position(Vector2(130,228))
+	#controlTitulo.set_position(Vector2(130,228))
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
 		textoPasso.set_visible_characters(0)
@@ -317,7 +317,7 @@ func _on_I9_pressed():
 	capAtual=9
 	tituloPasso.set_text(capituloT[9])
 	textoPasso.set_text(dialogue[9])
-	controlTitulo.set_position(Vector2(130,228))
+	#controlTitulo.set_position(Vector2(130,228))
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
 		textoPasso.set_visible_characters(0)
@@ -342,7 +342,7 @@ func _on_I9_pressed():
 func _on_I10_pressed():
 	Imagem.set_texture(imagemJ[10])
 	capAtual=10
-	controlTitulo.set_position(Vector2(130,228))
+	#controlTitulo.set_position(Vector2(130,228))
 	tituloPasso.set_text(capituloT[10])	
 	textoPasso.set_text(dialogue[10])
 	if capAtual!=capAnt:
@@ -369,7 +369,7 @@ func _on_I10_pressed():
 func _on_I11_pressed():
 	Imagem.set_texture(imagemJ[11])
 	capAtual=11
-	controlTitulo.set_position(Vector2(130,228))
+	#controlTitulo.set_position(Vector2(130,228))
 	tituloPasso.set_text(capituloT[11])	
 	textoPasso.set_text(dialogue[11])
 	
@@ -401,7 +401,7 @@ func _on_I12_pressed():
 	
 	tituloPasso.set_text(capituloT[12])	
 	textoPasso.set_text(dialogue[12])
-	controlTitulo.set_position(Vector2(130,228))
+	#controlTitulo.set_position(Vector2(130,228))
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
 		textoPasso.set_visible_characters(0)

@@ -71,10 +71,10 @@ func preparar():
 	get_node("TimerText").start();
 	get_node("SkipText").set_disabled(false)
 	Imagem.set_texture(imagemJ[global.capituloAtual])
-	if global.capituloAtual==7 || global.capituloAtual==5:
-		titulopos.set_position(Vector2(110,133))
-	else:
-		titulopos.set_position(Vector2(110,151))
+#	if global.capituloAtual==7 || global.capituloAtual==5:
+#		titulopos.set_position(Vector2(110,133))
+#	else:
+#		titulopos.set_position(Vector2(110,151))
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	pass
@@ -109,7 +109,7 @@ func moverJornada(y1,y2):
 func _on_I_pressed():
 	capAtual=1
 	Imagem.set_texture(imagemJ[1])
-	titulopos.set_position(Vector2(110,151))
+	#titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[1])
 	textoPasso.set_text(dialogue[1])
 	if capAtual!=capAnt:
@@ -136,7 +136,7 @@ func _on_I_pressed():
 func _on_I2_pressed():
 	Imagem.set_texture(imagemJ[2])
 	capAtual=2
-	titulopos.set_position(Vector2(110,151))
+	#titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[2])
 	textoPasso.set_text(dialogue[2])
 	if capAtual!=capAnt:
@@ -163,7 +163,7 @@ func _on_I2_pressed():
 func _on_I3_pressed():
 	Imagem.set_texture(imagemJ[3])
 	capAtual=3
-	titulopos.set_position(Vector2(110,151))
+	#titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[3])
 	textoPasso.set_text(dialogue[3])
 	if capAtual!=capAnt:
@@ -191,7 +191,7 @@ func _on_I3_pressed():
 func _on_I4_pressed():
 	Imagem.set_texture(imagemJ[4])
 	capAtual=4
-	titulopos.set_position(Vector2(110,151))
+	#titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[4])
 	textoPasso.set_text(dialogue[4])
 	if capAtual!=capAnt:
@@ -220,7 +220,7 @@ func _on_I5_pressed():
 	Imagem.set_texture(imagemJ[5])
 	capAtual=5
 	tituloPasso.set_text(capituloT[5])
-	titulopos.set_position(Vector2(110,133))
+	#titulopos.set_position(Vector2(110,133))
 	textoPasso.set_text(dialogue[5])
 	if capAtual!=capAnt:
 		tituloPasso.set_visible_characters(0)
@@ -247,7 +247,7 @@ func _on_I6_pressed():
 	Imagem.set_texture(imagemJ[6])
 	capAtual=6
 	tituloPasso.set_text(capituloT[6])
-	titulopos.set_position(Vector2(110,151))
+	#titulopos.set_position(Vector2(110,151))
 	textoPasso.set_text(dialogue[6])
 	
 	if capAtual!=capAnt:
@@ -275,7 +275,7 @@ func _on_I7_pressed():
 	Imagem.set_texture(imagemJ[7])
 	capAtual=7
 	tituloPasso.set_text(capituloT[7])
-	titulopos.set_position(Vector2(110,133))
+	#titulopos.set_position(Vector2(110,133))
 	textoPasso.set_text(dialogue[7])
 	
 	if capAtual!=capAnt:
@@ -302,7 +302,7 @@ func _on_I7_pressed():
 func _on_I8_pressed():
 	Imagem.set_texture(imagemJ[8])
 	capAtual=8
-	titulopos.set_position(Vector2(110,151))
+	#titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[8])
 	textoPasso.set_text(dialogue[8])
 
@@ -330,7 +330,7 @@ func _on_I8_pressed():
 func _on_I9_pressed():
 	Imagem.set_texture(imagemJ[9])
 	capAtual=9
-	titulopos.set_position(Vector2(110,151))
+	#titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[9])
 	textoPasso.set_text(dialogue[9])
 	
@@ -358,7 +358,7 @@ func _on_I9_pressed():
 func _on_I10_pressed():
 	Imagem.set_texture(imagemJ[10])
 	capAtual=10
-	titulopos.set_position(Vector2(110,151))
+	#titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[10])	
 	textoPasso.set_text(dialogue[10])
 	if capAtual!=capAnt:
@@ -385,7 +385,7 @@ func _on_I10_pressed():
 func _on_I11_pressed():
 	Imagem.set_texture(imagemJ[11])
 	capAtual=11
-	titulopos.set_position(Vector2(110,151))
+	#titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[11])	
 	textoPasso.set_text(dialogue[11])
 	
@@ -414,7 +414,7 @@ func _on_I11_pressed():
 func _on_I12_pressed():
 	Imagem.set_texture(imagemJ[12])
 	capAtual=12
-	titulopos.set_position(Vector2(110,151))
+	#titulopos.set_position(Vector2(110,151))
 	tituloPasso.set_text(capituloT[12])	
 	textoPasso.set_text(dialogue[12])
 	

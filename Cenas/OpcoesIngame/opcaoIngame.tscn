@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Cenas/OpcoesIngame/opcaoIngame.gd" type="Script" id=1]
 [ext_resource path="res://Elementos_Jogo/opcao-01.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Elementos_Jogo/slider_normal1.png" type="Texture" id=4]
 [ext_resource path="res://Elementos_Jogo/checked.png" type="Texture" id=5]
 [ext_resource path="res://Elementos_Jogo/uncheck.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -65,17 +66,28 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width" ]
 
-[sub_resource type="DynamicFontData" id=1204]
+[sub_resource type="DynamicFont" id=3]
 
-hinting = 2
-font_path = "res://Fonts/Roman SD.ttf"
+size = 14
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=1205]
+[sub_resource type="DynamicFont" id=4]
 
-size = 12
+size = 14
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 14
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 1204 )
+font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="opcao" type="Control"]
@@ -185,6 +197,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_icons/checked = ExtResource( 5 )
 custom_icons/unchecked = ExtResource( 6 )
+custom_fonts/font = SubResource( 3 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -192,7 +205,7 @@ group = null
 text = "Tela Cheia"
 flat = false
 align = 0
-_sections_unfolded = [ "Theme" ]
+_sections_unfolded = [ "Theme", "custom_fonts" ]
 
 [node name="janela" type="CheckBox" parent="." index="4"]
 
@@ -213,6 +226,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_icons/checked = ExtResource( 5 )
 custom_icons/unchecked = ExtResource( 6 )
+custom_fonts/font = SubResource( 4 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -220,7 +234,7 @@ group = null
 text = "Janela"
 flat = false
 align = 0
-_sections_unfolded = [ "Theme" ]
+_sections_unfolded = [ "Theme", "custom_fonts" ]
 
 [node name="Control tamanho da tela" type="Control" parent="." index="5"]
 
@@ -246,16 +260,16 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 5.0
-margin_top = 5.0
+margin_top = 3.0
 margin_right = 144.0
-margin_bottom = 19.0
+margin_bottom = 22.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1205 )
+custom_fonts/font = SubResource( 5 )
 text = "Dimensão de Tela"
 percent_visible = 1.0
 lines_skipped = 0
@@ -269,16 +283,16 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 203.0
-margin_top = 24.0
+margin_top = 22.0
 margin_right = 283.0
-margin_bottom = 38.0
+margin_bottom = 41.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1205 )
+custom_fonts/font = SubResource( 5 )
 text = "1280 x 720"
 percent_visible = 1.0
 lines_skipped = 0
@@ -306,11 +320,11 @@ custom_icons/grabber_highlight = ExtResource( 3 )
 custom_icons/grabber = ExtResource( 4 )
 custom_styles/slider = SubResource( 1 )
 custom_styles/grabber_highlight = SubResource( 2 )
-min_value = 1.0
-max_value = 4.0
+min_value = 0.0
+max_value = 3.0
 step = 1.0
 page = 0.0
-value = 3.0
+value = 2.0
 exp_edit = false
 rounded = true
 editable = true

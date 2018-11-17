@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Cenas/creditos/Creditos.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/bg.png" type="Texture" id=2]
 [ext_resource path="res://Elementos_Jogo/creditos-01.png" type="Texture" id=3]
 [ext_resource path="res://Cenas/creditos/armadillologo.png" type="Texture" id=4]
 [ext_resource path="res://Fonts/Roman SD.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -51,10 +52,10 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=7]
 
-size = 16
+size = 18
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 5 )
+font_data = ExtResource( 6 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="InputEventKey" id=8]
@@ -74,7 +75,7 @@ echo = false
 
 shortcut = SubResource( 8 )
 
-[node name="Creditos" type="Control" index="0"]
+[node name="Creditos" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
