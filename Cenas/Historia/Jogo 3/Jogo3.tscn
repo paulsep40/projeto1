@@ -1,21 +1,21 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Cenas/Historia/Jogo 3/Jogo3.gd" type="Script" id=1]
 [ext_resource path="res://Cenas/Historia/Jogo 1/Chabge_bg.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/cena1/BGE.jpg" type="Texture" id=3]
-[ext_resource path="res://Sprites/bg.png" type="Texture" id=4]
-[ext_resource path="res://Elementos_Jogo/Base.png" type="Texture" id=5]
-[ext_resource path="res://Cenas/Historia/Jogo 1/Card_Control.gd" type="Script" id=6]
-[ext_resource path="res://Elementos_Jogo/Cartas/1.png" type="Texture" id=7]
-[ext_resource path="res://Cenas/Historia/Jogo 1/Text_Control.gd" type="Script" id=8]
-[ext_resource path="res://Cenas/Historia/Jogo 1/RichTextLabel.gd" type="Script" id=9]
-[ext_resource path="res://Elementos_Jogo/botao jornada v3.png" type="Texture" id=10]
-[ext_resource path="res://Elementos_Jogo/botao jornada v3 hover.png" type="Texture" id=11]
+[ext_resource path="res://Elementos_Jogo/Backgrounds/CasaAriel-01.png" type="Texture" id=3]
+[ext_resource path="res://Elementos_Jogo/Base.png" type="Texture" id=4]
+[ext_resource path="res://Cenas/Historia/Jogo 1/Card_Control.gd" type="Script" id=5]
+[ext_resource path="res://Elementos_Jogo/Cartas/Still Henry-01.png" type="Texture" id=6]
+[ext_resource path="res://Cenas/Historia/Jogo 1/Text_Control.gd" type="Script" id=7]
+[ext_resource path="res://Cenas/Historia/Jogo 1/RichTextLabel.gd" type="Script" id=8]
+[ext_resource path="res://Elementos_Jogo/botao jornada v3.png" type="Texture" id=9]
+[ext_resource path="res://Elementos_Jogo/botao jornada v3 hover.png" type="Texture" id=10]
+[ext_resource path="res://Fonts/RobotoSlab-Bold.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://Elementos_Jogo/botão pause.png" type="Texture" id=12]
 [ext_resource path="res://Elementos_Jogo/botão pause hover.png" type="Texture" id=13]
 [ext_resource path="res://Cenas/Historia/Jogo 1/Pause.gd" type="Script" id=14]
 [ext_resource path="res://Elementos_Jogo/Pause_Fundo-01.png" type="Texture" id=15]
-[ext_resource path="res://Fonts/Roman SD.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://Elementos_Jogo/icon_setting.png" type="Texture" id=17]
 [ext_resource path="res://Elementos_Jogo/icon_help.png" type="Texture" id=18]
 [ext_resource path="res://Cenas/OpcoesIngame/opcaoIngame.tscn" type="PackedScene" id=19]
@@ -65,20 +65,15 @@ use_filter = true
 font_data = SubResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFontData" id=7]
-
-hinting = 2
-font_path = "res://Fonts/Roman SD.ttf"
-
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=7]
 
 size = 14
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 7 )
+font_data = ExtResource( 11 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="InputEventKey" id=9]
+[sub_resource type="InputEventKey" id=8]
 
 device = 0
 alt = false
@@ -91,32 +86,27 @@ scancode = 16777217
 unicode = 0
 echo = false
 
-[sub_resource type="ShortCut" id=10]
+[sub_resource type="ShortCut" id=9]
 
-shortcut = SubResource( 9 )
+shortcut = SubResource( 8 )
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=10]
 
-size = 16
+size = 21
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 16 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="DynamicFontData" id=12]
+[sub_resource type="DynamicFont" id=11]
 
-hinting = 2
-font_path = "res://Fonts/Roman SD.ttf"
-
-[sub_resource type="DynamicFont" id=13]
-
-size = 16
+size = 18
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 12 )
+font_data = ExtResource( 16 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="InputEventKey" id=14]
+[sub_resource type="InputEventKey" id=12]
 
 device = 0
 alt = false
@@ -129,21 +119,41 @@ scancode = 16777217
 unicode = 0
 echo = false
 
-[sub_resource type="ShortCut" id=15]
+[sub_resource type="ShortCut" id=13]
 
-shortcut = SubResource( 14 )
+shortcut = SubResource( 12 )
 
-[sub_resource type="DynamicFontData" id=16]
+[sub_resource type="DynamicFont" id=14]
 
-hinting = 2
-font_path = "res://Fonts/Roman SD.ttf"
+size = 18
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 16 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="InputEventKey" id=15]
+
+device = 0
+alt = false
+shift = false
+control = false
+meta = false
+command = false
+pressed = false
+scancode = 16777217
+unicode = 0
+echo = false
+
+[sub_resource type="ShortCut" id=16]
+
+shortcut = SubResource( 15 )
 
 [sub_resource type="DynamicFont" id=17]
 
-size = 16
+size = 18
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 16 )
+font_data = ExtResource( 16 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="InputEventKey" id=18]
@@ -166,44 +176,14 @@ shortcut = SubResource( 18 )
 [sub_resource type="DynamicFontData" id=20]
 
 hinting = 2
-font_path = "res://Fonts/Roman SD.ttf"
-
-[sub_resource type="DynamicFont" id=21]
-
-size = 16
-use_mipmaps = true
-use_filter = true
-font_data = SubResource( 20 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="InputEventKey" id=22]
-
-device = 0
-alt = false
-shift = false
-control = false
-meta = false
-command = false
-pressed = false
-scancode = 16777217
-unicode = 0
-echo = false
-
-[sub_resource type="ShortCut" id=23]
-
-shortcut = SubResource( 22 )
-
-[sub_resource type="DynamicFontData" id=24]
-
-hinting = 2
 font_path = "res://Fonts/RobotoSlab-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=25]
+[sub_resource type="DynamicFont" id=21]
 
 size = 12
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 24 )
+font_data = SubResource( 20 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Jogo" type="Control"]
@@ -219,6 +199,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
 __meta__ = {
 "_edit_horizontal_guides_": [ -95.0002 ]
 }
@@ -246,14 +227,14 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 [node name="bgE" type="Sprite" parent="Change_bg" index="1"]
 
 position = Vector2( -1280, 0 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="bgD" type="Sprite" parent="Change_bg" index="2"]
 
 position = Vector2( 1280, 0 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
 
@@ -269,7 +250,7 @@ playback/speed = 1.0
 [node name="fundo_preto" type="Sprite" parent="." index="1"]
 
 position = Vector2( 640, 360 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Card_Control" type="Control" parent="." index="2"]
@@ -288,14 +269,14 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 6 )
+script = ExtResource( 5 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="card" type="Sprite" parent="Card_Control" index="0"]
 
 position = Vector2( 20, -180.694 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Tween" type="Tween" parent="Card_Control" index="1"]
 
@@ -338,7 +319,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="Card_Label" type="Label" parent="Card_Control/Text_Control" index="0"]
@@ -462,9 +443,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 473.0
-margin_top = 147.0
+margin_top = 110.0
 margin_right = 806.0
-margin_bottom = 201.0
+margin_bottom = 275.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -479,8 +460,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_top = 61.0
 margin_right = 333.0
-margin_bottom = 54.0
+margin_bottom = 222.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -490,17 +472,17 @@ size_flags_vertical = 1
 custom_fonts/bold_font = SubResource( 4 )
 custom_fonts/normal_font = SubResource( 6 )
 bbcode_enabled = true
-bbcode_text = "[b]“Esqueceu que dia é hoje? É o dia da entrega da espada que ele encomendou\" [/b]"
+bbcode_text = "[b]\"Esqueceu que dia é hoje? É o dia da entrega da espada que ele encomendou\"[/b], diz Henry."
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 1
-text = "“Esqueceu que dia é hoje? É o dia da entrega da espada que ele encomendou\" "
+text = "\"Esqueceu que dia é hoje? É o dia da entrega da espada que ele encomendou\", diz Henry."
 scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-script = ExtResource( 9 )
+script = ExtResource( 8 )
 _sections_unfolded = [ "BBCode", "custom_fonts" ]
 
 [node name="Timer" type="Timer" parent="Narrativa_Control" index="1"]
@@ -531,8 +513,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 10 )
-texture_hover = ExtResource( 11 )
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 10 )
 _sections_unfolded = [ "Hint", "Mouse", "Textures" ]
 
 [node name="Chapter_Text" type="Label" parent="." index="8"]
@@ -551,7 +533,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 7 )
 text = "I. Mundo Comum"
 align = 1
 valign = 1
@@ -585,7 +567,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 10 )
+shortcut = SubResource( 9 )
 group = null
 texture_normal = ExtResource( 12 )
 texture_hover = ExtResource( 13 )
@@ -632,7 +614,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 10 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -660,7 +642,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 10 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -751,13 +733,13 @@ rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 11 )
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 15 )
+shortcut = SubResource( 13 )
 group = null
 text = "Voltar"
 flat = false
@@ -789,13 +771,13 @@ rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 17 )
+custom_fonts/font = SubResource( 14 )
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 19 )
+shortcut = SubResource( 16 )
 group = null
 text = "Voltar"
 flat = false
@@ -825,18 +807,18 @@ rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 21 )
+custom_fonts/font = SubResource( 17 )
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 23 )
+shortcut = SubResource( 19 )
 group = null
 text = "Voltar"
 flat = false
 align = 1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Mouse", "custom_fonts" ]
 
 [node name="VoltarOpção2" type="Button" parent="Jornada InGame" index="22"]
 
@@ -852,7 +834,7 @@ rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
-mouse_default_cursor_shape = 0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
 toggle_mode = false
@@ -861,6 +843,7 @@ shortcut = null
 group = null
 flat = true
 align = 1
+_sections_unfolded = [ "Mouse" ]
 
 [node name="Timer Atalho" type="Timer" parent="Jornada InGame" index="23"]
 
@@ -910,7 +893,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 25 )
+custom_fonts/font = SubResource( 21 )
 text = "Arquétipo encontrado: Herói"
 align = 1
 autowrap = true

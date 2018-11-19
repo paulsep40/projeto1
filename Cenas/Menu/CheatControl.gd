@@ -18,7 +18,7 @@ func DescerCheat():
 
 
 func _on_okButton_pressed():
-	if get_node("CheatBar").text=="NeyMestreDoUniverso42":
+	if get_node("CheatBar").text=="NeyMestreDoUniverso":
 		global.capituloAtual=12
 		
 		global.heroi=true

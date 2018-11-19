@@ -116,7 +116,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Borda Imagem" type="Sprite" parent="." index="3"]
 
-position = Vector2( -40.1346, 0 )
+position = Vector2( -40.1345, -0.00012207 )
 texture = ExtResource( 4 )
 centered = false
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -139,8 +139,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
+disabled = true
 toggle_mode = true
-pressed = true
 action_mode = 0
 enabled_focus_mode = 2
 shortcut = null

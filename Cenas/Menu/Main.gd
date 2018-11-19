@@ -23,7 +23,7 @@ func _on_Nova_Jornada_pressed():
 		get_node("PopupNovoJogo").show();
 	else:
 		reiniciar()
-		get_tree().change_scene("res://Cenas/Historia/Jogo 1/Jogo.tscn")
+		get_tree().change_scene("res://Cenas/Historia/Tutorial/tutorial.tscn")
 		Musica.set_stream(preload("res://sounds/musicaMenu.ogg"))
 		Musica.play()
 		
@@ -31,7 +31,7 @@ func _on_Nova_Jornada_pressed():
 	
 func _on_Sim_pressed():
 	reiniciar()
-	get_tree().change_scene("res://Cenas/Historia/Jogo 1/Jogo.tscn")
+	get_tree().change_scene("res://Cenas/Historia/Tutorial/tutorial.tscn")
 	Musica.set_stream(preload("res://sounds/musicaMenu.ogg"))
 	Musica.play()
 	pass # replace with function body

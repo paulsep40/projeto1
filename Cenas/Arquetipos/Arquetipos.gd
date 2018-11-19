@@ -41,7 +41,7 @@ func _ready():
 	get_node("Heroi").set_pressed(true);
 	timerText.start();
 	capAnt=0
-	
+	get_node("Texto_Arquetipo").set_scale(Vector2(1,1))
 	pass
 
 
@@ -71,7 +71,7 @@ func _on_Heroi_pressed():
 	Imagem_Arquetipo.set_texture(imagemA[0])
 	capAtual=0
 	Texto_Arquetipo.set_text(descricaoA[0])
-	
+	get_node("Texto_Arquetipo").set_scale(Vector2(1,1))
 	if capAtual!=capAnt:
 		Texto_Arquetipo.set_visible_characters(0)
 		capAnt=capAtual;
@@ -92,7 +92,7 @@ func _on_Mentor_pressed():
 	Imagem_Arquetipo.set_texture(imagemA[1])
 	capAtual=1
 	Texto_Arquetipo.set_text(descricaoA[1])
-	
+	get_node("Texto_Arquetipo").set_scale(Vector2(1,1))
 	if capAtual!=capAnt:
 		Texto_Arquetipo.set_visible_characters(0)
 		capAnt=capAtual;
@@ -112,7 +112,7 @@ func _on_Arauto_pressed():
 	Imagem_Arquetipo.set_texture(imagemA[2])
 	capAtual=2
 	Texto_Arquetipo.set_text(descricaoA[2])
-	
+	get_node("Texto_Arquetipo").set_scale(Vector2(1,1))
 	if capAtual!=capAnt:
 	
 		Texto_Arquetipo.set_visible_characters(0)
@@ -133,7 +133,7 @@ func _on_Guardiao_pressed():
 	Imagem_Arquetipo.set_texture(imagemA[3])
 	capAtual=3
 	Texto_Arquetipo.set_text(descricaoA[3])
-	
+	get_node("Texto_Arquetipo").set_scale(Vector2(0.9,0.9))
 	if capAtual!=capAnt:
 	
 		Texto_Arquetipo.set_visible_characters(0)
@@ -154,7 +154,7 @@ func _on_Camaleao_pressed():
 	Imagem_Arquetipo.set_texture(imagemA[4])
 	capAtual=4
 	Texto_Arquetipo.set_text(descricaoA[4])
-	
+	get_node("Texto_Arquetipo").set_scale(Vector2(1,1))
 	if capAtual!=capAnt:
 		
 		Texto_Arquetipo.set_visible_characters(0)
@@ -174,7 +174,7 @@ func _on_Aliados_pressed():
 	Imagem_Arquetipo.set_texture(imagemA[5])
 	capAtual=5
 	Texto_Arquetipo.set_text(descricaoA[5])
-	
+	get_node("Texto_Arquetipo").set_scale(Vector2(1,1))
 	if capAtual!=capAnt:
 		
 		Texto_Arquetipo.set_visible_characters(0)
@@ -194,7 +194,7 @@ func _on_Sombra_pressed():
 	Imagem_Arquetipo.set_texture(imagemA[6])
 	capAtual=6
 	Texto_Arquetipo.set_text(descricaoA[6])
-	
+	get_node("Texto_Arquetipo").set_scale(Vector2(1,1))
 	if capAtual!=capAnt:
 
 		Texto_Arquetipo.set_visible_characters(0)
@@ -215,7 +215,7 @@ func _on_Picaro_pressed():
 	Imagem_Arquetipo.set_texture(imagemA[7])
 	capAtual=7
 	Texto_Arquetipo.set_text(descricaoA[7])
-	
+	get_node("Texto_Arquetipo").set_scale(Vector2(1,1))
 	if capAtual!=capAnt:
 	
 		Texto_Arquetipo.set_visible_characters(0)

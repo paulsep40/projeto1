@@ -1,16 +1,17 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Cenas/Opcoes/opcao.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/bg.png" type="Texture" id=2]
-[ext_resource path="res://Elementos_Jogo/opcao-01.png" type="Texture" id=3]
-[ext_resource path="res://Elementos_Jogo/slider_high.png" type="Texture" id=4]
-[ext_resource path="res://Elementos_Jogo/slider_normal1.png" type="Texture" id=5]
-[ext_resource path="res://Elementos_Jogo/checked.png" type="Texture" id=6]
-[ext_resource path="res://Elementos_Jogo/uncheck.png" type="Texture" id=7]
-[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://Cenas/Opcoes/OptionButton.gd" type="Script" id=9]
+[ext_resource path="res://SuperBg.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Elementos_Jogo/opcao-01.png" type="Texture" id=4]
+[ext_resource path="res://Elementos_Jogo/slider_high.png" type="Texture" id=5]
+[ext_resource path="res://Elementos_Jogo/slider_normal1.png" type="Texture" id=6]
+[ext_resource path="res://Elementos_Jogo/checked.png" type="Texture" id=7]
+[ext_resource path="res://Elementos_Jogo/uncheck.png" type="Texture" id=8]
+[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Cenas/Opcoes/OptionButton.gd" type="Script" id=10]
 
-[sub_resource type="StyleBoxFlat" id=13]
+[sub_resource type="StyleBoxFlat" id=1]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -39,23 +40,23 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width" ]
 
-[sub_resource type="DynamicFont" id=14]
+[sub_resource type="DynamicFont" id=2]
 
 size = 14
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 8 )
+font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="DynamicFont" id=15]
+[sub_resource type="DynamicFont" id=3]
 
 size = 14
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 8 )
+font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="Theme" id=12]
+[sub_resource type="Theme" id=4]
 
 OptionButton/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
 OptionButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
@@ -72,7 +73,7 @@ OptionButton/styles/normal = null
 OptionButton/styles/pressed = null
 _sections_unfolded = [ "OptionButton" ]
 
-[sub_resource type="StyleBoxFlat" id=16]
+[sub_resource type="StyleBoxFlat" id=5]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -101,7 +102,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width" ]
 
-[sub_resource type="StyleBoxFlat" id=17]
+[sub_resource type="StyleBoxFlat" id=6]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -130,7 +131,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width" ]
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=7]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -159,7 +160,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border Width" ]
 
-[sub_resource type="StyleBoxFlat" id=18]
+[sub_resource type="StyleBoxFlat" id=8]
 
 resource_name = "OptionButton"
 content_margin_left = -1.0
@@ -189,23 +190,23 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width", "Resource" ]
 
-[sub_resource type="DynamicFont" id=19]
+[sub_resource type="DynamicFont" id=9]
 
 size = 14
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 8 )
+font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=20]
+[sub_resource type="DynamicFont" id=10]
 
 size = 18
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 8 )
+font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="InputEventKey" id=21]
+[sub_resource type="InputEventKey" id=11]
 
 device = 0
 alt = false
@@ -218,11 +219,11 @@ scancode = 16777217
 unicode = 0
 echo = false
 
-[sub_resource type="ShortCut" id=22]
+[sub_resource type="ShortCut" id=12]
 
-shortcut = SubResource( 21 )
+shortcut = SubResource( 11 )
 
-[node name="opcao" type="Control"]
+[node name="opcao" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -242,13 +243,15 @@ texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset" ]
 
-[node name="fundoOp" type="Sprite" parent="." index="1"]
+[node name="SuperBg" parent="." index="1" instance=ExtResource( 3 )]
 
-texture = ExtResource( 3 )
+[node name="fundoOp" type="Sprite" parent="." index="2"]
+
+texture = ExtResource( 4 )
 centered = false
 _sections_unfolded = [ "Offset" ]
 
-[node name="Efeitos" type="HSlider" parent="." index="2"]
+[node name="Efeitos" type="HSlider" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -265,9 +268,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
-custom_icons/grabber_highlight = ExtResource( 4 )
-custom_icons/grabber = ExtResource( 5 )
-custom_styles/slider = SubResource( 13 )
+custom_icons/grabber_highlight = ExtResource( 5 )
+custom_icons/grabber = ExtResource( 6 )
+custom_styles/slider = SubResource( 1 )
 min_value = -20.0
 max_value = 24.0
 step = 1.0
@@ -281,7 +284,7 @@ ticks_on_borders = false
 focus_mode = 2
 _sections_unfolded = [ "custom_icons", "custom_styles" ]
 
-[node name="Musica" type="HSlider" parent="." index="3"]
+[node name="Musica" type="HSlider" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -298,9 +301,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
-custom_icons/grabber_highlight = ExtResource( 4 )
-custom_icons/grabber = ExtResource( 5 )
-custom_styles/slider = SubResource( 13 )
+custom_icons/grabber_highlight = ExtResource( 5 )
+custom_icons/grabber = ExtResource( 6 )
+custom_styles/slider = SubResource( 1 )
 min_value = -20.0
 max_value = 24.0
 step = 1.0
@@ -314,7 +317,7 @@ ticks_on_borders = false
 focus_mode = 2
 _sections_unfolded = [ "custom_icons", "custom_styles" ]
 
-[node name="Full_Screen" type="CheckBox" parent="." index="4"]
+[node name="Full_Screen" type="CheckBox" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -331,9 +334,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_icons/checked = ExtResource( 6 )
-custom_icons/unchecked = ExtResource( 7 )
-custom_fonts/font = SubResource( 14 )
+custom_icons/checked = ExtResource( 7 )
+custom_icons/unchecked = ExtResource( 8 )
+custom_fonts/font = SubResource( 2 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -343,7 +346,7 @@ flat = false
 align = 0
 _sections_unfolded = [ "Theme", "custom_fonts", "custom_icons" ]
 
-[node name="janela" type="CheckBox" parent="." index="5"]
+[node name="janela" type="CheckBox" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -360,9 +363,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_icons/checked = ExtResource( 6 )
-custom_icons/unchecked = ExtResource( 7 )
-custom_fonts/font = SubResource( 15 )
+custom_icons/checked = ExtResource( 7 )
+custom_icons/unchecked = ExtResource( 8 )
+custom_fonts/font = SubResource( 3 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -372,7 +375,7 @@ flat = false
 align = 0
 _sections_unfolded = [ "Theme", "custom_fonts", "custom_icons", "custom_styles" ]
 
-[node name="Control tamanho da tela" type="Control" parent="." index="6"]
+[node name="Control tamanho da tela" type="Control" parent="." index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -406,9 +409,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
-custom_icons/grabber_highlight = ExtResource( 4 )
-custom_icons/grabber = ExtResource( 5 )
-custom_styles/slider = SubResource( 13 )
+custom_icons/grabber_highlight = ExtResource( 5 )
+custom_icons/grabber = ExtResource( 6 )
+custom_styles/slider = SubResource( 1 )
 min_value = 0.0
 max_value = 3.0
 step = 1.0
@@ -440,11 +443,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = SubResource( 12 )
-custom_styles/hover = SubResource( 16 )
-custom_styles/pressed = SubResource( 17 )
-custom_styles/focus = SubResource( 11 )
-custom_styles/normal = SubResource( 18 )
+theme = SubResource( 4 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
 custom_constants/arrow_margin = 0
 toggle_mode = false
 action_mode = 0
@@ -455,7 +458,7 @@ flat = false
 align = 0
 items = [  ]
 selected = -1
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 _sections_unfolded = [ "Anchor", "Focus", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Theme", "custom_constants", "custom_icons", "custom_styles" ]
 
 [node name="LabelTamanho" type="Label" parent="Control tamanho da tela" index="2"]
@@ -474,7 +477,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 19 )
+custom_fonts/font = SubResource( 9 )
 text = "Dimensão de Tela"
 percent_visible = 1.0
 lines_skipped = 0
@@ -497,14 +500,14 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 19 )
+custom_fonts/font = SubResource( 9 )
 text = "1280 x 720"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="Voltar" type="Button" parent="." index="7"]
+[node name="Voltar" type="Button" parent="." index="8"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -522,10 +525,10 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 20 )
+custom_fonts/font = SubResource( 10 )
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 22 )
+shortcut = SubResource( 12 )
 group = null
 text = "Voltar"
 flat = false

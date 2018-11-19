@@ -4,6 +4,8 @@ var cheated=false
 
 const ARQUIVO = "user://save.data"
 
+var MainBg=preload("res://Elementos_Jogo/Backgrounds/CasaAriel-01.png")
+
 #####################Arquétipos##############
 var heroi=false
 var sombra=false
@@ -74,7 +76,9 @@ func salvar_dados():
 	"agua": global.Agua,
 	"ar": global.Ar,
 	
-	"escudo": global.escudo
+	"escudo": global.escudo,
+	
+	"backgroundAtual": global.MainBg
 	}
 	if not erro:
 		Save.store_var(dados)
@@ -112,6 +116,9 @@ func carregar_dados():
 		global.Ar=dados_salvos["ar"]
 		
 		global.escudo=dados_salvos["escudo"]
+		
+		global.MainBg=dados_salvos["backgroundAtual"]
+		
 		
 		print("Sucesso ao carregar dados!")
 	else:

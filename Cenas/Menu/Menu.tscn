@@ -1,19 +1,20 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Cenas/Menu/Main.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/bg.png" type="Texture" id=2]
-[ext_resource path="res://Elementos_Jogo/Menu base-01.png" type="Texture" id=3]
-[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Elementos_Jogo/sair.png" type="Texture" id=5]
-[ext_resource path="res://Elementos_Jogo/creditos.png" type="Texture" id=6]
-[ext_resource path="res://Elementos_Jogo/icon_setting.png" type="Texture" id=7]
-[ext_resource path="res://Elementos_Jogo/icon_help.png" type="Texture" id=8]
-[ext_resource path="res://Elementos_Jogo/popupbg.png" type="Texture" id=9]
-[ext_resource path="res://Elementos_Jogo/Popup.png" type="Texture" id=10]
-[ext_resource path="res://Fonts/Roman SD.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://Cenas/Menu/sprite_splash.jpg" type="Texture" id=12]
-[ext_resource path="res://Cenas/Menu/CheatControl.gd" type="Script" id=13]
-[ext_resource path="res://Fonts/cour.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://SuperBg.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Elementos_Jogo/Menu base-01.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Elementos_Jogo/sair.png" type="Texture" id=6]
+[ext_resource path="res://Elementos_Jogo/creditos.png" type="Texture" id=7]
+[ext_resource path="res://Elementos_Jogo/icon_setting.png" type="Texture" id=8]
+[ext_resource path="res://Elementos_Jogo/icon_help.png" type="Texture" id=9]
+[ext_resource path="res://Elementos_Jogo/popupbg.png" type="Texture" id=10]
+[ext_resource path="res://Elementos_Jogo/Popup.png" type="Texture" id=11]
+[ext_resource path="res://Fonts/Roman SD.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Cenas/Menu/sprite_splash.jpg" type="Texture" id=13]
+[ext_resource path="res://Cenas/Menu/CheatControl.gd" type="Script" id=14]
+[ext_resource path="res://Fonts/cour.ttf" type="DynamicFontData" id=15]
 
 [sub_resource type="InputEventKey" id=1]
 
@@ -37,7 +38,7 @@ shortcut = SubResource( 1 )
 size = 21
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 4 )
+font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=4]
@@ -45,7 +46,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 14
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 11 )
+font_data = ExtResource( 12 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=5]
@@ -53,7 +54,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 11
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 11 )
+font_data = ExtResource( 12 )
 _sections_unfolded = [ "Settings" ]
 
 [sub_resource type="Animation" id=6]
@@ -91,7 +92,7 @@ tracks/1/keys = {
 size = 12
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 14 )
+font_data = ExtResource( 15 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="InputEventKey" id=8]
@@ -145,10 +146,10 @@ _sections_unfolded = [ "Border", "Border Width", "Corner Radius", "Shadow" ]
 size = 12
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 14 )
+font_data = ExtResource( 15 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Main" type="Control" index="0"]
+[node name="Main" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -169,7 +170,9 @@ texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 
-[node name="CallCheat" type="Button" parent="." index="1"]
+[node name="SuperBg" parent="." index="1" instance=ExtResource( 3 )]
+
+[node name="CallCheat" type="Button" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -194,13 +197,13 @@ text = "clovis"
 flat = false
 align = 1
 
-[node name="Fundo" type="Sprite" parent="." index="2"]
+[node name="Fundo" type="Sprite" parent="." index="3"]
 
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="Nova Jornada" type="Button" parent="." index="3"]
+[node name="Nova Jornada" type="Button" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -228,7 +231,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Hint", "Material", "Rect", "Visibility", "custom_fonts" ]
 
-[node name="Continuar" type="Button" parent="." index="4"]
+[node name="Continuar" type="Button" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -257,7 +260,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Hint", "Rect", "custom_fonts" ]
 
-[node name="Jornada do Heroi" type="Button" parent="." index="5"]
+[node name="Jornada do Heroi" type="Button" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -286,7 +289,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Hint", "Rect", "custom_fonts" ]
 
-[node name="Arquétipos" type="Button" parent="." index="6"]
+[node name="Arquétipos" type="Button" parent="." index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -315,7 +318,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Hint", "Rect", "custom_fonts" ]
 
-[node name="Exit" type="Button" parent="." index="7"]
+[node name="Exit" type="Button" parent="." index="8"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -337,12 +340,12 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-icon = ExtResource( 5 )
+icon = ExtResource( 6 )
 flat = false
 align = 1
 _sections_unfolded = [ "Hint", "Rect" ]
 
-[node name="Creditos" type="Button" parent="." index="8"]
+[node name="Creditos" type="Button" parent="." index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -364,12 +367,12 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-icon = ExtResource( 6 )
+icon = ExtResource( 7 )
 flat = false
 align = 1
 _sections_unfolded = [ "Hint", "Rect" ]
 
-[node name="Settings" type="Button" parent="." index="9"]
+[node name="Settings" type="Button" parent="." index="10"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -391,12 +394,12 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-icon = ExtResource( 7 )
+icon = ExtResource( 8 )
 flat = false
 align = 1
 _sections_unfolded = [ "Hint", "Rect" ]
 
-[node name="Help" type="Button" parent="." index="10"]
+[node name="Help" type="Button" parent="." index="11"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -418,12 +421,12 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-icon = ExtResource( 8 )
+icon = ExtResource( 9 )
 flat = false
 align = 1
 _sections_unfolded = [ "Hint", "Rect" ]
 
-[node name="PopupExit" type="Control" parent="." index="11"]
+[node name="PopupExit" type="Control" parent="." index="12"]
 
 editor/display_folded = true
 visible = false
@@ -441,14 +444,14 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Fundo" type="Sprite" parent="PopupExit" index="0"]
 
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 centered = false
 _sections_unfolded = [ "Offset" ]
 
 [node name="popup" type="Sprite" parent="PopupExit" index="1"]
 
 position = Vector2( 640, 360 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 _sections_unfolded = [ "Animation", "Offset", "Transform" ]
 
 [node name="Label" type="Label" parent="PopupExit" index="2"]
@@ -528,7 +531,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="PopupNovoJogo" type="Control" parent="." index="12"]
+[node name="PopupNovoJogo" type="Control" parent="." index="13"]
 
 editor/display_folded = true
 visible = false
@@ -546,14 +549,14 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Fundo" type="Sprite" parent="PopupNovoJogo" index="0"]
 
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 centered = false
 _sections_unfolded = [ "Offset" ]
 
 [node name="popup" type="Sprite" parent="PopupNovoJogo" index="1"]
 
 position = Vector2( 640, 360 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 _sections_unfolded = [ "Animation", "Offset", "Transform" ]
 
 [node name="Label" type="Label" parent="PopupNovoJogo" index="2"]
@@ -634,7 +637,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="13"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="14"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -644,14 +647,14 @@ playback_speed = 1.0
 anims/apareceMenu = SubResource( 6 )
 blend_times = [  ]
 
-[node name="Black" type="Sprite" parent="." index="14"]
+[node name="Black" type="Sprite" parent="." index="15"]
 
 modulate = Color( 1, 1, 1, 0 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 centered = false
 _sections_unfolded = [ "Offset", "Visibility" ]
 
-[node name="CheatControl" type="Control" parent="." index="15"]
+[node name="CheatControl" type="Control" parent="." index="16"]
 
 visible = false
 anchor_left = 0.0
@@ -667,7 +670,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 13 )
+script = ExtResource( 14 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="CheatBar" type="LineEdit" parent="CheatControl" index="0"]

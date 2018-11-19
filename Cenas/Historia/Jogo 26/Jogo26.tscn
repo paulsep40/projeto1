@@ -1,0 +1,1006 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://Cenas/Historia/Jogo 26/Jogo26.gd" type="Script" id=1]
+[ext_resource path="res://Cenas/Historia/Jogo 1/Chabge_bg.gd" type="Script" id=2]
+[ext_resource path="res://Elementos_Jogo/Backgrounds/Treinamento.jpg" type="Texture" id=3]
+[ext_resource path="res://Elementos_Jogo/Backgrounds/vila.jpg" type="Texture" id=4]
+[ext_resource path="res://Elementos_Jogo/Base.png" type="Texture" id=5]
+[ext_resource path="res://Cenas/Historia/Jogo 1/Card_Control.gd" type="Script" id=6]
+[ext_resource path="res://Elementos_Jogo/Cartas/ariel dodges-01.png" type="Texture" id=7]
+[ext_resource path="res://Cenas/Historia/Jogo 1/Text_Control.gd" type="Script" id=8]
+[ext_resource path="res://Cenas/Historia/Jogo 1/RichTextLabel.gd" type="Script" id=9]
+[ext_resource path="res://Elementos_Jogo/botao jornada v3.png" type="Texture" id=10]
+[ext_resource path="res://Elementos_Jogo/botao jornada v3 hover.png" type="Texture" id=11]
+[ext_resource path="res://Fonts/RobotoSlab-Bold.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Elementos_Jogo/botão pause.png" type="Texture" id=13]
+[ext_resource path="res://Elementos_Jogo/botão pause hover.png" type="Texture" id=14]
+[ext_resource path="res://Cenas/Historia/Jogo 1/Pause.gd" type="Script" id=15]
+[ext_resource path="res://Elementos_Jogo/Pause_Fundo-01.png" type="Texture" id=16]
+[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://Elementos_Jogo/icon_setting.png" type="Texture" id=18]
+[ext_resource path="res://Elementos_Jogo/icon_help.png" type="Texture" id=19]
+[ext_resource path="res://Cenas/OpcoesIngame/opcaoIngame.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Cenas/Ajuda Ingame/Ajuda.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Cenas/Jornada Ingame/Jornada InGame.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Cenas/Historia/Jogo 1/TrofeuArquetipo.gd" type="Script" id=23]
+[ext_resource path="res://Elementos_Jogo/achievement.png" type="Texture" id=24]
+[ext_resource path="res://Elementos_Jogo/icones arquetipos/arauto.png" type="Texture" id=25]
+
+[sub_resource type="DynamicFontData" id=1]
+
+hinting = 2
+font_path = "res://Fonts/RobotoSlab-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 16
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=3]
+
+hinting = 2
+font_path = "res://Fonts/RobotoSlab-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 14
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=5]
+
+hinting = 2
+font_path = "res://Fonts/RobotoSlab-Regular.ttf"
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 14
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 14
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 12 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="InputEventKey" id=8]
+
+device = 0
+alt = false
+shift = false
+control = false
+meta = false
+command = false
+pressed = false
+scancode = 16777217
+unicode = 0
+echo = false
+
+[sub_resource type="ShortCut" id=9]
+
+shortcut = SubResource( 8 )
+
+[sub_resource type="DynamicFont" id=10]
+
+size = 21
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 17 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFont" id=11]
+
+size = 18
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 17 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="InputEventKey" id=12]
+
+device = 0
+alt = false
+shift = false
+control = false
+meta = false
+command = false
+pressed = false
+scancode = 16777217
+unicode = 0
+echo = false
+
+[sub_resource type="ShortCut" id=13]
+
+shortcut = SubResource( 12 )
+
+[sub_resource type="DynamicFont" id=14]
+
+size = 18
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 17 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="InputEventKey" id=15]
+
+device = 0
+alt = false
+shift = false
+control = false
+meta = false
+command = false
+pressed = false
+scancode = 16777217
+unicode = 0
+echo = false
+
+[sub_resource type="ShortCut" id=16]
+
+shortcut = SubResource( 15 )
+
+[sub_resource type="DynamicFont" id=17]
+
+size = 18
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 17 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="InputEventKey" id=18]
+
+device = 0
+alt = false
+shift = false
+control = false
+meta = false
+command = false
+pressed = false
+scancode = 16777217
+unicode = 0
+echo = false
+
+[sub_resource type="ShortCut" id=19]
+
+shortcut = SubResource( 18 )
+
+[sub_resource type="DynamicFontData" id=20]
+
+hinting = 2
+font_path = "res://Fonts/RobotoSlab-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=21]
+
+size = 12
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 20 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="Jogo" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_horizontal_guides_": [ -95.0002 ]
+}
+
+[node name="Change_bg" type="Control" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 2 )
+
+[node name="bg" type="Sprite" parent="Change_bg" index="0"]
+
+texture = ExtResource( 3 )
+centered = false
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="bgE" type="Sprite" parent="Change_bg" index="1"]
+
+position = Vector2( -1280, 0 )
+texture = ExtResource( 4 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="bgD" type="Sprite" parent="Change_bg" index="2"]
+
+position = Vector2( 1280, 0 )
+texture = ExtResource( 4 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Tween" type="Tween" parent="Change_bg" index="3"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="fundo_preto" type="Sprite" parent="." index="1"]
+
+position = Vector2( 640, 360 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Card_Control" type="Control" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -183.0
+margin_top = -71.0
+margin_right = -143.0
+margin_bottom = -31.0
+rect_pivot_offset = Vector2( 20, 20 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 6 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="card" type="Sprite" parent="Card_Control" index="0"]
+
+position = Vector2( 20, -180.694 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Tween" type="Tween" parent="Card_Control" index="1"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="TweenMover" type="Tween" parent="Card_Control" index="2"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="Timer" type="Timer" parent="Card_Control" index="3"]
+
+process_mode = 1
+wait_time = 0.2
+one_shot = false
+autostart = false
+
+[node name="Text_Control" type="Control" parent="Card_Control" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -101.0
+margin_top = -22.0
+margin_right = 139.0
+margin_bottom = 2.0
+rect_pivot_offset = Vector2( 118.761, 12.4573 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 8 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="Card_Label" type="Label" parent="Card_Control/Text_Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 240.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Rect", "Theme", "custom_colors", "custom_fonts" ]
+
+[node name="Text_Tween_Sumir" type="Tween" parent="Card_Control/Text_Control" index="1"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="Text_Tween_Aparecer" type="Tween" parent="Card_Control/Text_Control" index="2"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="ButtonL" type="Button" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 438.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+_sections_unfolded = [ "custom_styles" ]
+
+[node name="ButtonR" type="Button" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 842.0
+margin_right = 1279.0
+margin_bottom = 719.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+_sections_unfolded = [ "Focus", "Hint", "Rect" ]
+
+[node name="ButtonC" type="Button" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 437.0
+margin_right = 841.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = true
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Narrativa_Control" type="Control" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 473.0
+margin_top = 112.0
+margin_right = 806.0
+margin_bottom = 256.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Narrativa_Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 333.0
+margin_bottom = 143.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/bold_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+bbcode_text = "Ariel não foi rápida o suficiente, a espada de madeira para a um centímetro de seu pescoço. 
+[b]\"Escolha com cuidado! Seu escudo poderia aguentar um ataque rápido como este. Nem sempre você vai ter tempo de desviar. Outra vez!\"[/b] 
+O professor avança e direciona um ataque rápido pela direita! Ariel..."
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 1
+text = "Ariel não foi rápida o suficiente, a espada de madeira para a um centímetro de seu pescoço. 
+\"Escolha com cuidado! Seu escudo poderia aguentar um ataque rápido como este. Nem sempre você vai ter tempo de desviar. Outra vez!\" 
+O professor avança e direciona um ataque rápido pela direita! Ariel..."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+script = ExtResource( 9 )
+_sections_unfolded = [ "BBCode", "custom_fonts" ]
+
+[node name="Timer" type="Timer" parent="Narrativa_Control" index="1"]
+
+process_mode = 1
+wait_time = 0.01
+one_shot = false
+autostart = true
+
+[node name="Botao Jornada" type="TextureButton" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 437.0
+margin_right = 845.0
+margin_bottom = 99.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Seu trajeto até aqui"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+_sections_unfolded = [ "Hint", "Mouse", "Textures" ]
+
+[node name="Chapter_Text" type="Label" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = 538.0
+margin_top = 22.0
+margin_right = -536.0
+margin_bottom = 55.0
+rect_pivot_offset = Vector2( 15.5631, 7.5306 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 7 )
+text = "I. Mundo Comum"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Rect", "custom_fonts" ]
+
+[node name="TimerChangeScene" type="Timer" parent="." index="9"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Pause Button" type="TextureButton" parent="." index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1200.0
+margin_right = 1241.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = SubResource( 9 )
+group = null
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
+
+[node name="Pause" type="Control" parent="." index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+rect_scale = Vector2( 0, 0 )
+rect_pivot_offset = Vector2( 1218.82, 17.4961 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 15 )
+_sections_unfolded = [ "Grow Direction", "Rect" ]
+
+[node name="Fundo" type="Sprite" parent="Pause" index="0"]
+
+texture = ExtResource( 16 )
+centered = false
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="Continuar" type="Button" parent="Pause" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 473.0
+margin_top = 294.0
+margin_right = 807.0
+margin_bottom = 361.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Continuar Jogo"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 10 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Continuar"
+flat = false
+align = 1
+_sections_unfolded = [ "Hint", "Rect", "custom_fonts" ]
+
+[node name="Salvar e Sair" type="Button" parent="Pause" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 473.0
+margin_top = 387.0
+margin_right = 807.0
+margin_bottom = 454.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Salvar jogo e sair para o Menu Principal"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 10 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Salvar e Sair"
+flat = false
+align = 1
+_sections_unfolded = [ "Hint", "Rect", "custom_fonts" ]
+
+[node name="Settings" type="Button" parent="Pause" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 542.0
+margin_top = 478.0
+margin_right = 613.0
+margin_bottom = 545.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Acessar Configurações"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 18 )
+flat = false
+align = 1
+_sections_unfolded = [ "Hint", "Rect" ]
+
+[node name="Help" type="Button" parent="Pause" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 669.0
+margin_top = 478.0
+margin_right = 741.0
+margin_bottom = 545.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Acessar Ajuda"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+icon = ExtResource( 19 )
+flat = false
+align = 1
+_sections_unfolded = [ "Hint", "Rect" ]
+
+[node name="Tween" type="Tween" parent="Pause" index="5"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="opcao" parent="Pause" index="6" instance=ExtResource( 20 )]
+
+visible = false
+
+[node name="VoltarOp" type="Button" parent="Pause/opcao" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 556.0
+margin_top = 523.0
+margin_right = 724.0
+margin_bottom = 563.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 11 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = SubResource( 13 )
+group = null
+text = "Voltar"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="TimerOpcao" type="Timer" parent="Pause/opcao" index="7"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = true
+autostart = false
+
+[node name="Ajuda" parent="Pause" index="7" instance=ExtResource( 21 )]
+
+visible = false
+
+[node name="VoltarAj" type="Button" parent="Pause/Ajuda" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 556.0
+margin_top = 625.0
+margin_right = 724.0
+margin_bottom = 665.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 14 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = SubResource( 16 )
+group = null
+text = "Voltar"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="TimerAjuda" type="Timer" parent="Pause/Ajuda" index="3"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = true
+autostart = false
+
+[node name="Jornada InGame" parent="." index="12" instance=ExtResource( 22 )]
+
+[node name="Voltar" type="Button" parent="Jornada InGame" index="21"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1062.0
+margin_top = 583.0
+margin_right = 1254.0
+margin_bottom = 625.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 17 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = SubResource( 19 )
+group = null
+text = "Voltar"
+flat = false
+align = 1
+_sections_unfolded = [ "Mouse", "custom_fonts" ]
+
+[node name="VoltarOpção2" type="Button" parent="Jornada InGame" index="22"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1.0
+margin_top = 648.0
+margin_right = 1279.0
+margin_bottom = 719.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = true
+align = 1
+_sections_unfolded = [ "Mouse" ]
+
+[node name="Timer Atalho" type="Timer" parent="Jornada InGame" index="23"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = true
+autostart = false
+
+[node name="TrofeuArquetipo" type="Control" parent="." index="13"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 978.0
+margin_top = 728.0
+margin_right = 1279.0
+margin_bottom = 805.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 23 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="Fundo" type="Sprite" parent="TrofeuArquetipo" index="0"]
+
+texture = ExtResource( 24 )
+centered = false
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="LabelArquetipo" type="Label" parent="TrofeuArquetipo" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 122.0
+margin_top = 19.0
+margin_right = 258.0
+margin_bottom = 61.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 21 )
+text = "Arquétipo encontrado: Herói"
+align = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts", "custom_styles" ]
+
+[node name="Tween" type="Tween" parent="TrofeuArquetipo" index="2"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="Icon" type="Sprite" parent="TrofeuArquetipo" index="3"]
+
+position = Vector2( 41.1503, 39.751 )
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 25 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Timer" type="Timer" parent="TrofeuArquetipo" index="4"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = true
+autostart = false
+
+[node name="Timer_Passar" type="Timer" parent="." index="14"]
+
+process_mode = 1
+wait_time = 0.2
+one_shot = false
+autostart = false
+
+[node name="TimerMover" type="Timer" parent="." index="15"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = true
+
+[connection signal="tween_completed" from="Card_Control/TweenMover" to="." method="_on_TweenMover_tween_completed"]
+
+[connection signal="timeout" from="Card_Control/Timer" to="." method="_on_Timer_timeout"]
+
+[connection signal="tween_completed" from="Card_Control/Text_Control/Text_Tween_Sumir" to="." method="_on_Text_Tween_Sumir_tween_completed"]
+
+[connection signal="mouse_entered" from="ButtonL" to="." method="_on_ButtonL_mouse_entered"]
+
+[connection signal="mouse_exited" from="ButtonL" to="." method="_on_ButtonL_mouse_exited"]
+
+[connection signal="pressed" from="ButtonL" to="." method="_on_ButtonL_pressed"]
+
+[connection signal="mouse_entered" from="ButtonR" to="." method="_on_ButtonR_mouse_entered"]
+
+[connection signal="mouse_exited" from="ButtonR" to="." method="_on_ButtonR_mouse_exited"]
+
+[connection signal="pressed" from="ButtonR" to="." method="_on_ButtonR_pressed"]
+
+[connection signal="mouse_entered" from="ButtonC" to="." method="_on_ButtonC_mouse_entered"]
+
+[connection signal="mouse_exited" from="ButtonC" to="." method="_on_ButtonC_mouse_exited"]
+
+[connection signal="pressed" from="ButtonC" to="Narrativa_Control/RichTextLabel" method="_on_ButtonC_pressed"]
+
+[connection signal="timeout" from="Narrativa_Control/Timer" to="Narrativa_Control/RichTextLabel" method="_on_Timer_timeout"]
+
+[connection signal="pressed" from="Botao Jornada" to="." method="_on_Botao_Jornada_pressed"]
+
+[connection signal="timeout" from="TimerChangeScene" to="." method="_on_TimerChanceScene_timeout"]
+
+[connection signal="pressed" from="Pause Button" to="." method="_on_Pause_Button_pressed"]
+
+[connection signal="pressed" from="Pause/Continuar" to="." method="_on_Continuar_pressed"]
+
+[connection signal="pressed" from="Pause/Salvar e Sair" to="." method="_on_Salvar_e_Sair_pressed"]
+
+[connection signal="pressed" from="Pause/Settings" to="." method="_on_Settings_pressed"]
+
+[connection signal="pressed" from="Pause/Help" to="." method="_on_Help_pressed"]
+
+[connection signal="pressed" from="Pause/opcao/VoltarOp" to="." method="_on_VoltarOp_pressed"]
+
+[connection signal="timeout" from="Pause/opcao/TimerOpcao" to="." method="_on_TimerOpcao_timeout"]
+
+[connection signal="pressed" from="Pause/Ajuda/VoltarAj" to="." method="_on_VoltarAj_pressed"]
+
+[connection signal="timeout" from="Pause/Ajuda/TimerAjuda" to="." method="_on_TimerAjuda_timeout"]
+
+[connection signal="pressed" from="Jornada InGame/Voltar" to="." method="_on_Voltar_pressed"]
+
+[connection signal="pressed" from="Jornada InGame/VoltarOpção2" to="." method="_on_VoltarOpo2_pressed"]
+
+[connection signal="timeout" from="Jornada InGame/Timer Atalho" to="." method="_on_Timer_Atalho_timeout"]
+
+[connection signal="timeout" from="TrofeuArquetipo/Timer" to="TrofeuArquetipo" method="_on_Timer_timeout"]
+
+[connection signal="timeout" from="Timer_Passar" to="." method="_on_Timer_Passar_timeout"]
+
+[connection signal="timeout" from="TimerMover" to="." method="_on_TimerMover_timeout"]
+
+

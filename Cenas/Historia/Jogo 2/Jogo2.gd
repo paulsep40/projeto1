@@ -52,13 +52,13 @@ func _ready():
 	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena
 	audioMusica=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer
 	
-	changebgE=true #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
+	changebgE=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	changebgD=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	
-	cardTextE="Voltar" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
-	trocaCenaE="res://Cenas/Historia/Jogo 1/Jogo.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
-	cardTextD="Ir para o Menu" #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
-	trocaCenaD="res://Cenas/Menu/Menu.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
+	cardTextE="'Certo!'" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
+	trocaCenaE="res://Cenas/Historia/Jogo 5/Jogo5.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
+	cardTextD="'Por que?'" #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
+	trocaCenaD="res://Cenas/Historia/Jogo 3/Jogo3.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
 	
 	somarMaldadeE=false #Mude para TRUE se essa escolha soma maldade para o personagem
 
@@ -91,6 +91,7 @@ func _ready():
 	
 	###########################################################################################
 	####################################### FIM das Variáveis para Alterar######################
+
 
 
 	

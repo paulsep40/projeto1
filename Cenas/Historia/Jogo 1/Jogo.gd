@@ -43,17 +43,16 @@ func _ready():
 	 
 	
 	
-	###########################################################
+		###########################################################
 	################### VARIÁVEIS PARA ALTERAR ##############
-	
-	global.capituloAtual=1#Aqui coloque o ponto da jornada em que o jogador está
-	global.cena = "res://Cenas/Historia/Jogo 1/Jogo.tscn" #aqui se põe o caminho para essa cena no jogo
-	
+	global.MainBg=preload("res://Elementos_Jogo/Backgrounds/CasaAriel-01.png")
+	global.capituloAtual=1 #Aqui coloque o ponto da jornada em que o jogador está
+	global.cena = "res://Cenas/Historia/Jogo 1/Jogo.tscn"
 	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena
 	audioMusica=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer
 	
-	changebgE=true #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
-	changebgD=true #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
+	changebgE=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
+	changebgD=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	
 	cardTextE="Revira os olhos" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
 	trocaCenaE="res://Cenas/Historia/Jogo 2/Jogo2.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
@@ -61,6 +60,7 @@ func _ready():
 	trocaCenaD="res://Cenas/Historia/Jogo 2/Jogo2.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
 	
 	somarMaldadeE=true #Mude para TRUE se essa escolha soma maldade para o personagem
+
 	somarMaldadeD=false #Mude para TRUE se essa escolha soma maldade para o personagem
 	alterarCaminho=false #altere para TRUE se essa for a cena que muda o caminho do personagem dependendo da maldade
 	trocaCenaAlteradoE="res://Cenas/Menu/Menu.tscn"
@@ -90,6 +90,7 @@ func _ready():
 	
 	###########################################################################################
 	####################################### FIM das Variáveis para Alterar######################
+
 
 	
 	

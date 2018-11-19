@@ -44,7 +44,7 @@ var dialogue= ["",
 "O que foi perdido ou danificado durante a provação é recuperado. Nem sempre a ressurreição diz respeito ao herói, mas, como todos os estágios desta jornada, o impacta profundamente.",
 "Chegada ao Mundo Comum com Conhecimento e/ou um tesouro. Liberdade, objetivo alcançado. A paz e o equilíbrio são restaurados. O herói agora pode viver em paz com seus feitos"]
 
-var imagemJ=[preload("res://Elementos_Jogo/Imagens_Jornada/bordaimagem_Prancheta 1.png"),
+var imagemJ=[preload("res://Elementos_Jogo/Imagens_Jornada/Finalaimagemnula-01.png"),
 preload("res://Elementos_Jogo/Imagens_Jornada/imagem (1).png"),
 preload("res://Elementos_Jogo/Imagens_Jornada/imagem (2).png"),
 preload("res://Elementos_Jogo/Imagens_Jornada/imagem (3).png"),

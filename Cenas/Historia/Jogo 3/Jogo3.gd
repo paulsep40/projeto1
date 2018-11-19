@@ -39,12 +39,9 @@ onready var ShowJornada= get_node("Jornada InGame")
 
 
 func _ready():
-	global.salvar_dados();
-	 #aqui se põe o caminho para essa cena no jogo
 	
+	 
 	
-	###########################################################
-	################### VARIÁVEIS PARA ALTERAR ##############
 	
 	###########################################################
 	################### VARIÁVEIS PARA ALTERAR ##############
@@ -58,9 +55,9 @@ func _ready():
 	changebgE=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	changebgD=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	
-	cardTextE="Mas já…?" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
+	cardTextE="'Mas já…?'" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
 	trocaCenaE="res://Cenas/Historia/Jogo 4/Jogo4.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
-	cardTextD="Você trabalha demais..." #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
+	cardTextD="'Você trabalha demais...'" #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
 	trocaCenaD="res://Cenas/Historia/Jogo 4/Jogo4.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
 	
 	somarMaldadeE=false #Mude para TRUE se essa escolha soma maldade para o personagem
@@ -96,12 +93,13 @@ func _ready():
 	####################################### FIM das Variáveis para Alterar######################
 
 
+
 	
 	
 	Sound_passar.play();
 	CardNode.mover(-200,-200,620,661,-90,0)
 	mudaMusica(trocarMusica,audioMusica)
-	
+	global.salvar_dados();
 	pass
 	
 	
