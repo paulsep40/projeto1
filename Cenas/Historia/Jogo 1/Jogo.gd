@@ -45,6 +45,9 @@ func _ready():
 	
 		###########################################################
 	################### VARIÁVEIS PARA ALTERAR ##############
+	
+	global.somAmbiente=preload("res://sounds/Cabana da Ariel.ogg")
+	
 	global.MainBg=preload("res://Elementos_Jogo/Backgrounds/CasaAriel-01.png")
 	global.capituloAtual=1 #Aqui coloque o ponto da jornada em que o jogador está
 	global.cena = "res://Cenas/Historia/Jogo 1/Jogo.tscn"
@@ -92,12 +95,14 @@ func _ready():
 	####################################### FIM das Variáveis para Alterar######################
 
 
-	
+	soundAmbience.set_stream(global.somAmbiente)
+	soundAmbience.play()
 	
 	Sound_passar.play();
 	CardNode.mover(-200,-200,620,661,-90,0)
 	mudaMusica(trocarMusica,audioMusica)
 	global.salvar_dados();
+	soundAmbience.play()
 	pass
 	
 	

@@ -7,6 +7,7 @@ extends Control
 func _ready():
 	get_node("Efeitos").set_value(global.volumefx)
 	get_node("Musica").set_value(global.volumemusica)
+	get_node("Ambientacao").set_value(global.volumeAmbiete)
 	get_node("Control tamanho da tela/Tamanho de Tela").set_value(global.tamanhotela)
 	attLabel()
 	if OS.window_fullscreen==true:
@@ -42,6 +43,10 @@ func _on_Musica_value_changed(value):
 	global.volumemusica=value
 	pass # replace with function body
 
+func _on_Ambientacao_value_changed(value):
+	soundAmbience.set_volume_db(value)
+	global.volumeAmbiete=value;
+	pass # replace with function body
 
 func _on_Tamanho_de_Tela_value_changed(value):
 	global.tamanhotela=value
@@ -107,3 +112,5 @@ func attLabel():
 		
 		get_node("Control tamanho da tela/Labelnumero").set_text("1920 X 1080")
 		pass
+
+

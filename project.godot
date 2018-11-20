@@ -20,6 +20,7 @@ global="*res://global.gd"
 Musica="*res://Musica.tscn"
 Sound_arrastar="*res://Sound_arrastar.tscn"
 Sound_passar="*res://Sound_passar.tscn"
+soundAmbience="*res://soundAmbience.tscn"
 
 [display]
 

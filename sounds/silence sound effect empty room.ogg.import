@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/silence sound effect empty room.ogg-7751b8628c51ad4dbdea2fa9d3c3375b.oggstr"
+
+[deps]
+
+source_file="res://sounds/silence sound effect empty room.ogg"
+dest_files=[ "res://.import/silence sound effect empty room.ogg-7751b8628c51ad4dbdea2fa9d3c3375b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

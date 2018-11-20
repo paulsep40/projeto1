@@ -4,8 +4,8 @@ var cheated=false
 
 const ARQUIVO = "user://save.data"
 
-var MainBg=preload("res://Elementos_Jogo/Backgrounds/CasaAriel-01.png")
-
+var MainBg=preload("res://Elementos_Jogo/Backgrounds/tutorial.jpeg")
+var somAmbiente=preload("res://sounds/silence sound effect empty room.ogg")
 #####################Arquétipos##############
 var heroi=false
 var sombra=false
@@ -48,6 +48,7 @@ var cena="res://Cenas/Menu/Menu.tscn"
 ######################################
 var volumefx=0
 var volumemusica=0
+var volumeAmbiete=-8
 var tamanhotela=2
 ######################################
 
@@ -77,7 +78,7 @@ func salvar_dados():
 	"ar": global.Ar,
 	
 	"escudo": global.escudo,
-	
+	"somAmbiente": global.somAmbiente,
 	"backgroundAtual": global.MainBg
 	}
 	if not erro:
@@ -118,7 +119,7 @@ func carregar_dados():
 		global.escudo=dados_salvos["escudo"]
 		
 		global.MainBg=dados_salvos["backgroundAtual"]
-		
+		global.somAmbiente=dados_salvos["somAmbiente"]
 		
 		print("Sucesso ao carregar dados!")
 	else:

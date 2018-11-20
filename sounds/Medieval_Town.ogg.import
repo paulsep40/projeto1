@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Medieval_Town.ogg-3a947981df4d63d3256c0e682f2e1760.oggstr"
+
+[deps]
+
+source_file="res://sounds/Medieval_Town.ogg"
+dest_files=[ "res://.import/Medieval_Town.ogg-3a947981df4d63d3256c0e682f2e1760.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

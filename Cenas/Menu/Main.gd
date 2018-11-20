@@ -3,6 +3,8 @@ var cheaton=false
 
 
 func _ready():
+	soundAmbience.set_stream(global.somAmbiente)
+	soundAmbience.play()
 	get_node("AnimationPlayer").play("apareceMenu")
 	if global.cheated==false:
 		global.carregar_dados();

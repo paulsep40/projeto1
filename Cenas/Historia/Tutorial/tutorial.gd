@@ -45,7 +45,8 @@ func _ready():
 	
 	###########################################################
 	################### VARIÁVEIS PARA ALTERAR ##############
-	
+	global.somAmbiente=preload("res://sounds/silence sound effect empty room.ogg")
+	global.MainBg=preload("res://Elementos_Jogo/Backgrounds/tutorial.jpeg")
 	global.capituloAtual=0#Aqui coloque o ponto da jornada em que o jogador está
 	global.cena = "res://Cenas/Historia/Tutorial/tutorial.tscn" #aqui se põe o caminho para essa cena no jogo
 	
@@ -90,7 +91,8 @@ func _ready():
 	
 	###########################################################################################
 	####################################### FIM das Variáveis para Alterar######################
-
+	soundAmbience.set_stream(global.somAmbiente)
+	soundAmbience.play()
 	
 	
 	Sound_passar.play();

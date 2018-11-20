@@ -223,7 +223,7 @@ echo = false
 
 shortcut = SubResource( 11 )
 
-[node name="opcao" type="Control" index="0"]
+[node name="opcao" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -284,16 +284,49 @@ ticks_on_borders = false
 focus_mode = 2
 _sections_unfolded = [ "custom_icons", "custom_styles" ]
 
-[node name="Musica" type="HSlider" parent="." index="4"]
+[node name="Ambientacao" type="HSlider" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 509.0
+margin_top = 449.0
+margin_right = 804.0
+margin_bottom = 465.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_icons/grabber_highlight = ExtResource( 5 )
+custom_icons/grabber = ExtResource( 6 )
+custom_styles/slider = SubResource( 1 )
+min_value = -20.0
+max_value = 24.0
+step = 1.0
+page = 0.0
+value = -8.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 0
+ticks_on_borders = false
+focus_mode = 2
+_sections_unfolded = [ "custom_icons", "custom_styles" ]
+
+[node name="Musica" type="HSlider" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 508.0
-margin_top = 449.0
+margin_top = 547.0
 margin_right = 803.0
-margin_bottom = 465.0
+margin_bottom = 563.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -317,7 +350,7 @@ ticks_on_borders = false
 focus_mode = 2
 _sections_unfolded = [ "custom_icons", "custom_styles" ]
 
-[node name="Full_Screen" type="CheckBox" parent="." index="5"]
+[node name="Full_Screen" type="CheckBox" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -346,7 +379,7 @@ flat = false
 align = 0
 _sections_unfolded = [ "Theme", "custom_fonts", "custom_icons" ]
 
-[node name="janela" type="CheckBox" parent="." index="6"]
+[node name="janela" type="CheckBox" parent="." index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -375,8 +408,9 @@ flat = false
 align = 0
 _sections_unfolded = [ "Theme", "custom_fonts", "custom_icons", "custom_styles" ]
 
-[node name="Control tamanho da tela" type="Control" parent="." index="7"]
+[node name="Control tamanho da tela" type="Control" parent="." index="8"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -507,16 +541,16 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="Voltar" type="Button" parent="." index="8"]
+[node name="Voltar" type="Button" parent="." index="9"]
 
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -85.0
-margin_top = 163.0
+margin_top = 257.0
 margin_right = 84.0
-margin_bottom = 202.0
+margin_bottom = 296.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 hint_tooltip = "Voltar para o Menu Principal"
@@ -536,6 +570,8 @@ align = 1
 _sections_unfolded = [ "Hint", "Rect", "custom_fonts" ]
 
 [connection signal="value_changed" from="Efeitos" to="." method="_on_Efeitos_value_changed"]
+
+[connection signal="value_changed" from="Ambientacao" to="." method="_on_Ambientacao_value_changed"]
 
 [connection signal="value_changed" from="Musica" to="." method="_on_Musica_value_changed"]
 

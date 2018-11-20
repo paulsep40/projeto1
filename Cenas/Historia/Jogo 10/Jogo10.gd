@@ -44,6 +44,8 @@ func _ready():
 	
 	###########################################################
 	################### VARIÁVEIS PARA ALTERAR ##############
+	global.somAmbiente=preload("res://sounds/Medieval_Town.ogg")
+	
 	global.MainBg=preload("res://Elementos_Jogo/Backgrounds/vila.jpg")
 	global.capituloAtual=1 #Aqui coloque o ponto da jornada em que o jogador está
 	global.cena = "res://Cenas/Historia/Jogo 10/Jogo10.tscn"
@@ -97,7 +99,8 @@ func _ready():
 
 
 
-
+	soundAmbience.set_stream(global.somAmbiente)
+	soundAmbience.play()
 
 	
 	
