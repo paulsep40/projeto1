@@ -22,7 +22,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="SplashUFC" type="Control"]
+[node name="SplashUFC" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0

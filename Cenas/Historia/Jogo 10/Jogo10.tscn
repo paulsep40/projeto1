@@ -444,9 +444,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 473.0
-margin_top = 147.0
+margin_top = 98.0
 margin_right = 806.0
-margin_bottom = 312.0
+margin_bottom = 263.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -462,7 +462,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 333.0
-margin_bottom = 161.0
+margin_bottom = 184.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -472,12 +472,16 @@ size_flags_vertical = 1
 custom_fonts/bold_font = SubResource( 4 )
 custom_fonts/normal_font = SubResource( 6 )
 bbcode_enabled = true
-bbcode_text = "Passando  na frente da feira popular, Ariel se depara com uma senhora desesperada falando com um vendedor..."
+bbcode_text = "A vila de Ordon é composta por várias casas simples, mesmo pequena, é sempre muito povoada! 
+Existe um pequeno mercado no centro da vila, uma igreja ao norte e um campo de treinamento recém construído.
+Passando  na frente da feira popular, Ariel se depara com uma senhora desesperada falando com um vendedor..."
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 1
-text = "Passando  na frente da feira popular, Ariel se depara com uma senhora desesperada falando com um vendedor..."
+text = "A vila de Ordon é composta por várias casas simples, mesmo pequena, é sempre muito povoada! 
+Existe um pequeno mercado no centro da vila, uma igreja ao norte e um campo de treinamento recém construído.
+Passando  na frente da feira popular, Ariel se depara com uma senhora desesperada falando com um vendedor..."
 scroll_active = true
 scroll_following = false
 selection_enabled = false
