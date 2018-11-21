@@ -43,25 +43,27 @@ func _ready():
 	 
 	
 	
-	###########################################################
+		###########################################################
 	################### VARIÁVEIS PARA ALTERAR ##############
-	global.somAmbiente=preload("res://sounds/silence sound effect empty room.ogg")
-	global.MainBg=preload("res://Elementos_Jogo/Backgrounds/tutorial.jpeg")
-	global.capituloAtual=0#Aqui coloque o ponto da jornada em que o jogador está
-	global.cena = "res://Cenas/Historia/Tutorial/tutorial.tscn" #aqui se põe o caminho para essa cena no jogo
 	
+	global.somAmbiente=preload("res://sounds/silence sound effect empty room.ogg")
+	
+	global.MainBg=preload("res://Elementos_Jogo/Backgrounds/CasaAriel-01.png")
+	global.capituloAtual=1 #Aqui coloque o ponto da jornada em que o jogador está
+	global.cena = "res://Cenas/Historia/Jogo 1/Jogo.tscn"
 	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena
 	audioMusica=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer
 	
 	changebgE=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	changebgD=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	
-	cardTextE="Reiniciar Tutorial" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
-	trocaCenaE="res://Cenas/Historia/Tutorial/tutorial.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
-	cardTextD="Iniciar Jogo" #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
-	trocaCenaD="res://Cenas/Historia/Jogo 1/Jogo.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
+	cardTextE="Continuar" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
+	trocaCenaE="res://Cenas/Historia/TutorialPt2/TutorialPt2.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
+	cardTextD="Continuar" #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
+	trocaCenaD="res://Cenas/Historia/TutorialPt2/TutorialPt2.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
 	
 	somarMaldadeE=true #Mude para TRUE se essa escolha soma maldade para o personagem
+
 	somarMaldadeD=false #Mude para TRUE se essa escolha soma maldade para o personagem
 	alterarCaminho=false #altere para TRUE se essa for a cena que muda o caminho do personagem dependendo da maldade
 	trocaCenaAlteradoE="res://Cenas/Menu/Menu.tscn"
@@ -91,33 +93,34 @@ func _ready():
 	
 	###########################################################################################
 	####################################### FIM das Variáveis para Alterar######################
+
+
 	soundAmbience.set_stream(global.somAmbiente)
 	soundAmbience.play()
-	
 	
 	Sound_passar.play();
 	CardNode.mover(-200,-200,620,661,-90,0)
 	mudaMusica(trocarMusica,audioMusica)
 	global.salvar_dados();
+	soundAmbience.play()
 	pass
 	
 	
 
 
 func _on_ButtonL_mouse_entered():
-	get_node("AnimationTutorial").hide();
-	get_node("ClicarD").hide();
-	get_node("ClicarE").show();
-	get_node("Narrativa_Control/RichTextLabel").set_bbcode("[b][color=red]CLIQUE EM UM DOS LADOS DA TELA[/color] para fazer sua escolha[/b]")
 	if pode_mexer==true:
+		get_node("Move_Mouse").hide()
+		get_node("Clica_MouseE").show()
+		get_node("Clica_MouseD").hide()
 		Sound_arrastar.play();
 		if place==0:
-			CardNode.rotacao(620,580,0,-15,0.25)
+			CardNode.rotacao(620,580,0,-8,0.25)
 			TextLabel.set_text(cardTextE)
 			TextNode.aparecer(0.25);
 			
 		if place==2:
-			CardNode.rotacao(660,580,15,-15,0.5)
+			CardNode.rotacao(660,580,8,-8,0.5)
 			TextNode.sumir(0.25);
 		
 	pass # replace with function body
@@ -143,19 +146,18 @@ func _on_ButtonC_mouse_exited():
 
 
 func _on_ButtonR_mouse_entered():
-	get_node("AnimationTutorial").hide();
-	get_node("ClicarD").show();
-	get_node("ClicarE").hide();
-	get_node("Narrativa_Control/RichTextLabel").set_bbcode("[b][color=red]CLIQUE EM UM DOS LADOS DA TELA[/color] para fazer sua escolha[/b]")
 	if pode_mexer==true:
+		get_node("Move_Mouse").hide()
+		get_node("Clica_MouseE").hide()
+		get_node("Clica_MouseD").show()
 		Sound_arrastar.play();
 		if place==0:
-			CardNode.rotacao(620,660,0,15,0.25)
+			CardNode.rotacao(620,660,0,8,0.25)
 			TextLabel.set_text(cardTextD)
 			TextNode.aparecer(0.25);
 		
 		if place==1:
-			CardNode.rotacao(580,660,-15,15,0.5)
+			CardNode.rotacao(580,660,-8,8,0.5)
 			TextNode.sumir(0.25);
 	
 	pass # replace with function body
@@ -174,11 +176,11 @@ func _on_ButtonR_mouse_exited():
 func _on_Timer_timeout():
 	
 	if place==2:
-		CardNode.rotacao(660,620,15,0,0.25)
+		CardNode.rotacao(660,620,8,0,0.25)
 		TextNode.sumir(0.25);
 		Sound_arrastar.play();
 	if place==1:
-		CardNode.rotacao(580,620,-15,0,0.25)
+		CardNode.rotacao(580,620,-8,0,0.25)
 		TextNode.sumir(0.25);
 		Sound_arrastar.play();
 	place=0;
@@ -204,7 +206,7 @@ func _on_ButtonL_pressed():
 		irPara=0
 		TimerNodeScene.start()
 		ApagarTexto.apagar()
-		CardNode.mover(580,661,200,900,-15,-90)
+		CardNode.mover(580,661,200,900,-8,-90)
 		get_node("Change_bg").chageBGAnimation(changebgE,0,1280)
 		Sound_passar.play();
 	pass # replace with function body
@@ -216,7 +218,7 @@ func _on_ButtonR_pressed():
 		irPara=1
 		ApagarTexto.apagar()
 		TimerNodeScene.start()
-		CardNode.mover(660,661,1040,900,15,90)
+		CardNode.mover(660,661,1040,900,8,90)
 		get_node("Change_bg").chageBGAnimation(changebgD,0,-1280)
 		Sound_passar.play();
 	pass # replace with function body
@@ -316,6 +318,8 @@ func mudaMusica(tf,som):
 func _on_VoltarOp_pressed():
 	get_node("Pause/opcao").hide()
 	get_node("Pause/opcao/TimerOpcao").start()
+	get_node("Pause/opcao/Control tamanho da tela/Selecoes").hide()
+	get_node("Pause/opcao").SelecaoIsOn=false;
 	pass # replace with function body
 
 

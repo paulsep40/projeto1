@@ -260,10 +260,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 624.0
-margin_top = 664.0
-margin_right = 664.0
-margin_bottom = 704.0
+margin_left = -226.0
+margin_top = -64.0
+margin_right = -186.0
+margin_bottom = -24.0
 rect_pivot_offset = Vector2( 20, 20 )
 rect_clip_content = false
 mouse_filter = 0
@@ -974,6 +974,10 @@ autostart = true
 [connection signal="mouse_exited" from="ButtonC" to="." method="_on_ButtonC_mouse_exited"]
 
 [connection signal="pressed" from="ButtonC" to="Narrativa_Control/RichTextLabel" method="_on_ButtonC_pressed"]
+
+[connection signal="mouse_entered" from="Narrativa_Control/RichTextLabel" to="." method="_on_RichTextLabel_mouse_entered"]
+
+[connection signal="mouse_exited" from="Narrativa_Control/RichTextLabel" to="." method="_on_RichTextLabel_mouse_exited"]
 
 [connection signal="timeout" from="Narrativa_Control/Timer" to="Narrativa_Control/RichTextLabel" method="_on_Timer_timeout"]
 
