@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Cenas/Historia/Jogo 1/Jogo.gd" type="Script" id=1]
 [ext_resource path="res://Cenas/Historia/Jogo 1/Chabge_bg.gd" type="Script" id=2]
@@ -7,23 +7,24 @@
 [ext_resource path="res://Cenas/Historia/Jogo 1/Card_Control.gd" type="Script" id=5]
 [ext_resource path="res://Elementos_Jogo/Cartas/1.png" type="Texture" id=6]
 [ext_resource path="res://Cenas/Historia/Jogo 1/Text_Control.gd" type="Script" id=7]
-[ext_resource path="res://Cenas/Historia/Jogo 1/RichTextLabel.gd" type="Script" id=8]
-[ext_resource path="res://Elementos_Jogo/botao jornada v3.png" type="Texture" id=9]
-[ext_resource path="res://Elementos_Jogo/botao jornada v3 hover.png" type="Texture" id=10]
-[ext_resource path="res://Fonts/RobotoSlab-Bold.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://Elementos_Jogo/botão pause.png" type="Texture" id=12]
-[ext_resource path="res://Elementos_Jogo/botão pause hover.png" type="Texture" id=13]
-[ext_resource path="res://Cenas/Historia/Jogo 1/Pause.gd" type="Script" id=14]
-[ext_resource path="res://Elementos_Jogo/Pause_Fundo-01.png" type="Texture" id=15]
-[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=16]
-[ext_resource path="res://Elementos_Jogo/icon_setting.png" type="Texture" id=17]
-[ext_resource path="res://Elementos_Jogo/icon_help.png" type="Texture" id=18]
-[ext_resource path="res://Cenas/OpcoesIngame/opcaoIngame.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Cenas/Ajuda Ingame/Ajuda.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Cenas/Jornada Ingame/Jornada InGame.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Cenas/Historia/Jogo 1/TrofeuArquetipo.gd" type="Script" id=22]
-[ext_resource path="res://Elementos_Jogo/achievement.png" type="Texture" id=23]
-[ext_resource path="res://Elementos_Jogo/icones arquetipos/heroi.png" type="Texture" id=24]
+[ext_resource path="res://Elementos_Jogo/Opacity Texto.png" type="Texture" id=8]
+[ext_resource path="res://Cenas/Historia/Jogo 1/RichTextLabel.gd" type="Script" id=9]
+[ext_resource path="res://Elementos_Jogo/botao jornada v3.png" type="Texture" id=10]
+[ext_resource path="res://Elementos_Jogo/botao jornada v3 hover.png" type="Texture" id=11]
+[ext_resource path="res://Fonts/RobotoSlab-Bold.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Elementos_Jogo/botão pause.png" type="Texture" id=13]
+[ext_resource path="res://Elementos_Jogo/botão pause hover.png" type="Texture" id=14]
+[ext_resource path="res://Cenas/Historia/Jogo 1/Pause.gd" type="Script" id=15]
+[ext_resource path="res://Elementos_Jogo/Pause_Fundo-01.png" type="Texture" id=16]
+[ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://Elementos_Jogo/icon_setting.png" type="Texture" id=18]
+[ext_resource path="res://Elementos_Jogo/icon_help.png" type="Texture" id=19]
+[ext_resource path="res://Cenas/OpcoesIngame/opcaoIngame.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Cenas/Ajuda Ingame/Ajuda.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Cenas/Jornada Ingame/Jornada InGame.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Cenas/Historia/Jogo 1/TrofeuArquetipo.gd" type="Script" id=23]
+[ext_resource path="res://Elementos_Jogo/achievement.png" type="Texture" id=24]
+[ext_resource path="res://Elementos_Jogo/icones arquetipos/heroi.png" type="Texture" id=25]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -32,7 +33,7 @@ font_path = "res://Fonts/RobotoSlab-Regular.ttf"
 
 [sub_resource type="DynamicFont" id=2]
 
-size = 16
+size = 20
 use_mipmaps = true
 use_filter = true
 font_data = SubResource( 1 )
@@ -70,7 +71,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 14
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 11 )
+font_data = ExtResource( 12 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="InputEventKey" id=8]
@@ -95,7 +96,7 @@ shortcut = SubResource( 8 )
 size = 21
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 16 )
+font_data = ExtResource( 17 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
 [sub_resource type="DynamicFont" id=11]
@@ -103,7 +104,7 @@ _sections_unfolded = [ "Font", "Resource", "Settings" ]
 size = 18
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 16 )
+font_data = ExtResource( 17 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="InputEventKey" id=12]
@@ -128,7 +129,7 @@ shortcut = SubResource( 12 )
 size = 18
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 16 )
+font_data = ExtResource( 17 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="InputEventKey" id=15]
@@ -153,7 +154,7 @@ shortcut = SubResource( 15 )
 size = 18
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 16 )
+font_data = ExtResource( 17 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="InputEventKey" id=18]
@@ -259,10 +260,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -183.0
-margin_top = -71.0
-margin_right = -143.0
-margin_bottom = -31.0
+margin_left = 624.0
+margin_top = 664.0
+margin_right = 664.0
+margin_bottom = 704.0
 rect_pivot_offset = Vector2( 20, 20 )
 rect_clip_content = false
 mouse_filter = 0
@@ -309,11 +310,12 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -101.0
-margin_top = -22.0
-margin_right = 139.0
-margin_bottom = 2.0
-rect_pivot_offset = Vector2( 118.761, 12.4573 )
+margin_left = -134.0
+margin_top = -355.0
+margin_right = 173.0
+margin_bottom = -30.0
+rect_scale = Vector2( 0, 0 )
+rect_pivot_offset = Vector2( 149.46, 161.145 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -322,15 +324,24 @@ size_flags_vertical = 1
 script = ExtResource( 7 )
 _sections_unfolded = [ "Rect" ]
 
-[node name="Card_Label" type="Label" parent="Card_Control/Text_Control" index="0"]
+[node name="BgText" type="Sprite" parent="Card_Control/Text_Control" index="0"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 240.0
-margin_bottom = 24.0
-rect_pivot_offset = Vector2( 0, 0 )
+modulate = Color( 1, 1, 1, 0.917137 )
+position = Vector2( 153, 162.5 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="Card_Label" type="Label" parent="Card_Control/Text_Control" index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -135.5
+margin_top = -143.5
+margin_right = 134.5
+margin_bottom = 145.5
+rect_pivot_offset = Vector2( 130, 137 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
@@ -346,7 +357,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Grow Direction", "Rect", "Theme", "custom_colors", "custom_fonts" ]
 
-[node name="Text_Tween_Sumir" type="Tween" parent="Card_Control/Text_Control" index="1"]
+[node name="Text_Tween_Sumir" type="Tween" parent="Card_Control/Text_Control" index="2"]
 
 repeat = false
 playback_process_mode = 1
@@ -355,7 +366,7 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
-[node name="Text_Tween_Aparecer" type="Tween" parent="Card_Control/Text_Control" index="2"]
+[node name="Text_Tween_Aparecer" type="Tween" parent="Card_Control/Text_Control" index="3"]
 
 repeat = false
 playback_process_mode = 1
@@ -422,7 +433,7 @@ anchor_bottom = 0.0
 margin_left = 437.0
 margin_right = 841.0
 margin_bottom = 720.0
-rect_pivot_offset = Vector2( 0, 0 )
+rect_pivot_offset = Vector2( 202.46, 470.145 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -483,7 +494,7 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "BBCode", "custom_fonts" ]
 
 [node name="Timer" type="Timer" parent="Narrativa_Control" index="1"]
@@ -514,8 +525,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 10 )
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
 _sections_unfolded = [ "Hint", "Mouse", "Textures" ]
 
 [node name="Chapter_Text" type="Label" parent="." index="8"]
@@ -570,8 +581,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = SubResource( 9 )
 group = null
-texture_normal = ExtResource( 12 )
-texture_hover = ExtResource( 13 )
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
 _sections_unfolded = [ "Mouse", "Rect", "Textures" ]
 
 [node name="Pause" type="Control" parent="." index="11"]
@@ -588,12 +599,12 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 14 )
+script = ExtResource( 15 )
 _sections_unfolded = [ "Grow Direction", "Rect" ]
 
 [node name="Fundo" type="Sprite" parent="Pause" index="0"]
 
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 centered = false
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
@@ -675,7 +686,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-icon = ExtResource( 17 )
+icon = ExtResource( 18 )
 flat = false
 align = 1
 _sections_unfolded = [ "Hint", "Rect" ]
@@ -702,7 +713,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-icon = ExtResource( 18 )
+icon = ExtResource( 19 )
 flat = false
 align = 1
 _sections_unfolded = [ "Hint", "Rect" ]
@@ -716,7 +727,7 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
-[node name="opcao" parent="Pause" index="6" instance=ExtResource( 19 )]
+[node name="opcao" parent="Pause" index="6" instance=ExtResource( 20 )]
 
 visible = false
 
@@ -754,7 +765,7 @@ wait_time = 0.1
 one_shot = true
 autostart = false
 
-[node name="Ajuda" parent="Pause" index="7" instance=ExtResource( 20 )]
+[node name="Ajuda" parent="Pause" index="7" instance=ExtResource( 21 )]
 
 visible = false
 
@@ -792,7 +803,7 @@ wait_time = 0.1
 one_shot = true
 autostart = false
 
-[node name="Jornada InGame" parent="." index="12" instance=ExtResource( 21 )]
+[node name="Jornada InGame" parent="." index="12" instance=ExtResource( 22 )]
 
 [node name="Voltar" type="Button" parent="Jornada InGame" index="21"]
 
@@ -869,12 +880,12 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 22 )
+script = ExtResource( 23 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="Fundo" type="Sprite" parent="TrofeuArquetipo" index="0"]
 
-texture = ExtResource( 23 )
+texture = ExtResource( 24 )
 centered = false
 _sections_unfolded = [ "Region", "Transform" ]
 
@@ -916,7 +927,7 @@ playback/speed = 1.0
 
 position = Vector2( 41.1503, 39.751 )
 scale = Vector2( 0.9, 0.9 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Timer" type="Timer" parent="TrofeuArquetipo" index="4"]

@@ -312,6 +312,8 @@ func mudaMusica(tf,som):
 func _on_VoltarOp_pressed():
 	get_node("Pause/opcao").hide()
 	get_node("Pause/opcao/TimerOpcao").start()
+	get_node("Pause/opcao/Control tamanho da tela/Selecoes").hide()
+	get_node("Pause/opcao").SelecaoIsOn=false;
 	pass # replace with function body
 
 
