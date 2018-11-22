@@ -48,9 +48,11 @@ func _ready():
 	
 	global.somAmbiente=preload("res://sounds/silence sound effect empty room.ogg")
 	
-	global.MainBg=preload("res://Elementos_Jogo/Backgrounds/CasaAriel-01.png")
+	global.MainBg=preload("res://Elementos_Jogo/Backgrounds/tutorial.jpeg")
+	
 	global.capituloAtual=1 #Aqui coloque o ponto da jornada em que o jogador está
-	global.cena = "res://Cenas/Historia/Jogo 1/Jogo.tscn"
+	global.cena = "res://Cenas/Historia/Tutorial/tutorial.tscn"
+	
 	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena
 	audioMusica=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer
 	

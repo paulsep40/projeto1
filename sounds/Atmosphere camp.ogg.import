@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Atmosphere camp.ogg-07b66951481d1f1364c0173d2b217fec.oggstr"
+
+[deps]
+
+source_file="res://sounds/Atmosphere camp.ogg"
+dest_files=[ "res://.import/Atmosphere camp.ogg-07b66951481d1f1364c0173d2b217fec.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

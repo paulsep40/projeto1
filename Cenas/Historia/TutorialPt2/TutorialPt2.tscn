@@ -54,7 +54,7 @@ use_filter = true
 font_data = SubResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=3]
 
 size = 14
 use_mipmaps = true
@@ -62,7 +62,7 @@ use_filter = true
 font_data = ExtResource( 12 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="SpriteFrames" id=24]
+[sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
 "frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
@@ -98,7 +98,7 @@ use_filter = true
 font_data = SubResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="InputEventKey" id=10]
+[sub_resource type="InputEventKey" id=9]
 
 device = 0
 alt = false
@@ -111,11 +111,11 @@ scancode = 16777217
 unicode = 0
 echo = false
 
-[sub_resource type="ShortCut" id=11]
+[sub_resource type="ShortCut" id=10]
 
-shortcut = SubResource( 10 )
+shortcut = SubResource( 9 )
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=11]
 
 size = 21
 use_mipmaps = false
@@ -123,7 +123,7 @@ use_filter = false
 font_data = ExtResource( 32 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=12]
 
 size = 18
 use_mipmaps = true
@@ -131,7 +131,7 @@ use_filter = true
 font_data = ExtResource( 32 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="InputEventKey" id=14]
+[sub_resource type="InputEventKey" id=13]
 
 device = 0
 alt = false
@@ -144,11 +144,11 @@ scancode = 16777217
 unicode = 0
 echo = false
 
-[sub_resource type="ShortCut" id=15]
+[sub_resource type="ShortCut" id=14]
 
-shortcut = SubResource( 14 )
+shortcut = SubResource( 13 )
 
-[sub_resource type="DynamicFont" id=16]
+[sub_resource type="DynamicFont" id=15]
 
 size = 18
 use_mipmaps = true
@@ -156,7 +156,7 @@ use_filter = true
 font_data = ExtResource( 32 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="InputEventKey" id=17]
+[sub_resource type="InputEventKey" id=16]
 
 device = 0
 alt = false
@@ -169,11 +169,11 @@ scancode = 16777217
 unicode = 0
 echo = false
 
-[sub_resource type="ShortCut" id=18]
+[sub_resource type="ShortCut" id=17]
 
-shortcut = SubResource( 17 )
+shortcut = SubResource( 16 )
 
-[sub_resource type="DynamicFont" id=19]
+[sub_resource type="DynamicFont" id=18]
 
 size = 18
 use_mipmaps = true
@@ -181,7 +181,7 @@ use_filter = true
 font_data = ExtResource( 32 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="InputEventKey" id=20]
+[sub_resource type="InputEventKey" id=19]
 
 device = 0
 alt = false
@@ -194,24 +194,24 @@ scancode = 16777217
 unicode = 0
 echo = false
 
-[sub_resource type="ShortCut" id=21]
+[sub_resource type="ShortCut" id=20]
 
-shortcut = SubResource( 20 )
+shortcut = SubResource( 19 )
 
-[sub_resource type="DynamicFontData" id=22]
+[sub_resource type="DynamicFontData" id=21]
 
 hinting = 2
 font_path = "res://Fonts/RobotoSlab-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=23]
+[sub_resource type="DynamicFont" id=22]
 
 size = 12
 use_mipmaps = true
 use_filter = true
-font_data = SubResource( 22 )
+font_data = SubResource( 21 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Jogo" type="Control"]
+[node name="Jogo" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -442,7 +442,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 3 )
 text = "Tutorial pt2"
 align = 1
 valign = 1
@@ -454,9 +454,9 @@ _sections_unfolded = [ "Anchor", "Rect", "custom_fonts" ]
 [node name="ClicaAqui" type="AnimatedSprite" parent="." index="5"]
 
 position = Vector2( 437.293, 0 )
-frames = SubResource( 24 )
+frames = SubResource( 4 )
 animation = "ClicaJornada"
-frame = 2
+frame = 8
 playing = true
 centered = false
 
@@ -637,7 +637,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 11 )
+shortcut = SubResource( 10 )
 group = null
 texture_normal = ExtResource( 28 )
 texture_hover = ExtResource( 29 )
@@ -684,7 +684,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 11 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -712,7 +712,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 11 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -806,10 +806,10 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 15 )
+shortcut = SubResource( 14 )
 group = null
 text = "Voltar"
 flat = false
@@ -844,10 +844,10 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 15 )
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 18 )
+shortcut = SubResource( 17 )
 group = null
 text = "Voltar"
 flat = false
@@ -880,10 +880,10 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 19 )
+custom_fonts/font = SubResource( 18 )
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 21 )
+shortcut = SubResource( 20 )
 group = null
 text = "Voltar"
 flat = false
@@ -963,7 +963,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 23 )
+custom_fonts/font = SubResource( 22 )
 text = "Arquétipo encontrado: Herói"
 align = 1
 autowrap = true

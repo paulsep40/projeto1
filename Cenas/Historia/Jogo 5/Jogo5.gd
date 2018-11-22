@@ -43,27 +43,24 @@ func _ready():
 	 
 	
 	
-		###########################################################
+	###########################################################
 	################### VARIÁVEIS PARA ALTERAR ##############
 	
-	
-	
-	global.MainBg=preload("res://Elementos_Jogo/Backgrounds/tutorial.jpeg")
 	global.capituloAtual=1 #Aqui coloque o ponto da jornada em que o jogador está
-	global.cena = "res://Cenas/Historia/TutorialPt2/TutorialPt2.tscn"
-	
+	global.cena = "res://Cenas/Historia/Jogo 5/Jogo5.tscn" #aqui se põe o caminho para essa cena no jogo
+
 	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena
 	audioMusica=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer
 	
 	changebgE=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
-	changebgD=true #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
+	changebgD=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	
-	cardTextE="Reiniciar Tutorial" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
-	trocaCenaE="res://Cenas/Historia/Tutorial/tutorial.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
-	cardTextD="Iniciar Jogo" #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
-	trocaCenaD="res://Cenas/Historia/Jogo 1/Jogo.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
+	cardTextE="'Estou com pressa'" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
+	trocaCenaE="res://Cenas/Historia/Jogo 7/Jogo7.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
+	cardTextD="'Tem razão'" #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
+	trocaCenaD="res://Cenas/Historia/Jogo 6/Jogo6.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
 	
-	somarMaldadeE=true #Mude para TRUE se essa escolha soma maldade para o personagem
+	somarMaldadeE=false #Mude para TRUE se essa escolha soma maldade para o personagem
 
 	somarMaldadeD=false #Mude para TRUE se essa escolha soma maldade para o personagem
 	alterarCaminho=false #altere para TRUE se essa for a cena que muda o caminho do personagem dependendo da maldade
@@ -96,7 +93,13 @@ func _ready():
 	####################################### FIM das Variáveis para Alterar######################
 
 
-	
+
+
+
+
+
+#	soundAmbience.set_stream(global.somAmbiente)
+#	soundAmbience.play()
 	
 	Sound_passar.play();
 	CardNode.mover(-200,-200,620,661,-90,0)
@@ -110,7 +113,6 @@ func _ready():
 
 func _on_ButtonL_mouse_entered():
 	if pode_mexer==true:
-		
 		Sound_arrastar.play();
 		if place==0:
 			CardNode.rotacao(620,580,0,-8,0.25)
@@ -153,12 +155,8 @@ func _on_RichTextLabel_mouse_exited():
 	
 
 
-
-
-
 func _on_ButtonR_mouse_entered():
 	if pode_mexer==true:
-		
 		Sound_arrastar.play();
 		if place==0:
 			CardNode.rotacao(620,660,0,8,0.25)
@@ -251,7 +249,6 @@ func _on_TimerChanceScene_timeout():
 
 
 func _on_Botao_Jornada_pressed():
-	get_node("Narrativa_Control/RichTextLabel").set_bbcode("[b] [color=#ed7607]MOVA O MOUSE PARA A DIREITA E ESCOLHA 'INICIAR JOGO' [/color] [/b] para começar a jogar.")
 	ShowJornada.moverJornada(-720,0)
 	ShowJornada.preparar();
 	IsPaused=2;
@@ -367,21 +364,6 @@ func _on_Help_pressed():
 func _on_TimerMover_timeout():
 	pode_mexer=true;
 	pass # replace with function body
-
-
-
-
-
-
-func _on_Botao_Jornada2_mouse_entered():
-	get_node("Botao Jornada").set_pressed(true)
-	pass # replace with function body
-
-
-func _on_Botao_Jornada2_mouse_exited():
-	get_node("Botao Jornada").set_pressed(false)
-	pass # replace with function body
-
 
 
 
