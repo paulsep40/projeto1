@@ -55,7 +55,7 @@ func _ready():
 	audioMusica=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer
 	
 	changebgE=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
-	changebgD=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
+	changebgD=true #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	
 	cardTextE="Reiniciar Tutorial" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
 	trocaCenaE="res://Cenas/Historia/Tutorial/tutorial.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")

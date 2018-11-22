@@ -456,7 +456,7 @@ _sections_unfolded = [ "Anchor", "Rect", "custom_fonts" ]
 position = Vector2( 437.293, 0 )
 frames = SubResource( 24 )
 animation = "ClicaJornada"
-frame = 1
+frame = 2
 playing = true
 centered = false
 
@@ -991,7 +991,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 [node name="Timer" type="Timer" parent="TrofeuArquetipo" index="4"]
 
 process_mode = 1
-wait_time = 3.0
+wait_time = 5.0
 one_shot = true
 autostart = false
 

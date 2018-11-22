@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Cenas/Historia/Jogo 1/Jogo.gd" type="Script" id=1]
 [ext_resource path="res://Cenas/Historia/Jogo 1/Chabge_bg.gd" type="Script" id=2]
@@ -24,7 +24,9 @@
 [ext_resource path="res://Cenas/Jornada Ingame/Jornada InGame.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Cenas/Historia/Jogo 1/TrofeuArquetipo.gd" type="Script" id=23]
 [ext_resource path="res://Elementos_Jogo/achievement.png" type="Texture" id=24]
-[ext_resource path="res://Elementos_Jogo/icones arquetipos/heroi.png" type="Texture" id=25]
+[ext_resource path="res://AchievementSound.tscn" type="PackedScene" id=25]
+[ext_resource path="res://sounds/Jingle_Achievement_00.ogg" type="AudioStream" id=26]
+[ext_resource path="res://Elementos_Jogo/icones arquetipos/heroi.png" type="Texture" id=27]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -923,17 +925,22 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
-[node name="Icon" type="Sprite" parent="TrofeuArquetipo" index="3"]
+[node name="AchievementSound" parent="TrofeuArquetipo" index="3" instance=ExtResource( 25 )]
+
+stream = ExtResource( 26 )
+volume_db = -12.0
+
+[node name="Icon" type="Sprite" parent="TrofeuArquetipo" index="4"]
 
 position = Vector2( 41.1503, 39.751 )
 scale = Vector2( 0.9, 0.9 )
-texture = ExtResource( 25 )
+texture = ExtResource( 27 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="Timer" type="Timer" parent="TrofeuArquetipo" index="4"]
+[node name="Timer" type="Timer" parent="TrofeuArquetipo" index="5"]
 
 process_mode = 1
-wait_time = 3.0
+wait_time = 5.0
 one_shot = true
 autostart = false
 
@@ -1008,6 +1015,8 @@ autostart = true
 [connection signal="pressed" from="Jornada InGame/VoltarOpção2" to="." method="_on_VoltarOpo2_pressed"]
 
 [connection signal="timeout" from="Jornada InGame/Timer Atalho" to="." method="_on_Timer_Atalho_timeout"]
+
+[connection signal="tween_completed" from="TrofeuArquetipo/Tween" to="TrofeuArquetipo" method="_on_Tween_tween_completed"]
 
 [connection signal="timeout" from="TrofeuArquetipo/Timer" to="TrofeuArquetipo" method="_on_Timer_timeout"]
 
