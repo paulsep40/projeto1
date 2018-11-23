@@ -98,7 +98,7 @@ echo = false
 
 shortcut = SubResource( 7 )
 
-[node name="opcao" type="Control"]
+[node name="opcao" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
