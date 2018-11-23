@@ -1,6 +1,8 @@
 extends Node
 
 var cheated=false
+var played=false
+var musicaTocando
 
 const ARQUIVO = "user://save.data"
 
@@ -79,6 +81,7 @@ func salvar_dados():
 	
 	"escudo": global.escudo,
 	"somAmbiente": global.somAmbiente,
+	"MusicaTocando": global.musicaTocando,
 	"backgroundAtual": global.MainBg
 	}
 	if not erro:
@@ -120,7 +123,7 @@ func carregar_dados():
 		
 		global.MainBg=dados_salvos["backgroundAtual"]
 		global.somAmbiente=dados_salvos["somAmbiente"]
-		
+		global.musicaTocando=dados_salvos["MusicaTocando"]
 		print("Sucesso ao carregar dados!")
 	else:
 		print("Erro ao carregar dados")

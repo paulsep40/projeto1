@@ -57,7 +57,7 @@ use_filter = false
 font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=4]
 
 size = 14
 use_mipmaps = true
@@ -65,7 +65,7 @@ use_filter = true
 font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=5]
 
 size = 12
 use_mipmaps = true
@@ -73,7 +73,7 @@ use_filter = true
 font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=6]
 
 size = 18
 use_mipmaps = true
@@ -81,7 +81,7 @@ use_filter = true
 font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="InputEventKey" id=11]
+[sub_resource type="InputEventKey" id=7]
 
 device = 0
 alt = false
@@ -94,11 +94,11 @@ scancode = 16777217
 unicode = 0
 echo = false
 
-[sub_resource type="ShortCut" id=12]
+[sub_resource type="ShortCut" id=8]
 
-shortcut = SubResource( 11 )
+shortcut = SubResource( 7 )
 
-[node name="opcao" type="Control" index="0"]
+[node name="opcao" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -336,7 +336,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 4 )
 text = "Dimensão de Tela"
 percent_visible = 1.0
 lines_skipped = 0
@@ -386,7 +386,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_icons/checked = ExtResource( 7 )
 custom_icons/unchecked = ExtResource( 8 )
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 5 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -415,7 +415,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_icons/checked = ExtResource( 7 )
 custom_icons/unchecked = ExtResource( 8 )
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 5 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -444,7 +444,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_icons/checked = ExtResource( 7 )
 custom_icons/unchecked = ExtResource( 8 )
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 5 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -473,7 +473,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_icons/checked = ExtResource( 7 )
 custom_icons/unchecked = ExtResource( 8 )
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 5 )
 toggle_mode = true
 pressed = true
 enabled_focus_mode = 2
@@ -503,7 +503,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_icons/checked = ExtResource( 7 )
 custom_icons/unchecked = ExtResource( 8 )
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 5 )
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -553,7 +553,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 4 )
 text = "1280 x 720"
 percent_visible = 1.0
 lines_skipped = 0
@@ -578,10 +578,10 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 12 )
+shortcut = SubResource( 8 )
 group = null
 text = "Voltar"
 flat = false

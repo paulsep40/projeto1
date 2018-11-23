@@ -252,7 +252,7 @@ use_filter = true
 font_data = SubResource( 22 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Jogo" type="Control" index="0"]
+[node name="Jogo" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -445,7 +445,7 @@ playback/speed = 1.0
 position = Vector2( 60.2936, 0 )
 frames = SubResource( 3 )
 animation = "Mouse_Escolhas"
-frame = 30
+frame = 22
 playing = true
 centered = false
 
@@ -455,7 +455,7 @@ visible = false
 position = Vector2( 10.5367, -0.0147095 )
 frames = SubResource( 4 )
 animation = "ClicaE"
-frame = 11
+frame = 5
 playing = true
 centered = false
 
@@ -465,7 +465,7 @@ visible = false
 position = Vector2( 827.514, -0.0147095 )
 frames = SubResource( 4 )
 animation = "ClicaE"
-frame = 10
+frame = 4
 playing = true
 centered = false
 

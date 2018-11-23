@@ -6,8 +6,7 @@ func _ready():
 	get_node("Efeitos").set_value(global.volumefx)
 	get_node("Musica").set_value(global.volumemusica)
 	get_node("Ambientacao").set_value(global.volumeAmbiete)
-	attButton()
-	attLabel()
+	
 	if OS.window_fullscreen==true:
 		get_node("Full_Screen").set_pressed(true)
 		get_node("janela").set_pressed(false);
@@ -18,7 +17,8 @@ func _ready():
 	else:
 		get_node("Full_Screen").set_pressed(false)
 		get_node("janela").set_pressed(true)
-		
+		attButton()
+		attLabel()
 		get_node("Control tamanho da tela").show()
 		#get_node("Control tamanho da tela/Labelnumero").set_text("1280 X 720");
 	pass

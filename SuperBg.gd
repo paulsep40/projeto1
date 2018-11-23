@@ -5,8 +5,8 @@ extends Control
 # var b = "textvar"
 
 func _ready():
-	global.carregar_dados()
-	get_node("Sprite").set_texture(global.MainBg)
+#	global.carregar_dados()
+#	get_node("Sprite").set_texture(global.MainBg)
 	pass
 
 #func _process(delta):

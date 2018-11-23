@@ -5,7 +5,7 @@
 [ext_resource path="res://Elementos_Jogo/Backgrounds/Treinamento.jpg" type="Texture" id=3]
 [ext_resource path="res://Elementos_Jogo/Base.png" type="Texture" id=4]
 [ext_resource path="res://Cenas/Historia/Jogo 1/Card_Control.gd" type="Script" id=5]
-[ext_resource path="res://Elementos_Jogo/Cartas/15,16.png" type="Texture" id=6]
+[ext_resource path="res://Elementos_Jogo/Cartas/treinadorStill.png" type="Texture" id=6]
 [ext_resource path="res://Cenas/Historia/Jogo 1/Text_Control.gd" type="Script" id=7]
 [ext_resource path="res://Elementos_Jogo/Opacity Texto.png" type="Texture" id=8]
 [ext_resource path="res://Cenas/Historia/Jogo 1/RichTextLabel.gd" type="Script" id=9]
@@ -27,6 +27,7 @@
 [ext_resource path="res://AchievementSound.tscn" type="PackedScene" id=25]
 [ext_resource path="res://sounds/Jingle_Achievement_00.ogg" type="AudioStream" id=26]
 [ext_resource path="res://Elementos_Jogo/icones arquetipos/heroi.png" type="Texture" id=27]
+
 
 [sub_resource type="DynamicFontData" id=1]
 

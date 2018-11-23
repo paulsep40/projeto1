@@ -3,11 +3,16 @@ var cheaton=false
 
 
 func _ready():
-	soundAmbience.set_stream(global.somAmbiente)
+	soundAmbience.set_stream(preload("res://sounds/silence sound effect empty room.ogg"))
 	soundAmbience.play()
 	get_node("AnimationPlayer").play("apareceMenu")
 	if global.cheated==false:
 		global.carregar_dados();
+	
+	if global.played==true:
+		Musica.set_stream(preload("res://sounds/Musica 03.ogg"))
+		Musica.play();
+		global.played=false;
 	
 	if global.capituloAtual>0:
 		get_node("Continuar").set_disabled(false)
@@ -26,16 +31,16 @@ func _on_Nova_Jornada_pressed():
 	else:
 		reiniciar()
 		get_tree().change_scene("res://Cenas/Historia/Tutorial/tutorial.tscn")
-		Musica.set_stream(preload("res://sounds/musicaMenu.ogg"))
-		Musica.play()
+		global.played=true;
+		
 		
 	pass 
 	
 func _on_Sim_pressed():
 	reiniciar()
+	global.played=true;
 	get_tree().change_scene("res://Cenas/Historia/Tutorial/tutorial.tscn")
-	Musica.set_stream(preload("res://sounds/musicaMenu.ogg"))
-	Musica.play()
+	
 	pass # replace with function body
 
 func _on_CancelarNovo_pressed():
@@ -44,12 +49,12 @@ func _on_CancelarNovo_pressed():
 
 
 func _on_Continuar_pressed():
-	
+	global.played=true
 	global.carregar_dados()
 	global.cheated==false
 	get_tree().change_scene(global.cena)
-	
-	Musica.set_stream(preload("res://sounds/musicaMenu.ogg"))
+	soundAmbience.set_stream(global.somAmbiente)
+	Musica.set_stream(global.musicaTocando)
 	Musica.play()
 	pass 
 
@@ -103,7 +108,7 @@ func reiniciar():
 	global.Agua = false
 	global.Ar = false
 	global.maldade=0
-	
+	global.somAmbiente=preload("res://sounds/silence sound effect empty room.ogg")
 	pass
 
 

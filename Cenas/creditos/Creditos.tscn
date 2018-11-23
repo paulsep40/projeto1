@@ -5,7 +5,7 @@
 [ext_resource path="res://SuperBg.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Elementos_Jogo/creditos-01.png" type="Texture" id=4]
 [ext_resource path="res://Cenas/creditos/armadillologo.png" type="Texture" id=5]
-[ext_resource path="res://Fonts/Roman SD.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Fonts/RobotoSlab-Bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="DynamicFontData" id=1]
@@ -36,7 +36,7 @@ _sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
 
 [sub_resource type="DynamicFont" id=5]
 
-size = 16
+size = 18
 use_mipmaps = true
 use_filter = true
 extra_spacing_top = 3
@@ -45,7 +45,7 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=6]
 
-size = 14
+size = 18
 use_mipmaps = true
 use_filter = false
 font_data = ExtResource( 6 )
@@ -106,7 +106,6 @@ _sections_unfolded = [ "Offset" ]
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." index="3"]
 
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -136,7 +135,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 246.0
-margin_bottom = 696.0
+margin_bottom = 923.0
 rect_min_size = Vector2( 242, 100 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -150,6 +149,7 @@ _sections_unfolded = [ "Rect", "custom_constants" ]
 
 [node name="LogoArmadillo" type="Control" parent="ScrollContainer/VBoxContainer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -173,6 +173,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="HarielControl" type="Control" parent="ScrollContainer/VBoxContainer" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -242,6 +243,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="LeoControl" type="Control" parent="ScrollContainer/VBoxContainer" index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -311,6 +313,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="MaluControl" type="Control" parent="ScrollContainer/VBoxContainer" index="3"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -380,6 +383,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Nata_Control" type="Control" parent="ScrollContainer/VBoxContainer" index="4"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -656,6 +660,149 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 4 )
 text = "Glaudiney Mendonça"
+align = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Icones" type="Control" parent="ScrollContainer/VBoxContainer" index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 711.0
+margin_right = 246.0
+margin_bottom = 807.0
+rect_min_size = Vector2( 246, 96 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Agradecimentos" type="Label" parent="ScrollContainer/VBoxContainer/Icones" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+margin_left = -123.0
+margin_top = 28.0
+margin_right = 123.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 246, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
+text = "Icones"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Pessoas" type="Label" parent="ScrollContainer/VBoxContainer/Icones" index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -123.0
+margin_top = 2.0
+margin_right = 123.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 246, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+text = "Freepik from www.flaticon.com 
+https://icons8.com/"
+align = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Sons Ambiente" type="Control" parent="ScrollContainer/VBoxContainer" index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 822.0
+margin_right = 246.0
+margin_bottom = 923.0
+rect_min_size = Vector2( 246, 101 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Sons de Ambiente" type="Label" parent="ScrollContainer/VBoxContainer/Sons Ambiente" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+margin_left = -123.0
+margin_right = 123.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 246, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
+text = "Sons de Ambiente"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Pessoas" type="Label" parent="ScrollContainer/VBoxContainer/Sons Ambiente" index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -123.0
+margin_top = -28.5
+margin_right = 123.0
+margin_bottom = 48.5
+rect_min_size = Vector2( 246, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+text = "www.littlerobotsoundfactory.com
+https://youtu.be/VrfyB2gMAUg
+https://youtu.be/xNN7iTA57jM
+tabletopaudio.com"
 align = 1
 autowrap = true
 percent_visible = 1.0

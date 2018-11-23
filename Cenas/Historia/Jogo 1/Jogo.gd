@@ -51,8 +51,8 @@ func _ready():
 	global.MainBg=preload("res://Elementos_Jogo/Backgrounds/CasaAriel-01.png")
 	global.capituloAtual=1 #Aqui coloque o ponto da jornada em que o jogador está
 	global.cena = "res://Cenas/Historia/Jogo 1/Jogo.tscn"
-	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena
-	audioMusica=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer
+	trocarMusica=true #aqui você altera  para TRUE se quiser mudar a música da cena
+	global.musicaTocando=preload("res://sounds/Musica 1.ogg")#aqui você põe o caminho da música que você quer
 	
 	changebgE=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	changebgD=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
@@ -100,7 +100,7 @@ func _ready():
 	
 	Sound_passar.play();
 	CardNode.mover(-200,-200,620,661,-90,0)
-	mudaMusica(trocarMusica,audioMusica)
+	mudaMusica(trocarMusica,global.musicaTocando)
 	global.salvar_dados();
 	soundAmbience.play()
 	pass
