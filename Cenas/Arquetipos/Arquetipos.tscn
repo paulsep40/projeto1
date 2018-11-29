@@ -38,7 +38,7 @@
 [ext_resource path="res://Elementos_Jogo/Botoes Arquetipos/desativado/desativado-28.png" type="Texture" id=36]
 [ext_resource path="res://Fonts/RobotoSlab-Regular.ttf" type="DynamicFontData" id=37]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 
 size = 18
 use_mipmaps = true
@@ -46,7 +46,7 @@ use_filter = true
 font_data = ExtResource( 37 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="InputEventKey" id=4]
+[sub_resource type="InputEventKey" id=2]
 
 device = 0
 alt = false
@@ -59,11 +59,11 @@ scancode = 16777217
 unicode = 0
 echo = false
 
-[sub_resource type="ShortCut" id=5]
+[sub_resource type="ShortCut" id=3]
 
-shortcut = SubResource( 4 )
+shortcut = SubResource( 2 )
 
-[node name="Arquetipos" type="Control"]
+[node name="Arquetipos" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -76,6 +76,10 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 270.394 ],
+"_edit_vertical_guides_": [ 221.792, 330.503 ]
+}
 
 [node name="Fundo" type="Sprite" parent="." index="0"]
 
@@ -176,10 +180,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 223.0
-margin_top = 198.0
-margin_right = 294.0
-margin_bottom = 269.0
+margin_left = 331.0
+margin_top = 200.0
+margin_right = 402.0
+margin_bottom = 271.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 hint_tooltip = "Mentor"
@@ -206,10 +210,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 332.0
-margin_top = 198.0
-margin_right = 403.0
-margin_bottom = 269.0
+margin_left = 222.0
+margin_top = 200.0
+margin_right = 293.0
+margin_bottom = 271.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 hint_tooltip = "Arauto"
@@ -398,10 +402,10 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 5 )
+shortcut = SubResource( 3 )
 group = null
 text = "Voltar"
 flat = false
