@@ -49,7 +49,7 @@ func _ready():
 	global.somAmbiente=preload("res://sounds/Atmosphere camp.ogg")
 	global.cena = "res://Cenas/Historia/Jogo 17/Jogo17.tscn"
 
-	global.capituloAtual=1 #Aqui coloque o ponto da jornada em que o jogador está
+	global.capituloAtual=2 #Aqui coloque o ponto da jornada em que o jogador está
 	global.cena = "res://Cenas/Historia/Jogo 17/Jogo17.tscn"
 	trocarMusica=true #aqui você altera  para TRUE se quiser mudar a música da cena
 	global.musicaTocando=preload("res://sounds/Musica 2.ogg") #aqui você põe o caminho da música que você quer

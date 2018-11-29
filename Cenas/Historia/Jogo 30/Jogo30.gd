@@ -47,7 +47,7 @@ func _ready():
 	global.MainBg=preload("res://Elementos_Jogo/Backgrounds/vila.jpg")
 	global.somAmbiente= preload("res://sounds/Medieval_Town.ogg")
 	
-	global.capituloAtual=1 #Aqui coloque o ponto da jornada em que o jogador está
+	global.capituloAtual=2 #Aqui coloque o ponto da jornada em que o jogador está
 	global.cena="res://Cenas/Historia/Jogo 30/Jogo30.tscn"
 	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena
 	global.musicaTocando=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer

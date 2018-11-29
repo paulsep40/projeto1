@@ -189,7 +189,7 @@ use_filter = true
 font_data = SubResource( 20 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Jogo" type="Control"]
+[node name="Jogo" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -547,7 +547,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 7 )
-text = "I. Mundo Comum"
+text = "II. O Chamado da Aventura"
 align = 1
 valign = 1
 percent_visible = 1.0

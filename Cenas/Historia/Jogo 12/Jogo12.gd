@@ -45,7 +45,7 @@ func _ready():
 ###########################################################
 	################### VARIÁVEIS PARA ALTERAR ##############
 	
-	global.capituloAtual=1 #Aqui coloque o ponto da jornada em que o jogador está
+	global.capituloAtual=2 #Aqui coloque o ponto da jornada em que o jogador está
 	global.cena = "res://Cenas/Historia/Jogo 12/Jogo12.tscn"
 	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena
 	audioMusica=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer
