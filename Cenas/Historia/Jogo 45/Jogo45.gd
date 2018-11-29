@@ -40,25 +40,21 @@ onready var ShowJornada= get_node("Jornada InGame")
 
 func _ready():
 	
-	
-
 ###########################################################
 	################### VARIÁVEIS PARA ALTERAR ##############
-	global.MainBg=preload("res://Elementos_Jogo/Backgrounds/vila.jpg")
-	global.somAmbiente= preload("res://sounds/Medieval_Town.ogg")
-	
+	global.cena = "res://Cenas/Historia/Jogo 45/Jogo.tscn" #aqui se põe o caminho para essa cena no jogo
 	global.capituloAtual=1 #Aqui coloque o ponto da jornada em que o jogador está
-	global.cena="res://Cenas/Historia/Jogo 30/Jogo30.tscn"
+	
 	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena
-	global.musicaTocando=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer
+	audioMusica=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer
 	
 	changebgE=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	changebgD=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	
-	cardTextE="'Vou dizer'" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
-	trocaCenaE="res://Cenas/Historia/Jogo 31/Jogo31.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
-	cardTextD="'Vou defende-lo'" #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
-	trocaCenaD="res://Cenas/Historia/Jogo 32/Jogo32.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
+	cardTextE="'Foi ótimo'" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
+	trocaCenaE="res://Cenas/Historia/Jogo 46/Jogo46.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
+	cardTextD="'Nada demais'" #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
+	trocaCenaD="res://Cenas/Historia/Jogo 47/Jogo47.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
 	
 	somarMaldadeE=false #Mude para TRUE se essa escolha soma maldade para o personagem
 
@@ -95,9 +91,8 @@ func _ready():
 
 
 
-
-	soundAmbience.set_stream(global.somAmbiente)
-	soundAmbience.play()
+#	soundAmbience.set_stream(global.somAmbiente)
+#	soundAmbience.play()
 	
 	Sound_passar.play();
 	CardNode.mover(-200,-200,620,661,-90,0)

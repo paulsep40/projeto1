@@ -41,7 +41,7 @@ onready var ShowJornada= get_node("Jornada InGame")
 func _ready():
 	
 	 
-
+	
 
 	###########################################################
 	################### VARIÁVEIS PARA ALTERAR ##############

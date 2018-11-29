@@ -48,7 +48,7 @@ func _ready():
 	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena
 	audioMusica=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer
 	
-	changebgE=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
+	changebgE=true #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	changebgD=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	
 	cardTextE="Ir para casa" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
