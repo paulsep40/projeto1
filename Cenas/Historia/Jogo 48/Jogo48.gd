@@ -42,7 +42,7 @@ func _ready():
 	
 ###########################################################
 	################### VARIÁVEIS PARA ALTERAR ##############
-	global.cena = "res://Cenas/Historia/Jogo 48/Jogo.tscn" #aqui se põe o caminho para essa cena no jogo
+	global.cena = "res://Cenas/Historia/Jogo 48/Jogo48.tscn" #aqui se põe o caminho para essa cena no jogo
 	global.capituloAtual=2 #Aqui coloque o ponto da jornada em que o jogador está
 	
 	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena

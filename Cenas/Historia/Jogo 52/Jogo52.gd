@@ -43,14 +43,14 @@ func _ready():
 
 ###########################################################
 	################### VARIÁVEIS PARA ALTERAR ##############
-	global.cena = "res://Cenas/Historia/Jogo 52/Jogo.tscn" #aqui se põe o caminho para essa cena no jogo
+	global.cena = "res://Cenas/Historia/Jogo 52/Jogo52.tscn" #aqui se põe o caminho para essa cena no jogo
 	global.capituloAtual=2 #Aqui coloque o ponto da jornada em que o jogador está
 	
 	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena
 	audioMusica=preload("res://sounds/musicaMenu.ogg") #aqui você põe o caminho da música que você quer
 	
-	changebgE=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
-	changebgD=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
+	changebgE=true #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
+	changebgD=true #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	
 	cardTextE="Seguir o vulto discretamente" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
 	trocaCenaE="res://Cenas/Historia/Jogo 55/Jogo55.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
