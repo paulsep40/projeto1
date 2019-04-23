@@ -1,6 +1,6 @@
 [gd_scene load_steps=50 format=2]
 
-[ext_resource path="res://Cenas/Historia/Jogo 77/Jogo77.gd" type="Script" id=1]
+[ext_resource path="res://Cenas/Historia/Jogo 81/Jogo81.gd" type="Script" id=1]
 [ext_resource path="res://Cenas/Historia/Jogo 1/Chabge_bg.gd" type="Script" id=2]
 [ext_resource path="res://Elementos_Jogo/Backgrounds/Floresta Dark.png" type="Texture" id=3]
 [ext_resource path="res://Elementos_Jogo/Backgrounds/Floresta.png" type="Texture" id=4]
@@ -230,9 +230,9 @@ flat = true
 
 [node name="Narrativa_Control" type="Control" parent="."]
 margin_left = 473.0
-margin_top = 144.511
+margin_top = 143.814
 margin_right = 806.0
-margin_bottom = 251.511
+margin_bottom = 250.814
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Narrativa_Control"]
 margin_top = -2.0
@@ -241,9 +241,9 @@ margin_bottom = 104.0
 custom_fonts/bold_font = SubResource( 4 )
 custom_fonts/normal_font = SubResource( 6 )
 bbcode_enabled = true
-bbcode_text = "Ao observar o seu oponente com mais cautela, Ariel percebe que ele estava com a defesa aberta, mas agora já estava se preparando para fugir. Em alguns momentos já havia perdido o Rato de vista."
+bbcode_text = "O rato novamente desvia e desta vez pula em Ariel, derrubando-a. Sentindo os dentes perfurarem seu braço, Ariel precisa agir rápido. Ela atacar com:"
 tab_size = 1
-text = "Ao observar o seu oponente com mais cautela, Ariel percebe que ele estava com a defesa aberta, mas agora já estava se preparando para fugir. Em alguns momentos já havia perdido o Rato de vista."
+text = "O rato novamente desvia e desta vez pula em Ariel, derrubando-a. Sentindo os dentes perfurarem seu braço, Ariel precisa agir rápido. Ela atacar com:"
 script = ExtResource( 10 )
 
 [node name="Timer" type="Timer" parent="Narrativa_Control"]

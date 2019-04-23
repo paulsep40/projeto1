@@ -66,8 +66,8 @@ func _ready():
 	trocaCenaAlteradoE="res://Cenas/Menu/Menu.tscn"
 	trocaCenaAlteradoD="res://Cenas/Menu/Menu.tscn"
 	
-	get_node("TrofeuArquetipo").subir_Trofeu(false); #mude para TRUE se ele encontrar algum arquétipo
-	get_node("TrofeuArquetipo/LabelArquetipo").set_text("Arquétipo encontrado: Herói") #Mude para o nome do arquétipo que o usuário encontrou
+	get_node("TrofeuArquetipo").subir_Trofeu(true); #mude para TRUE se ele encontrar algum arquétipo
+	get_node("TrofeuArquetipo/LabelArquetipo").set_text("Arquétipo encontrado: Mentor") #Mude para o nome do arquétipo que o usuário encontrou
 	
 	##############Aqui você vai descomentar o ARQUÉTIPO que o herói encontrou nessa cena#################
 	#global.heroi=true

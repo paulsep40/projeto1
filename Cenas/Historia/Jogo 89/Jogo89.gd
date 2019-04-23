@@ -44,13 +44,7 @@ func _ready():
 ###########################################################
 	################### VARIÁVEIS PARA ALTERAR ##############
 
-	###########################################################
-	################### VARIÁVEIS PARA ALTERAR ##############
-
-	###########################################################
-	################### VARIÁVEIS PARA ALTERAR ##############
-
-	global.cena = "res://Cenas/Historia/Jogo 78/Jogo78.tscn" #aqui se põe o caminho para essa cena no jogo
+	global.cena = "res://Cenas/Historia/Jogo 89/Jogo89.tscn" #aqui se põe o caminho para essa cena no jogo
 	global.capituloAtual=6 #Aqui coloque o ponto da jornada em que o jogador está
 	
 	trocarMusica=false #aqui você altera  para TRUE se quiser mudar a música da cena
@@ -59,10 +53,10 @@ func _ready():
 	changebgE=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	changebgD=false #Mude para TRUE se quando o jogador escolher ESQUERDA o bg muda
 	
-	cardTextE="Finalizar" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
-	trocaCenaE="res://Cenas/Historia/Jogo 83/Jogo83.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
-	cardTextD="Deixá-lo fugir" #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
-	trocaCenaD="res://Cenas/Historia/Jogo 79/Jogo79.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
+	cardTextE="’Por que?’" #Texto quando o jogador por o mouse no lado ESQUERDO (ponha entre aspas "")
+	trocaCenaE="res://Cenas/Historia/Jogo 90/Jogo90.tscn" #Para que cena o jogador vai se escolher o lado ESQUERDO (ponha entre aspas "")
+	cardTextD="’O que você quer dizer?’" #Texto quando o jogador por o mouse no DIREITO (ponha entre aspas "")
+	trocaCenaD="res://Cenas/Historia/Jogo 90/Jogo90.tscn" #Para que cena o jogador vai se escolher o lado DIREITO (ponha entre aspas "")
 	
 	somarMaldadeE=false #Mude para TRUE se essa escolha soma maldade para o personagem
 
@@ -95,6 +89,16 @@ func _ready():
 	
 	###########################################################################################
 	####################################### FIM das Variáveis para Alterar######################
+
+
+
+
+
+
+
+
+
+
 
 
 
